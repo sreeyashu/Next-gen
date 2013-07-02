@@ -11,23 +11,16 @@
         <title>::.Next Gen - transactional.::</title>
         <script src="js/modernizr.custom.js"></script>
         <script type="application/javascript" src="js/jquery-1.10.1.js"></script>
-        <script type="application/javascript" src="js/iscroll.js"></script>
-		<script type="text/javascript" src="js/custom.js"></script>
-        <script type="text/javascript">
-		var myScroll, myScroll2, myScroll3, myScroll4, myScroll5;
-		function loaded() {
-			myScroll = new iScroll('left_column', {draggableScrollbars:true});
-			myScroll2 = new iScroll('small-scroller', {draggableScrollbars:true});
-			myScroll3 = new iScroll('right_column', {draggableScrollbars:true});
-			myScroll4 = new iScroll('movements-ia', {draggableScrollbars:true});
-			myScroll5 = new iScroll('record-list__content', {draggableScrollbars:true});
-		}
+        <script type="text/javascript" src="js/iscroll.js"></script>
+        <script type="text/javascript" src="js/custom.js"></script>
+        <!--<script type="text/javascript">
+		
 		/*document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);*/
-			document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 200); }, false);
-		</script>
+			//document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 200); }, false);
+		</script>-->
     </head>
     <body class="next_gen">
-    	<div class="wrapper">
+        <div class="wrapper">
         
         <!-- Left Accounts & Cards -->
         	<div id="left_column" >
@@ -102,7 +95,7 @@
                         </dl>
                     </div>
                  </div>
-            </div>
+              </div>
         <!-- Center column Header, Upcoming & Movements -->
         	<div id="center_column">
             	<!-- Header Navigation IA -->
@@ -134,7 +127,7 @@
                         </div>
                         <!-- Movements IA -->
                         <div class="movements-ia" id="movements-ia">
-                            <div class="record-list">
+                        	<div class="record-list">
                                 <div class="record-list__header">
                                     <h2>Lorum ipsum dolor sit</h2>
                                     <span class="movements_balance">1234.54<span>EUR</span></span>
@@ -180,7 +173,7 @@
                                             </span>
                                             <div class="info2">
                                                 <span class="branding_icons info-icon yash"></span>
-                                                <h2>Europese overschrijving van</h2>
+                                                <h2 class="transaction_name">Europese overschrijving van</h2>
                                                 <p>Lorum ipsum dolor sit amit quantum</p>
                                                 <p class="value-date">Value date <span>12/06/13</span></p>
                                                 <div class="detail-page">
@@ -195,13 +188,13 @@
                                             </div>
                                         </li>
                                         <li class="transaction_out">
-                                            <span class="top clearfix">
+                                           <span class="top clearfix">
                                                 <span class="date">25/01/2013</span>
                                                 <span class="amount">- 125,35<span>eur</span></span>
                                             </span>
                                             <div class="info2">
                                                 <span class="branding_icons info-icon yash"></span>
-                                                <strong>Europese overschrijving van</strong>
+                                                <h2 class="transaction_name">Europese overschrijving van</h2>
                                                 <p>Lorum ipsum dolor sit amit quantum</p>
                                                 <p class="value-date">Value date <span>12/06/13</span></p>
                                                 <div class="detail-page">
@@ -216,13 +209,13 @@
                                             </div>
                                         </li>
                                         <li class="transaction_out">
-                                            <span class="top clearfix">
+                                           <span class="top clearfix">
                                                 <span class="date">25/01/2013</span>
                                                 <span class="amount">- 125,35<span>eur</span></span>
                                             </span>
                                             <div class="info2">
                                                 <span class="branding_icons info-icon yash"></span>
-                                                <strong>Europese overschrijving van</strong>
+                                                <h2 class="transaction_name">Europese overschrijving van</h2>
                                                 <p>Lorum ipsum dolor sit amit quantum</p>
                                                 <p class="value-date">Value date <span>12/06/13</span></p>
                                                 <div class="detail-page">
@@ -240,13 +233,13 @@
                                     <h3 class="record-list__group_header">Previous Month</h3>
                                     <ol class="record-list__item">
                                         <li class="transaction_out">
-                                            <span class="top clearfix">
+                                           <span class="top clearfix">
                                                 <span class="date">25/01/2013</span>
                                                 <span class="amount">- 125,35<span>eur</span></span>
                                             </span>
                                             <div class="info2">
                                                 <span class="branding_icons info-icon yash"></span>
-                                                <strong>Europese overschrijving van</strong>
+                                                <h2 class="transaction_name">Europese overschrijving van</h2>
                                                 <p>Lorum ipsum dolor sit amit quantum</p>
                                                 <p class="value-date">Value date <span>12/06/13</span></p>
                                                 <div class="detail-page">
@@ -261,13 +254,13 @@
                                             </div>
                                         </li>
                                         <li class="transaction_out">
-                                            <span class="top clearfix">
+                                           <span class="top clearfix">
                                                 <span class="date">25/01/2013</span>
                                                 <span class="amount">- 125,35<span>eur</span></span>
                                             </span>
                                             <div class="info2">
                                                 <span class="branding_icons info-icon yash"></span>
-                                                <strong>Europese overschrijving van</strong>
+                                                <h2 class="transaction_name">Europese overschrijving van</h2>
                                                 <p>Lorum ipsum dolor sit amit quantum</p>
                                                 <p class="value-date">Value date <span>12/06/13</span></p>
                                                 <div class="detail-page">
@@ -282,13 +275,13 @@
                                             </div>
                                         </li>
                                          <li class="transaction_out">
-                                            <span class="top clearfix">
+                                           <span class="top clearfix">
                                                 <span class="date">25/01/2013</span>
                                                 <span class="amount">- 125,35<span>eur</span></span>
                                             </span>
                                             <div class="info2">
                                                 <span class="branding_icons info-icon yash"></span>
-                                                <strong>Europese overschrijving van</strong>
+                                                <h2 class="transaction_name">Europese overschrijving van</h2>
                                                 <p>Lorum ipsum dolor sit amit quantum</p>
                                                 <p class="value-date">Value date <span>12/06/13</span></p>
                                                 <div class="detail-page">
@@ -305,7 +298,7 @@
                                     </ol>
                                     </div>
                                 </div>
-                             </div>
+                            </div>    
                         </div>
                     </div><!-- Div for small screen scrolling -->
                  </div><!-- Div for small screen scrolling -->
@@ -358,6 +351,16 @@
                               <dd class="menu-list__item account">
                             	<dl>
                                 	<dt class="account__owner">LORUM IPSUM DOLORES SIT</dt>
+                                    <dd class="account__type">This is a message, lorum ipsum dolores amet sit quatum es rosas esperanza.</dd>
+                             	</dl>      
+                             </dd>
+                        </dl>
+                    </div>
+            </div>
+        </div>
+    </body>
+</html>
+t>
                                     <dd class="account__type">This is a message, lorum ipsum dolores amet sit quatum es rosas esperanza.</dd>
                              	</dl>      
                              </dd>
