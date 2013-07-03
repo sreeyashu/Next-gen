@@ -36,11 +36,11 @@
                      </dt>
                      <!-- List item for account -->
                      <dd class="menu-list__item account">
-                        <dl>
+                        <dl class="active">
                            <dt class="account__owner">Lorum ipsum dolor sit</dt>
                            <dd class="account__type">Current Account</dd>
                            <dd class="account__iban">BE68 0033 6588 8001</dd>
-                           <dd class="bal_amount">1234.34<span>EUR</span></dd>
+                           <dd class="bal_amount"><span>1234.34</span><span>EUR</span></dd>
                         </dl>
                      </dd>
                      <!-- List item for account -->
@@ -49,7 +49,7 @@
                            <dt class="account-owner">Lorum ipsum dolor sit</dt>
                            <dd>Current Account</dd>
                            <dd>BE68 0033 6588 8001</dd>
-                           <dd class="bal_amount">1234.34<span>EUR</span></dd>
+                           <dd class="bal_amount"><span>1234.34</span><span>EUR</span></dd>
                         </dl>
                      </dd>
                   </dl>
@@ -74,7 +74,7 @@
                            <dt class="account__owner">Lorum ipsum dolor sit</dt>
                            <dd class="account__type">Current Account</dd>
                            <dd class="account__iban">BE12 1234 1234 1234</dd>
-                           <dd class="bal_amount">1234.34<span>EUR</span></dd>
+                           <dd class="bal_amount"><span>1234.34</span><span>EUR</span></dd>
                         </dl>
                      </dd>
                      <!-- List item for card -->
@@ -83,7 +83,7 @@
                            <dt class="account-owner">Lorum ipsum dolor sit</dt>
                            <dd>Current Account</dd>
                            <dd>BE12 1234 1234 1234</dd>
-                           <dd class="bal_amount">1234.34<span>EUR</span></dd>
+                           <dd class="bal_amount"><span>1234.34</span><span>EUR</span></dd>
                         </dl>
                      </dd>
                   </dl>
@@ -105,6 +105,7 @@
                <!-- Div for small screen scrolling -->
                <div class="subscrolling">
                   <!-- Div for small screen scrolling -->
+                  <div class="error_handling">Please while fetching the data*</div>
                   <!-- Action bar IA -->
                   <div class="action_bar-ia">
                      <ol class="action_bar-ia__inner clearfix">
@@ -372,19 +373,9 @@
                </div>
             </div>
             <div class="record-list__content upcomming_transfer__content" id="upcomming_transfer">
-               <div class="yash2">
+               <div class="upcomming_transfer__content__inner">
                   <ol class="record-list__item">
-                     <li class="transaction_in">
-                        <span class="top clearfix">
-                        <span class="date">25/01/2013</span>
-                        <span class="amount">- 125,35<span>eur</span></span>
-                        </span>
-                        <div class="info2">
-                           <h2 class="transaction_name">Europese overschrijving van</h2>
-                           <p>Lorum ipsum dolor sit amit quantum</p>
-                           <p class="value-date">Value date <span>12/06/13</span></p>
-                        </div>
-                     </li>
+                  	<!-- Transaction row -->
                      <li class="transaction_out">
                         <span class="top clearfix">
                         <span class="date">25/01/2013</span>
@@ -396,39 +387,7 @@
                            <p class="value-date">Value date <span>12/06/13</span></p>
                         </div>
                      </li>
-                     <li class="transaction_out">
-                        <span class="top clearfix">
-                        <span class="date">25/01/2013</span>
-                        <span class="amount">- 125,35<span>eur</span></span>
-                        </span>
-                        <div class="info2">
-                           <h2 class="transaction_name">Europese overschrijving van</h2>
-                           <p>Lorum ipsum dolor sit amit quantum</p>
-                           <p class="value-date">Value date <span>12/06/13</span></p>
-                        </div>
-                     </li>
-                     <li class="transaction_out">
-                        <span class="top clearfix">
-                        <span class="date">25/01/2013</span>
-                        <span class="amount">- 125,35<span>eur</span></span>
-                        </span>
-                        <div class="info2">
-                           <h2 class="transaction_name">Europese overschrijving van</h2>
-                           <p>Lorum ipsum dolor sit amit quantum</p>
-                           <p class="value-date">Value date <span>12/06/13</span></p>
-                        </div>
-                     </li>
-                     <li class="transaction_out">
-                        <span class="top clearfix">
-                        <span class="date">25/01/2013</span>
-                        <span class="amount">- 125,35<span>eur</span></span>
-                        </span>
-                        <div class="info2">
-                           <h2 class="transaction_name">Europese overschrijving van</h2>
-                           <p>Lorum ipsum dolor sit amit quantum</p>
-                           <p class="value-date">Value date <span>12/06/13</span></p>
-                        </div>
-                     </li>
+                     <!-- Transaction row -->
                      <li class="transaction_out">
                         <span class="top clearfix">
                         <span class="date">25/01/2013</span>

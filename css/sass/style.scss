@@ -1,0 +1,700 @@
+@import "partials/reset";
+@import "partials/fonts";
+@import "partials/plugins";
+@import "partials/mixins";
+@import "partials/config";
+
+
+/* fonts __________________________________________________*/
+.hello-l{ font-family: 'HelloType-l', sans-serif; }
+.hello-r{ font-family: 'HelloType-r', sans-serif; }
+.hello-b{ font-family: 'HelloType-b', sans-serif; }
+
+
+/* inputs __________________________________________________*/
+input[type=text], input[type=date], input[type=number]{ padding: 3px 2%; width: 95%; height: 30px; border: 1px solid #9d9d9d; color: #606060; @extend .hello-r; font-size: 13px; @include border-radius(5px); position: relative; 
+	&.search-icon{ background: #fff url(../images/icon-search.png) no-repeat right 9px; }
+	&.error{ border: 1px solid $red; display: block; }
+	&.valid{ border: 1px solid #89a829; background-color: #f9fbf4; }
+}
+
+input[type=text]{ outline: none;
+	&#account-date{ background: #fff url(../images/sprite-dates.png) no-repeat right 5px; }
+	&:focus{ border: 1px solid $blue; }
+}
+
+textarea{ padding: 8px 2%; width: 95%; height: 45px; border: 1px solid #9d9d9d; color: #606060; @extend .hello-r; font-size: 13px; @include border-radius(5px); position: relative; outline: none; resize: none;
+	&:focus{ border: 1px solid $blue; }
+	&.error{ border: 1px solid $red; display: block; }
+}
+input[type=submit]{ background: $d-blue; color: #fff; @extend .hello-l; text-transform: uppercase; font-size: 15px; line-height: 19px; border: none; padding: 8px 50px; cursor: pointer; @include border-radius(2px); -webkit-appearance: none; }
+
+.dropdown-selected, .dropdown-list{ padding: 2px 0; width: 99%; border: 1px solid #9d9d9d; color: #606060; float: right; position: relative; @extend .hello-r; -webkit-backface-visibility: hidden; @include border-radius(5px);
+	ul{ @extend ul.reset; 
+		li{ width: 96%; padding: 0 2%; float: left; margin: 0; cursor: pointer; }
+	}
+	.arrow{ display: block; width: 14px; height: 10px; overflow: hidden; text-indent: -9999px; position: absolute; right: 15px; top: 15px; background: url(../images/sprite.png) no-repeat -150px -88px; }
+	
+	&.myaccount-foldout{ display: none; background: #fff; padding: 0; position: absolute; right: 0; top: 39px; z-index: 20; border-top: 1px solid $l-main; @include border-radius(0 0 5px 5px);
+		
+		ul li{ border-top: 1px solid $l-main; padding: 5px 2%;
+			&:first-child{ border: none; }
+			&:hover{ background: $l-main; }
+		}
+		
+	}
+	
+}
+
+
+/* buttons __________________________________________________*/
+.btn{ display: inline-block; padding: 5px 15px; background: $d-blue; color: #fff; text-decoration: none; @extend .hello-r; font-size: 15px; line-height: 19px; text-transform: uppercase; @include border-radius(2px);
+	&.red{ background: $red; }
+	&.blue{ background: $d-blue; }
+	&.dark{ background: #333333; }
+	&.disabled{ background: #909090; }
+	&.close{ display: block; width: 38px; height: 38px; padding: 0; background: url(../images/sprite.png) no-repeat -270px -40px; text-indent: -9999px; }
+	&.back{ display: block; width: 20px; height: 30px; background: url(../images/sprite.png) no-repeat -240px -45px; padding: 0; text-indent: -9999px; }
+	&.info{ display: block; width: 38px; height: 38px; background: url(../images/sprite.png) no-repeat -420px -40px; padding: 0; text-indent: -9999px; }
+	&.submitStyle{ padding: 8px 50px; }
+}
+
+.logout{ position: relative; padding: 7px 35px 5px 0; text-transform: uppercase; color: #1081a5; text-decoration: none;
+	span{ display: block; width: 26px; height: 25px; background: url(../images/sprite.png) no-repeat -109px 1px; text-indent: -9999px; position: absolute; right: 0; top:0; }
+}
+
+.icon{ display: block; width: 26px; height: 25px; background: url(../images/sprite.png) no-repeat 3px 5px; text-indent: -9999px;
+	&.oct{ background-position: 3px 5px; }
+	&.lock{ background-position: -109px 1px; }
+	&.messages{ background-position: -149px 1px; }
+	&.info-icon{ background-position: -109px -79px; width: 16px; height: 16px; padding: 11px 0 11px 11px; }
+}
+
+.actions{ display: inline-block; padding: 6px 0 0 40px; position: relative; color: $main; text-decoration: none; text-transform: uppercase;
+	.action-icon{ display: block; width: 30px; height: 30px; background: url(../images/sprite.png) no-repeat -180px -80px; position: absolute; left: 0; top:-4px; }
+	.action-icon .count{ @extend .count; position: absolute; right: -3px; top: 3px; left: auto; }
+	&.tasks .action-icon{ background-position: -180px -80px; }
+	&.export .action-icon{ background-position: -40px -80px; }
+}
+
+.logo{ display: block; width: 54px; height: 60px; text-indent: -9999px; background: url(../images/sprite.png) no-repeat -39px 0; }
+
+.count{ display: inline-block; padding: 1px 4px; background: $red; width: auto; height: auto; color: #fff; font-size: 11px; line-height: 12px; @include border-radius(2px); }
+
+.arrow-link{ display: inline-block; padding: 0 20px 0 0; color: $blue; text-decoration: none; background: url(../images/sprite.png) no-repeat right 7px; @extend strong;
+	&:hover{ color: lighten($blue, 5); }
+}
+
+.btn-back{ color: #fff; text-decoration: none; text-transform:uppercase; position: relative; padding: 10px 0 10px 45px;
+	span{ display: block; width: 37px; height: 37px; background: url(../images/sprite.png) no-repeat -190px -40px; text-indent: -9999px; position: absolute; left: 0; top: 0; }
+}
+
+
+
+
+/* headings __________________________________________________*/
+h1{}
+h2{ @extend .hello-b; font-size: 20px; line-height: 28px; text-transform: uppercase; padding: 0; margin: 0 0 15px 0; font-weight: 300; }
+h3{ @extend .hello-b; font-size: 13px; line-height: 17px; text-transform: uppercase; padding: 0; margin: 0 0 7px 0; font-weight: 300; }
+
+
+
+
+
+/* main __________________________________________________*/
+body{ @extend .hello-r; font-size: 13px; line-height: 18px; background: $main; -webkit-user-select:text !important; -webkit-text-size-adjust: none; }
+strong{ @extend .hello-b; font-weight: normal; }
+ul.reset{ list-style: none; margin: 0; padding: 0; }
+
+#wrapper{ position: absolute; left: 0; top:0; width: 100%; height: 100%; overflow: hidden;
+	
+	#left-column{ width: $large-side; float: left; background: $main; position: relative;
+		
+		.inner{ padding: 68px 0 0 0; }
+		
+		.account-type{ position: relative;
+			
+			.top{ background: #262626; padding: 22px 20px 20px; position: relative; color: $l-main; border-bottom: 1px solid #000;
+				h2{ position: absolute; left: 20px; bottom: 20px; margin: 0; line-height: 24px; }
+				.info{ text-transform: uppercase; float: right; text-align: right; color: #c9c9c9;
+					strong{ font-size: 15px; line-height: 20px; @extend .hello-b; color: $l-main; }
+				}
+				
+			}
+			ul{ @extend ul.reset;
+				li{ text-transform: uppercase; border-bottom: 1px solid #000000; line-height: 18px; position: relative;
+					a{ display: block; padding: 20px; background: $main; text-decoration: none; color: #dddddd; 
+						&.active, &:hover{ background: #fff; color: $d-blue; @include box-shadow(0px 5px 10px 0px rgba(0,0,0,0.5));
+							strong{ color: $d-blue; }
+							.amount{ color: $d-blue; }
+						}
+					}
+					strong{ color: #fff; }
+					.amount{ display: inline-block; width: 100%; text-align: right; @extend .hello-b; color: $l-main; font-size: 15px; line-height: 19px; margin: 15px 0 0 0; }
+					
+					&:after{ content: ""; display: block; width: 100%; height: 1px; background: #606060; position: absolute; left: 0; bottom:0; }
+					
+				}
+			}
+
+			&:first-child{ border-top: 1px solid #000000;
+				&:after{ content: ""; display: block; width: 100%; height: 1px; background: #606060; position: absolute; left: 0; top:0; }
+			}
+			
+		}
+		
+	}
+	
+	#center-column{ width: $large-center; float: left; background: #fff; position: relative; z-index: 20; overflow: hidden; @include box-shadow(0px 0px 15px 0px rgba(0,0,0,0.35));
+		
+		&.loading{ background: #fff url(../images/loading.gif) no-repeat center 220px; }
+
+		.inner{}
+		.center-trigger{ position: absolute; left: 0; top: 0; z-index: -1; width: 100%; height: 100%; background: transparent; cursor: pointer; }
+		
+		#center-scroll-small, #center-scroll-medium, #center-scroll-large{ position: relative; -webkit-backface-visibility:hidden; }
+		
+		#navigation{ background: #fff; height: 60px; position: relative; z-index: 10; border-bottom: 1px solid $l-main;
+			
+			.inner{ padding: 20px 20px 15px; position: relative; }
+			
+			.icon.oct{ float: left; }
+			.logout{ float: right; }
+			.icon.messages{ float: right; margin: 0 0 0 20px; }
+			.logo{ position: absolute; left: 60px; top: 10px; -webkit-backface-visibility:hidden; }
+			
+		}
+		
+		#action-bar{ background: $l-main; height: 80px; position: relative; z-index: 9; border-bottom: 6px solid $blue; -webkit-backface-visibility:hidden;
+			
+			.inner{ padding: 25px 20px; 
+				&.normal{}
+				&.print-action{ display: none; 
+					.btn{ float: left; margin: 0 20px 0 0; padding: 8px 50px; }
+				}
+			}
+			.actions{ margin: 0 0 0 30px; float: left;
+				&:first-child{ margin: 0; }
+			}
+			.btn{ float: right; }
+
+			&.print{
+				.inner.normal{ display: none; }
+				.inner.print-action{ display: block; }
+			}
+			
+		}
+		
+		#account-bar{ background: #fff; border-bottom: 1px solid #ddd; position: relative; z-index: 10; cursor: pointer; @include box-shadow(0px 0px 10px 0px rgba(0,0,0,0.1));
+			
+			.inner{ padding: 14px 20px 20px; }
+			h2{ font-size: 17px; line-height: 25px; float: left; margin: 0; color: $main;
+				span{ color: $d-blue; }
+			}
+			.info{ float: right; text-align: right; text-transform: uppercase; color: #464646; line-height: 19px; margin: 6px 0 0 0; color:#262626;
+				span{ display: inline-block; }
+				.icon.info-icon{ width: 17px; height: 17px; padding: 0 0 0 11px; background-position: -109px -90px; }
+			}
+			
+			.account-info{ display: none; width: 100%; float: left; border-top: 1px solid $l-main; margin: 10px 0 0 0; padding: 10px 0 0 0; overflow: hidden;
+				
+				.field{ width: 100%; float: left; 
+					.label{ width: 18%; float: left; border-right: 1px solid $l-main; padding: 3px 0; font-size: 12px; }
+					.desc{ width: 70%; float: left; margin: 0 0 0 20px; padding: 3px 0; color: #606060; }
+				}
+				
+			}
+			
+			.account-credit-status{ display: block; width: 100%; float: left; padding: 10px 0 0; margin: 10px 0 0; border-top: 1px solid $l-main; 
+				
+				.info{ width: 100%; float: left; line-height: 17px; margin: 0 0 10px 0;
+					.left-info{ width: 50%; float: left; text-align: left; color: $d-blue; }
+					.right-info{ width: 50%; float: right; text-align: right; color: #00b1cb; }
+				}
+				.bar{ width: 100%; height: 42px; overflow: hidden; background: #cef6f9; float: left; position: relative;
+					.state{ height: 100%; background: #99ccdc; position: absolute; left: 0; top: 0; z-index: 1; }
+					.pattern{ width: 100%; height: 100%; position: absolute; right: 0; top: 0; z-index: 2; background: url(../images/bar_pattern.png); border-right: 3px solid #00b1cb; }
+					.start-border{ position: absolute; left: 0; top:0; width: 3px; height: 100%; background: $d-blue; z-index: 3; }
+				}
+				
+			}
+			
+		}
+		
+		#account-list{
+			
+			.list-group{ background: #fff; }
+			
+			h3{ background: $l-main; padding: 2px 20px; margin: 0; }
+			ul{ @extend ul.reset; padding: 0 20px; 
+				li{ width: 100%; float: left; padding: 30px 0 20px; border-top: 1px solid #ccc;
+					
+					a{ text-decoration: none; color: $main; display: block; }
+					.top{ display: block; width: 100%; float: left; background: url(../images/icon-in.png) no-repeat 50% 6px; margin: 0 0 5px 0;
+						.date{ line-height: 19px; float: left; }
+						.amount{ @extend .hello-b; color: $d-blue; font-size: 15px; line-height: 19px; text-transform: uppercase; float: right; }
+					}
+					
+					.info{ display: block; width: 100%; float: left; position: relative; color: #262626; line-height: 18px;
+						.info-icon{ position: absolute; right: 0; top:10px; cursor: pointer; }
+						strong{ @extend .hello-b; color: #262626; text-transform: uppercase; }
+						p.value-date{ text-transform: none; @extend .hello-l; color: #262626; margin: 10px 0 0 0; }
+					}
+					
+					.detail{ display: none; width: 100%; float: left; margin: 15px 0 0; overflow: hidden; font-family: monospace; font-size: 12px; background: $l-main; padding: 15px 0; @include border-radius(5px);
+						.detail-page{ display: block; width: 405px; margin: 0 auto; } // display: block; width: 480px; margin: 0 auto; overflow: hidden; }
+					}
+					
+					&.in .top{ background-image: url(../images/icon-in.png); }
+					&.out .top{ background-image: url(../images/icon-out.png); }
+					&:first-child{ border: none; }
+					
+				}
+			}
+			
+			
+		}
+		
+		
+	}
+	
+	#right-column{ width: $large-side; float: left; background: $main; position: relative;
+		
+		.inner{ padding: 68px 0 0 0; }
+		
+		.messages-type{ border-top: 1px solid #000000; position: relative;
+			
+			&:after{ content: ""; display: block; width: 100%; height: 1px; background: #606060; position: absolute; left: 0; top:0; }
+			&.messages{
+				
+				.top{ padding: 38px 20px 15px; background: #262626; color: $l-main; border-bottom: 1px solid #000; 
+					h2{ margin: 0; 
+						span{ display: inline-block; width: 24px; height: 24px; background: url(../images/sprite.png) no-repeat -230px 0; position: relative; top: 3px; margin: 0 0 0 10px; }
+					}
+				}
+			
+				ul{ @extend ul.reset;
+					li{ padding: 20px; border-top: 1px solid #000; line-height: 18px; position: relative;
+						a{ text-decoration: none; color: #dddddd; }
+						h3{ color: $l-main; }
+						&:after{ content: ""; display: block; width: 100%; height: 1px; background: #606060; position: absolute; left: 0; top:0; }
+						&:first-child{ border: none;
+							&:after{ display: none; }
+						}
+						&:hover{ background: #262626; }
+					}
+				}
+				
+			}
+			
+			&.questions, &.disclaimer{ padding: 20px; background: #262626; color: #fff; position: relative;
+				
+				&:after{ content: ""; display: block; width: 100%; height: 1px; background: #606060; position: absolute; left: 0; top:0; }
+				
+				ul{  @extend ul.reset;
+					li{ margin: 2px 0 0; width: 100%; float: left; font-size: 14px; line-height: 18px;
+						
+						.social-icon{ display: block; width: 24px; height: 24px; padding: 0; margin: 0; background: url(../images/sprite.png) no-repeat -110px -40px; text-indent: -9999px;
+							&.icon-fb{ background-position: -110px -40px; }
+							&.icon-tw{ background-position: -150px -40px; }
+						}
+												
+						&:first-child{ margin: 0; }
+						
+					}
+					
+				}
+				
+				ul.social{ margin: 20px 0 0 0;
+					li{ width: auto; margin: 0 20px 0 0;}
+				}
+				
+			}
+
+			&.disclaimer{ padding-top: 45px; background: none; 
+				.arrow-link{ color: #dddddd; @extend .hello-r; font-size: 13px; background-position: right -14px; }
+			}
+			
+		}
+		
+	}	
+	
+	#messages{ width: $large-side; background: $main; color: #c9c9c9; position: absolute; right: $large-side; z-index: 5; @include transition(left, $animation-speed);
+		
+		.inner{ padding: 110px 20px 20px; }
+		
+		.btn-back{ position: absolute; left: 20px; top: 30px;}
+		p{ margin: 15px 0 0 0; 
+			&:first-child{ margin: 0; }
+		}
+		
+		&.open{ right: 0; }
+		
+		
+	}
+}
+
+#overlayer{ display: block; background: rgba(51,51,51,1); position: fixed; left: 0; top:1500px; width: 100%; height: 100%; z-index: -1; opacity: 0; @include transition( (top, 250ms), (opacity, 400ms));
+	
+	&.visible{ position: absolute; left: 0; top: 0; z-index: 1; opacity: 1; }
+
+	.overlay-slide{ width: 768px; margin: 0 auto; background: #fff; position: relative; overflow-x: hidden; overflow-y: scroll;
+		
+		.inner{ padding: 0; position: relative; }
+		
+		.topbar{ width: 100%; float: left; position: relative; margin: 0 0 20px 0; background:$blue;
+			.inner{ padding: 20px 50px; }
+			h2{ margin: 0; @extend .hello-r; color: #fff; }
+			.btn.close, .btn.info{ position: absolute; right: 40px; top: 15px;}
+			.btn.back{ display: block; float: left; margin: 0 10px 0 0; }
+		}
+		
+		// login
+		#login .form-group .field .form-label { width: 20%; }
+		#login .form-group .field .form-input { width: 77%; 
+			&.left-space{ margin-left: 20%; }
+		}
+
+		.form-group{ width: 100%; float: left;
+			.field{ width: 100%; float: left; background: #fff; @include transition(background-color, $animation-speed);
+				&.to-field{
+					.btn.close{ display: none; position: absolute; right: 40px; top: 20px; z-index: 10; background-position: -370px -40px; }
+				}
+				&.save-settings{ text-transform: uppercase; }
+
+				.inner{ padding: 20px 90px 30px 50px; }
+				
+				.form-label{ width: 12%; float: left; @extend .hello-b; line-height: 32px; text-transform: uppercase; position: relative; }
+				.form-input{ width: 88%; float: left; position: relative;
+
+					&.left-space{ margin-left: 12%; }
+
+					input[type=text]{ float: right;
+						&#account-to:focus{ background-color: #cfe9ed; }
+					}
+					.form-sub-input{ width: 100%; float: left; margin: 20px 0 0 0;
+						label{ text-transform: uppercase; }
+						p.error-message{ display: none; width: 96%; color: #007fa8; padding: 0 2%; margin: 10px 0 0 0; float: left; }
+						&:first-child{ margin: 0; }
+					}
+					
+					// not in list + add extra info box
+					.form-addinfo{ display: none; width: 100%; float: left; margin: 20px 0 0; 
+						.benificiary-info{ float: right; margin: 5px 0 0 0; display: none;
+							&.more-info{ display: block; }
+						}
+						a{ color: $blue; @extend .hello-b; text-decoration: none;
+							&:hover{ text-decoration: underline; }
+						}
+						
+						// box behind add info button
+						.form-extrainfo{ display: none; width: 100%; float: left; margin: 20px 0 0 0;
+							
+							.field{ width: 100%; float: left; margin: 20px 0 0 0; background: none; 
+								&.w-1-3{ width: 31.6%; float: right; margin: 20px 2% 0 0; 
+									input[type=text]{ padding: 2px 5%; width: 89%; }
+								}
+								&.w-2-3{ width: 66%; float: right; }
+								&:first-child{ margin: 0; }
+							}
+							
+						}
+
+					}
+
+					&.my-account{ z-index: 20; }
+					
+					.myaccount-selected, .myaccount-foldout{ padding: 2px 0; width: 99%; border: 1px solid #9d9d9d; color: #606060; float: right; position: relative; @extend .hello-r; @include border-radius(5px);
+						ul{ @extend ul.reset; 
+							li{ width: 96%; padding: 0 2%; float: left; margin: 0; cursor: pointer;
+								.account-name{ display: block; width: 60%; height: 17px; float: left; text-transform: uppercase; @extend .hello-b; }
+								.account-iban{ display: block; width: 60%; height: 17px; float: left; color: #606060; }
+								.account-amount{ display: block; width: 35%; height: 17px; float: right; text-transform: uppercase; @extend .hello-b; margin: 9px 5% 0 0; text-align: right; }
+							}
+						}
+						.arrow{ display: block; width: 14px; height: 10px; overflow: hidden; text-indent: -9999px; position: absolute; right: 15px; top: 15px; background: url(../images/sprite.png) no-repeat -150px -88px; }
+						
+						&.myaccount-foldout{ display: none; background: #fff; padding: 0; position: absolute; right: 0; top: 39px; z-index: 20; border-top: 1px solid $l-main; @include border-radius(0 0 5px 5px);
+							
+							ul li{ border-top: 1px solid $l-main; padding: 5px 2%;
+								.account-amount{ width: 40%; margin-right: 0; }
+								&:first-child{ border: none; }
+								&:hover{ background: $l-main; }
+							}
+							
+						}
+						
+					}
+
+					#message-tabs{ width: 99%; float: right;
+
+						.tab-top{
+							a{ display: inline-block; background: #909090; color: #fff; text-decoration:none; padding: 10px; @include border-radius(5px 5px 0 0);
+								&.active{ background: $l-main; color: $main; }
+							}
+						}
+						.tab-bottom{ background: $l-main; @include border-radius(0 5px 5px 5px);
+							.inner{ padding: 10px; }
+							.wrap-structured{ display: none;
+								input[type=text]{ float: none; width: 23%; text-align: center; }
+							}
+							.wrap-free{ display: none; }
+						}
+
+						&.message-free{ 
+							.tab-bottom .wrap-free{ display: block; }
+							.tab-bottom .wrap-structured{ display: none; }
+						}
+						&.message-structured{
+							.tab-bottom .wrap-free{ display: none; }
+							.tab-bottom .wrap-structured{ display: block; }
+						}
+
+					}
+					
+					&.error .myaccount-selected{ border: 1px solid $red; } 
+					&.open .myaccount-selected{ @include border-radius(5px 5px 0 0); }
+
+				}
+				
+				.form-suggest{ display: none; width: 88%; margin: 0 0 0 12%; float: left; padding: 20px 0; overflow-x: hidden; overflow-y: scroll;
+					
+					.inner{ padding: 0; }
+					h3{ background: #dddddd; padding: 2px 10px; margin: 0; }
+					
+					ul{ @extend ul.reset; 
+						li{ text-transform: uppercase; border-top: 1px solid #dadada; position: relative;
+							a{ display: block; text-decoration: none; color: #606060; padding: 20px 10px; }
+							strong{ @extend .hello-b; color: $main; }
+							.highlight{ color: $blue; }
+							&:hover{ background: #fff; }
+							&:after{ content: ""; display: block; width: 100%; height: 1px; background: #fff; position: absolute; left: 0; top: 0; }
+							&:first-child{ border: none;
+								&:after{ display: none; }
+							}
+						}
+					}
+					
+				}
+
+				.login-info{ width: 100%; float: left; margin: 20px 0 0 0;
+
+					.inner{ padding: 0 50px;}
+					.info-label{ display: block; text-transform: uppercase; @extend .hello-b; }
+
+					&:first-child{ margin: 0; }
+				}
+				
+				&.focus{ background: $l-main;
+				
+					.form-suggest{ display: block; }
+					.form-label .btn.close{ display: block; }
+					
+				}
+
+			}
+
+			&.full{
+				.field .form-label { width: 100%; }
+				.field .form-input { width: 100%; }
+			}
+			
+		}
+		
+		.moreinfo{ display: none; }
+		.step{ display: block; width: 100%; float: left; padding: 0 0 20px 0;
+			
+			&.loading .top{ background-image: url(../images/loading.gif); }
+			&.signSettings, &.export-statements{
+				.topbar, .sign{ margin: 0; }
+			}
+
+			p{ margin: 15px 0 0 0 ;
+				&:first-child{ margin: 0; }
+			}
+
+			.top{ width: 100%; float: left; background: url(../images/sign-transfer.png) no-repeat center top; padding: 65px 0 0 0; text-align: center; line-height: 20px; margin: 0; border: none;
+				
+				.inner{ padding: 0 20px; max-width:500px; margin: 0 auto; }
+				strong{ text-transform: uppercase; 
+					&.l-blue{ color: #00b1ca; }
+					&.d-blue{ color: #007fa7; }
+					&.transfer-text{ text-transform: none; }
+				}
+			
+			}
+			
+			.sign, .login-account{ width: 100%; float: left; background: $l-main; margin: 20px 0 0 0; border-top: 1px solid #ddd; position: relative;
+				.inner{ padding: 10px 50px; }
+
+				ul{ @extend ul.reset;
+					li{ width: 100%; float: left; padding: 15px 0; position: relative; border-top: 1px solid #ddd;
+						.num{ @extend strong; font-size: 20px; line-height: 20px; width: 38px; float: left; margin: 8px 0 0 0; }
+						.desc{ width: 90%; float: left; line-height: 25px; color: $main; 
+							span.red{ @extend strong; color: $red; }
+							.line-break{ display: inline; }
+						}
+						.icon{ display: inline-block; width: 35px; height: 25px; background: url(../images/sprite.png) no-repeat -220px -85px; position: relative; top: 8px;
+							&.m1{ background-position: -220px -85px; }
+							&.ok{ background-position: -270px -86px; width: 26px; height: 26px; }
+						}
+						
+						input[type=text]{ margin: 10px 0; }
+						input[type=submit]{ width: auto; margin: 0 0 0 40px; }
+						
+						&:after{ content: ""; display: block; width: 100%; height: 1px; position: absolute; left: 0; top: 0; background: #fff; }
+						
+						&:first-child{ border: none;
+							&:after{ display: none; }
+						}
+						
+					}
+
+				}
+				
+				&:after{ content: ""; display: block; width: 100%; height: 1px; position: absolute; left: 0; top: 0; background: #fff; }
+				
+			}
+
+			.login-account{
+				p{ text-transform: uppercase; @extend strong; margin: 20px 0 15px; }
+				.input{ width: 10%; float: left; 
+					input[type=radio]{ margin: 8px 0 0 0; }
+				}
+				ul{
+					li{
+						.desc{ line-height: 19px; }
+						&:first-child{ border-top: 1px solid #ddd;
+							&:after{ display: block; }
+						}
+					}
+
+					&.error li .desc { color: $red; }
+				}
+			}
+
+			.upcomming-transfers{
+
+				// always copy this from (#wrapper #center-column #account-list ul) and change ul{ padding: 0 50px; } AND .top{ padding: 0; }
+				ul{ @extend ul.reset; padding: 0 50px; 
+					li{ width: 100%; float: left; padding: 30px 0 20px; border-top: 1px solid #ccc;
+						
+						a{ text-decoration: none; color: $main; display: block; }
+						.top{ display: block; width: 100%; float: left; background: url(../images/icon-in.png) no-repeat 50% 6px; padding: 0;
+							.date{ line-height: 19px; float: left; }
+							.amount{ @extend .hello-b; color: $blue; font-size: 15px; line-height: 19px; text-transform: uppercase; float: right; }
+						}
+						
+						.info{ display: block; width: 100%; float: left; text-transform: uppercase; color: #6a6a6a; position: relative;
+							.info-icon{ position: absolute; right: 0; top:10px; cursor: pointer; }
+							strong{ @extend .hello-r; color: $main; }
+							p{ margin: 10px 0 0 0;
+								&.value-date{ text-transform: none; @extend .hello-l; color: #9d9d9d; }
+								&:first-child{ margin: 0; }
+							}
+						}
+						
+						.detail{ display: none; width: 100%; float: left; margin: 15px 0 0; 
+							.detail-page{ display: block; } // display: block; width: 480px; margin: 0 auto; overflow: hidden; }
+						}
+						
+						&.in .top{ background-image: url(../images/icon-in.png); }
+						&.out .top{ background-image: url(../images/icon-out.png); }
+						&:first-child{ border: none; }
+						
+					}
+				}
+				// end copy
+
+			}
+
+
+			.download-wrapper{ width: 100%; float: left;
+
+				.inner{ display: block; padding: 0 50px; }
+				.btn.submitStyle{ display: block; padding-left: 0; padding-right: 0; text-align: center; }
+				.year-wrap{ width: 100%; float: left; margin: 0;
+
+					.triggerWrap{ margin: 15px 0; }
+
+					.months-overview{ overflow: hidden; }
+					.month-wrap{ width: 100%; float: left; border-bottom: 1px solid #fff;
+
+						.top-link{ background: #dddddd; text-transform: uppercase; width: 100%; float:left; @extend strong; color: $main; cursor: pointer;
+							.inner{ padding: 15px 50px; position: relative;
+								span{ position: absolute; right: 50px; top: 15px; @extend .hello-r; }
+							}
+
+							.hide{ display: none; }
+
+							&.open{
+								.show{ display: none; }
+								.hide{ display: block; }
+							}
+
+						}
+						.statements{ width: 100%; float: left; padding: 0; overflow: hidden;
+							select{ margin: 20px 0; width: 100%; border: 1px solid #ddd; }
+							ul.statement-list{ @extend ul.reset;
+								li{ padding: 18px 0 18px 50px; margin: 0; min-height: 40px; position: relative; border-top: 1px solid #dadada;
+									.pdf-icon{ display: block; width: 40px; height: 43px; background: url(../images/sprite.png) no-repeat -460px -35px; text-indent: -9999px; position: absolute; left: 0px; top: -2px; }
+									.label{ float: right; }
+									strong{}
+
+									&:after{ content: ""; display: block; width: 100%; height: 1px; position: absolute; left: 0; top: 0; background: #fff; }
+									&:first-child{ border: none;
+										&:after{ display: none; }
+									}
+
+									&:hover{ background: $l-main; }
+									&.downloaded{ background: $l-main;
+										.pdf-icon{ background-position: -460px -174px; }
+									}
+								}
+							}
+						}
+
+					}
+
+					&:first-child{ margin: 0; }
+
+				}
+
+			}
+
+
+		}
+
+	}
+	.export{
+
+		ul{ @extend ul.reset;
+			li{ padding: 0 0 0 40px; position: relative; margin: 30px 0 0 0;
+				a{ color: $main; text-decoration: none; }
+				strong{ text-transform: uppercase; }
+				.export-icon{ display: block; width: 26px; height: 22px; background: url(../images/sprite.png) no-repeat -312px -88px; position: absolute; left: 0; top: 4px; 
+					&.print{ background-position: -352px -88px; }
+				}
+
+				&:first-child{ margin: 0; }
+
+			}
+		}
+
+	}
+
+	
+}
+
+#loading{ display:block; position: absolute; left: 0; top: 0; z-index: 200; width: 100%; height: 100%; background: #fff url(../images/loading.gif) no-repeat center center; opacity: 1; }
+
+@media all and (max-width: 768px) { @import 'partials/768'; }
+@media all and (min-width: 769px) and (max-width: 1279px) { @import "partials/769x1279"; }
+@media all and (min-width: 1280px) { @import "partials/1280";  }
+
+
+
+// plugin overrides
+.mCSB_container { margin-right: 0 }
+.mCS-dark>.mCSB_scrollTools .mCSB_draggerRail{ background: none; }
+.mCSB_scrollTools{ z-index: 11; }

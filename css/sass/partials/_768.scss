@@ -1,0 +1,182 @@
+body{
+	
+	&.left-open{
+		#wrapper{
+			#center-column{ margin-left: $small-side; 
+				.center-trigger{ z-index: 9; }
+			}
+			#right-column{ right: -$small-side; }
+		}
+	}
+	
+	&.right-open{
+		#wrapper{
+			#left-column{ display: none; }
+			#center-column{ margin-left: -$small-side; 
+				.center-trigger{ z-index: 100; }
+			}
+		}
+	}
+	
+}
+
+input[type=submit]{ padding: 10px 20px; }
+.btn{ padding: 10px 20px; }
+.logout{ text-indent: -9999px; }
+
+#wrapper{
+	
+	#left-column{ width: $small-side; position: absolute; left: 0; top:0; }
+	
+	#center-column{ width: $small-center; @include transition(margin-left, $animation-speed); 
+		
+		#action-bar{ height: 79px;
+
+			.inner{ padding: 20px; 
+				&.print-action{
+					.btn{ width: 48%; margin: 0 0 0 2%; padding-left: 0; padding-right: 0; text-align: center;
+						&:first-child{ margin: 0; }
+					}
+				}
+			}
+			
+			.actions{ margin: 8px 0 0 15px; 
+				&:first-child{ margin-top: 8px; }
+			}
+
+		}
+
+		#account-bar{
+
+			.account-info .field{
+				.label{ width: 30%; }
+				.desc{ width: 60%; }
+			}
+		}
+
+		#account-list ul li .top{ background-position: 36% 6px; }
+		
+	}
+	
+	#right-column{ width: $small-side; position: absolute; right: 0; top:0; @include transition(right, $animation-speed); }
+	
+	#messages{ width: $small-side; position: absolute; right: $small-side; top:0;
+		
+		.left-open &{ right: -($small-side - (100% - $small-side) ); }
+		&.open{ right: 0; }
+		.btn-back{ text-indent: -9999px; }
+		
+	}
+	
+}
+
+#overlayer{
+
+	.overlay-slide{ width: 100%;
+		.topbar{
+			.btn.close, .btn.info{ right: 20px; }
+			.inner{ padding: 20px; }
+		}
+
+		// login
+		#login .form-group .field .form-label { width: 100%; }
+		#login .form-group .field .form-input { width: 100%;
+			&.left-space{ margin-left: 0; }
+		}
+
+		.form-group .field{
+			&.to-field{ margin: 5px 0 0 0;
+				.btn.close{ right: 25px; top: 5px; }
+				.inner{ padding: 0 20px 15px; }
+
+				.form-suggest{
+					.inner{ padding: 0 0 15px; }
+				}
+			}
+
+
+			img{ max-width: 100%; }
+
+			.inner{ padding: 0 20px; }
+			.form-label{ width: 100%; margin: 0; padding: 15px 0 5px; }
+			.form-input{ width: 100%; 
+				input[type=text]{ float: left; }
+				&.left-space{ margin-left: 0; }
+				.myaccount-selected, .myaccount-foldout{ float: left;
+					ul li{
+						.account-name, .account-iban{ width: 100%; }
+						.account-amount{ display: none; }
+					}
+
+					&.myaccount-foldout{ right: auto; left:0; }
+				}
+
+				#message-tabs{ float: left;
+					.tab-bottom .wrap-structured{
+						input[type=text] { float: left; width: 17%; }
+						.indication{ width: 12%; float: left; text-align: center; padding: 8px 0 0 0; overflow:hidden;
+							&.small{ width: 4%; }
+						}
+					}
+				}
+
+			}
+
+			.form-suggest{ width: 100%; margin: 0; }
+
+			.login-info{ width: 100%; float: left; margin: 20px 0 0 0;
+
+				.inner{ padding: 0 20px; }
+				.info-label{ display: block; }
+				
+			}
+			
+			input[type=submit]{ padding-left: 0; padding-right: 0; width: 100%; }
+
+		}
+		
+		.step{
+			&.sign, &.signSettings{
+				.sign .inner { padding: 10px 20px; }
+				ul li{
+					.desc{ width: 80%; 
+ 						.line-break { display: block; }
+					}
+					input[type=submit] { width: 100%; padding-left: 0; padding-right: 0; margin: 0; }
+				}
+			}
+
+			.login-account .inner { padding: 10px 20px; }
+
+			.upcomming-transfers ul{ padding: 0 20px; }
+
+			.download-wrapper .inner{ padding: 0 20px; }
+			.download-wrapper .year-wrap .month-wrap .statements ul.statement-list li{ padding-left: 20px; 
+				.inner{ padding-left: 50px; }
+			}
+
+			&.confirmEnd{
+				.btn.submitStyle { padding-left: 0; padding-right: 0; width: 100%; }
+			}
+
+		}
+
+		input[type=submit]{ width: 100%; margin: 0; padding:10px 0; text-align: center; }
+
+	}
+
+}
+
+@media all and (max-width: 550px) {
+	
+	#wrapper #center-column #action-bar .actions .text{ display: none; }
+	
+}
+
+@media all and (max-width: 479px) {
+	
+	#wrapper #center-column #account-list ul li .detail{ height: 166px; background: url(../images/transaction-detail-flip.jpg) no-repeat center top; text-indent: -9999px; 
+		.detail-page{ display: none; }
+	}
+
+}

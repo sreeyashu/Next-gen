@@ -47,22 +47,22 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /** Font imports ttf,eot,woff,svg **/
 @font-face {
 	font-family: 'HelloType-l';
-	src: url("../fonts/HelloType-l.eot");
-	src: url("../fonts/HelloType-l.eot?#iefix") format("eot"), url("../fonts/HelloType-l.woff") format("woff"), url("../fonts/HelloType-l.ttf") format("truetype"), url("../fonts/HelloType-l.svg#HelloType-l") format("svg");
+	src: url("../css/fonts/HelloType-l.eot");
+	src: url("../css/fonts/HelloType-l.eot?#iefix") format("eot"), url("../css/fonts/HelloType-l.woff") format("woff"), url("../css/fonts/HelloType-l.ttf") format("truetype"), url("../css/fonts/HelloType-l.svg#HelloType-l") format("svg");
 	font-style: normal;
 	font-weight: normal;
 }
 @font-face {
 	font-family: 'HelloType-b';
-	src: url("../fonts/HelloType-b.eot");
-	src: url("../fonts/HelloType-b.eot?#iefix") format("eot"), url("../fonts/HelloType-b.woff") format("woff"), url("../fonts/HelloType-b.ttf") format("truetype"), url("../fonts/HelloType-b.svg#HelloType-b") format("svg");
+	src: url("../css/fonts/HelloType-b.eot");
+	src: url("../css/fonts/HelloType-b.eot?#iefix") format("eot"), url("../css/fonts/HelloType-b.woff") format("woff"), url("../css/fonts/HelloType-b.ttf") format("truetype"), url("../css/fonts/HelloType-b.svg#HelloType-b") format("svg");
 	font-style: normal;
 	font-weight: normal;
 }
 @font-face {
 	font-family: 'HelloType-r';
-	src: url("../fonts/HelloType-r.eot");
-	src: url("../fonts/HelloType-r.eot?#iefix") format("eot"), url("../fonts/HelloType-r.woff") format("woff"), url("../fonts/HelloType-r.ttf") format("truetype"), url("../fonts/HelloType-r.svg#HelloType-r") format("svg");
+	src: url("../css/fonts/HelloType-r.eot");
+	src: url("../css/fonts/HelloType-r.eot?#iefix") format("eot"), url("../css/fonts/HelloType-r.woff") format("woff"), url("../css/fonts/HelloType-r.ttf") format("truetype"), url("../css/fonts/HelloType-r.svg#HelloType-r") format("svg");
 	font-style: normal;
 	font-weight: normal;
 }
@@ -135,7 +135,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	color: #ffffff/*rgb(255,255,255)*/;
 	font-family: 'HelloType-b', sans-serif;
 }
-.next_gen .menu-list__item dl dd {
+.next_gen .menu-list__item dl{
 	color: #dddddd/*rgb(221,221,221)*/;
 }
 .next_gen .menu-list__item .bal_amount {
@@ -143,9 +143,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	font-size: 15px;
 	font-family: 'HelloType-b', sans-serif;
 }
+.next_gen .menu-list__item dl.active , .next_gen .menu-list__item dl:hover{ background:#ffffff;color: #0080a8;-webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.5);-moz-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.5);box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.5); cursor:pointer;}
+.next_gen .menu-list__item .active dt, .next_gen .active .bal_amount, .next_gen .menu-list__item dl:hover dt, .next_gen dl:hover .bal_amount{color: #0080a8;}
+
 .next_gen .accounts-ia .menu-list__header:first-child:after{background: #606060;}
 .next_gen .menu-list__item:after {background: #606060;}
-.next_gen .branding_icons{display: block;width: 26px;height: 25px;background: url(../images/sprite.png) no-repeat 3px 5px;text-indent: -9999px;}
+.next_gen .branding_icons{display: block;width: 26px;height: 25px;background: url(../css/images/sprite.png) no-repeat 3px 5px;text-indent: -9999px;}
 
 /* Styles for Branding center column */
 .next_gen #center_column {
@@ -231,16 +234,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .navigation-ia{ width:100%;height: 60px;position: relative;z-index: 10;}
 .navigation-ia__inner{padding: 20px 20px 15px;position: relative;}
 .navigation-ia__icon.menu-oct {float: left;background-position: 3px 5px;}
-.navigation-ia__brand_logo {position: absolute;left: 60px;top: 10px;-webkit-backface-visibility: hidden;display: block;text-indent: -9999px;width: 54px;height: 60px;background: url(../images/sprite.png) no-repeat -39px 0;}
+.navigation-ia__brand_logo {position: absolute;left: 60px;top: 10px;-webkit-backface-visibility: hidden;display: block;text-indent: -9999px;width: 54px;height: 60px;background: url(../css/images/sprite.png) no-repeat -39px 0;}
 .navigation-ia__icon.messages {float: right;margin: 0 0 0 20px;background-position: -149px 1px;}
 .navigation-ia__logout {position: relative;padding: 7px 35px 5px 0;text-decoration: none;float: right;}
-.navigation-ia__logout span {display: block;text-indent: -9999px;position: absolute;right: 0;top: 0;width: 26px;height: 25px;background: url(../images/sprite.png) no-repeat -109px 1px;}
+.navigation-ia__logout span {display: block;text-indent: -9999px;position: absolute;right: 0;top: 0;width: 26px;height: 25px;background: url(../css/images/sprite.png) no-repeat -109px 1px;}
 
 /* Styles for Action bar IA */
 .action_bar-ia{width:100%;height: 80px;position: relative;z-index: 9;-webkit-backface-visibility: hidden;}
 .action_bar-ia__inner{padding: 25px 20px;}
 .action_bar-ia__actions {display: inline-block;padding: 6px 0 0 40px;position: relative;color: #333;text-decoration: none; float:left;margin: 0 0 0 30px;}
-.action_bar-ia__actions .action-icon {display: block;width: 30px;height: 30px;position: absolute;left: 0;top: -4px;background: url(../images/sprite.png) no-repeat -180px -80px;}
+.action_bar-ia__actions .action-icon {display: block;width: 30px;height: 30px;position: absolute;left: 0;top: -4px;background: url(../css/images/sprite.png) no-repeat -180px -80px;}
 .export{ cursor:not-allowed !important;}
 .export .action-icon {background-position: -40px -80px;}
 .tasks{ margin:0;}
@@ -259,7 +262,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 #right_column{ position:absolute; left:79%;width:21%; top:0;height:100%;}
 .messages-ia{padding-top: 60px;}
 .messages-ia .menu-list__header {padding: 60px 20px 20px;position: relative;}
-.messages-ia .menu-list__header span {display: inline-block;width: 24px;height: 24px;background: url(../images/sprite.png) no-repeat -230px 0;position: relative;top: 3px;margin: 0 0 0 10px;}
+.messages-ia .menu-list__header span {display: inline-block;width: 24px;height: 24px;background: url(../css/images/sprite.png) no-repeat -230px 0;position: relative;top: 3px;margin: 0 0 0 10px;}
 .messages-ia .menu-list__item{ text-transform:none;}
 
 
@@ -288,8 +291,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .record-list__item li:first-child{ border:none;}
 .detail-page{ display:none;}
 .top{display: block;width: 100%;margin: 0 0 5px 0;}
-.transaction_in .top {background: url(../images/icon-in.png) no-repeat 50% 6px;}
-.transaction_out .top{background: url(../images/icon-out.png) no-repeat 50% 6px;}
+.transaction_in .top {background: url(../css/images/icon-in.png) no-repeat 50% 6px;}
+.transaction_out .top{background: url(../css/images/icon-out.png) no-repeat 50% 6px;}
 
 
 .top .date {line-height: 19px;float: left;}
@@ -309,10 +312,11 @@ p.value-date {text-transform: none;color: #262626;margin: 10px 0 0 0;}
 .upcomming_transfer__header{ width:100%;position: relative;margin: 0;background: #00b0ca;}
 .upcomming_transfer__header__inner{padding: 20px 50px; }
 .upcomming_transfer__header__inner h2{font-size:20px; color:#ffffff;font-family: 'HelloType-r', sans-serif;}
-.close_btn{display: block;width: 38px;height: 38px;padding: 0;background: url(../images/sprite.png) no-repeat -270px -40px;text-indent: -9999px;position: absolute;right: 40px;top: 10px;}
+.close_btn{display: block;width: 38px;height: 38px;padding: 0;background: url(../css/images/sprite.png) no-repeat -270px -40px;text-indent: -9999px;position: absolute;right: 40px;top: 10px;}
 .upcomming_transfer__content{height:93%;}
 .upcomming_transfer__content .record-list__item{ padding: 0 50px;}
 
+.error_handling{ text-align:center; width:98%; font-size:12px;color:red; padding:1%; display:none;}
 @media all and (max-width: 768px) {
 .next_gen #left_column {width: 85%;-webkit-transition: left,325ms;-moz-transition: left,325ms;-o-transition: left,325ms;transition: left,325ms;}
 .next_gen #center_column {width: 100%;-webkit-transition: margin-left,325ms;-moz-transition: margin-left,325ms;-o-transition: margin-left,325ms;transition: margin-left,325ms;left:0;-webkit-transition: left,325ms;-moz-transition: left,325ms;-o-transition: left,325ms;transition: left,325ms;right:0;}
