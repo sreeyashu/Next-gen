@@ -1,0 +1,39 @@
+@mixin hello-r{
+	font-family: 'HelloType-r', sans-serif;
+}
+@mixin hello-l{
+	font-family: 'HelloType-l', sans-serif;
+}
+@mixin hello-b{
+	font-family: 'HelloType-b', sans-serif;
+}
+@mixin inner_padding($top:22px, $right-left:20px, $bottom:20px){
+	padding: $top $right-left $bottom;
+}
+
+@mixin box-shadow($hoff:0px, $voff:5px, $blur:10px, $spread:0px ,$color:rgba(0, 0, 0, 0.5), $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:$hoff $voff $blur $spread $color inset;
+    -moz-box-shadow:$hoff $voff $blur $spread $color inset;
+    box-shadow:$hoff $voff $blur $spread $color inset;
+  } @else {
+    -webkit-box-shadow: $hoff $voff $blur $spread $color;
+    -moz-box-shadow: $hoff $voff $blur $spread $color;
+    box-shadow: $hoff $voff $blur $spread $color;
+  }
+}
+
+@mixin border-radius($dist) {
+  	-webkit-border-radius: $dist;
+	-moz-border-radius: $dist;
+	-ms-border-radius: $dist;
+	-o-border-radius: $dist;
+  	border-radius: $dist;
+}
+@mixin transition($dist, $animation-speed) {
+	-webkit-transition: $dist, $animation-speed;
+	-moz-transition: $dist, $animation-speed;
+	-o-transition: $dist, $animation-speed;
+	transition: $dist, $animation-speed;
+}
+

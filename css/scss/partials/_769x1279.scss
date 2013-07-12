@@ -1,0 +1,37 @@
+.next_gen {
+  #left_column {
+    width: $medium-side;
+  }
+  #center_column {
+    width: $medium-center;
+	@include transition(margin-left, 325ms);
+    position: absolute;
+    right: 0;
+  }
+  #right_column {
+    width: $medium-side;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.navigation-ia__icon.menu-oct {
+  display: none;
+}
+
+.navigation-ia__brand_logo {
+  left: 20px;
+}
+
+.right_open {
+  .menu-oct {
+    display: block !important;
+  }
+  .navigation-ia__brand_logo {
+    left: 60px;
+  }
+  #center_column {
+    right: 35%;
+  }
+}

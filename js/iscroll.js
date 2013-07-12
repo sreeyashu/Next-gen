@@ -242,7 +242,7 @@ iScroll.prototype = {
 			bar = doc.createElement('div');
 
 			if (that.options.scrollbarClass) bar.className = that.options.scrollbarClass + dir.toUpperCase();
-			else bar.style.cssText = 'position:absolute;z-index:100;' + (dir == 'h' ? 'height:7px;bottom:1px;left:2px;right:' + (that.vScrollbar ? '7' : '2') + 'px' : 'width:4px;bottom:' + (that.hScrollbar ? '7' : '2') + 'px;top:2px;right:4px');
+			else bar.style.cssText = 'position:absolute;z-index:100;' + (dir == 'h' ? 'height:7px;bottom:1px;left:2px;right:' + (that.vScrollbar ? '7' : '2') + 'px' : 'width:4px;bottom:' + (that.hScrollbar ? '7' : '2') + 'px;top:2px;right:2px');
 
 			bar.style.cssText += ';pointer-events:none;' + cssVendor + 'transition-property:opacity;' + cssVendor + 'transition-duration:' + (that.options.fadeScrollbar ? '350ms' : '0') + ';overflow:hidden;opacity:' + (that.options.hideScrollbar ? '0' : '1');
 
@@ -992,7 +992,15 @@ iScroll.prototype = {
 
 		that._startAni();
 	},
-
+	getScrollY: function () {
+	 var that = this;
+	 return that.y;
+	 },  
+	 
+	 getScrollX: function () {
+	 var that = this;
+	 return that.x;
+	 },  
 	scrollToElement: function (el, time) {
 		var that = this, pos;
 		el = el.nodeType ? el : that.scroller.querySelector(el);
@@ -1102,3 +1110,10 @@ if (typeof exports !== 'undefined') exports.iScroll = iScroll;
 else window.iScroll = iScroll;
 
 })(window, document);
+
+
+/*
+ * fastClick
+ *
+ */
+(function(){function b(f,e,g,c){if(f.addEventListener){f.addEventListener(e,g,c);return{destroy:function(){f.removeEventListener(e,g,c)}}}else{var d=function(h){g.handleEvent(window.event,g)};f.attachEvent("on"+e,d);return{destroy:function(){f.detachEvent("on"+e,d)}}}}var a="ontouchstart" in window;this.FastButton=function(d,e,c){this.events=[];this.touchEvents=[];this.element=d;this.handler=e;this.useCapture=c;if(a){this.events.push(b(d,"touchstart",this,this.useCapture))}this.events.push(b(d,"click",this,this.useCapture))};this.FastButton.prototype.destroy=function(){for(i=this.events.length-1;i>=0;i-=1){this.events[i].destroy()}this.events=this.touchEvents=this.element=this.handler=this.fastButton=null};this.FastButton.prototype.handleEvent=function(c){switch(c.type){case"touchstart":this.onTouchStart(c);break;case"touchmove":this.onTouchMove(c);break;case"touchend":this.onClick(c);break;case"click":this.onClick(c);break}};this.FastButton.prototype.onTouchStart=function(c){c.stopPropagation?c.stopPropagation():(c.cancelBubble=true);this.touchEvents.push(b(this.element,"touchend",this,this.useCapture));this.touchEvents.push(b(document.body,"touchmove",this,this.useCapture));this.startX=c.touches[0].clientX;this.startY=c.touches[0].clientY};this.FastButton.prototype.onTouchMove=function(c){if(Math.abs(c.touches[0].clientX-this.startX)>10||Math.abs(c.touches[0].clientY-this.startY)>10){this.reset()}};this.FastButton.prototype.onClick=function(d){d.stopPropagation?d.stopPropagation():(d.cancelBubble=true);this.reset();var c=this.handler.call(this.element,d);if(d.type=="touchend"){clickbuster.preventGhostClick(this.startX,this.startY)}return c};this.FastButton.prototype.reset=function(){for(i=this.touchEvents.length-1;i>=0;i-=1){this.touchEvents[i].destroy()}this.touchEvents=[]};this.clickbuster=function(){};this.clickbuster.preventGhostClick=function(c,d){clickbuster.coordinates.push(c,d);window.setTimeout(clickbuster.pop,2500)};this.clickbuster.pop=function(){clickbuster.coordinates.splice(0,2)};this.clickbuster.onClick=function(e){for(var d=0;d<clickbuster.coordinates.length;d+=2){var c=clickbuster.coordinates[d];var f=clickbuster.coordinates[d+1];if(Math.abs(e.clientX-c)<25&&Math.abs(e.clientY-f)<25){e.stopPropagation?e.stopPropagation():(e.cancelBubble=true);e.preventDefault?e.preventDefault():(e.returnValue=false)}}};if(a){document.addEventListener("click",clickbuster.onClick,true);clickbuster.coordinates=[]}})(this);$.event.special.fastClick={setup:function(){$(this).data("fastClick",new FastButton(this,$.event.special.fastClick.handler))},teardown:function(){$(this).data("fastClick").destroy();$(this).removeData("fastClick")},handler:function(a){a=$.event.fix(a);a.type="fastClick";$.event.dispatch.apply(this,arguments)}};$.fn.fastClick=function(a){return $(this).each(function(){return a?$(this).bind("fastClick",a):$(this).trigger("fastClick")})};

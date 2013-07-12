@@ -1,0 +1,305 @@
+﻿@import "partials/reset";
+@import "partials/mixins";
+@import "partials/fonts";
+@import "config";
+
+html, body, .wcm {
+	width: $default-width;
+	height: $default-height;
+	overflow: hidden;
+}
+*{-webkit-tap-highlight-color:rgba(0,0,0,0);}
+.next_gen {
+	width: $default-width;
+	height: $default-height;
+	background: $main_bg;
+	font-size: $basefontsize;
+	line-height: $base-line_height;
+	-webkit-user-select: text !important;
+	-webkit-text-size-adjust: none;
+	@include hello-r;
+.wrapper {
+	width: $default-width;
+	height: $default-height;
+	overflow:hidden;
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+h2, h3 {
+	@include hello-b;
+	text-transform: $texttransform;
+	padding:0;
+	font-weight:$fontweight;
+}
+}
+
+
+/* Common Global Styles */
+.white_background{
+	background:$white_bg;
+}
+.blue_header{
+	background: $blue_header;
+}
+.inner_padding{
+	@include inner_padding();
+}
+.amount_info {
+	text-transform: $texttransform;
+	float: right;
+	text-align: right;
+	color: #c9c9c9;
+}
+
+.top {
+	display: block;
+	width: $default-width;
+	margin: 0 0 5px 0;
+}
+.bal_amount {
+	display: inline-block;
+	width: $default-width;
+	text-align: right;
+	line-height: $base-line_height + 1;
+	margin: 15px 0 0 0;
+}
+.branding_btn {
+	cursor: pointer;
+	color: $whitefontcolor;
+	@include hello-r;
+	font-size: $basefontsize + 3;
+	line-height: $base-line_height + 1;
+	text-decoration: none;
+	display: inline-block;
+	text-transform: $texttransform;
+	@include border-radius(2px);
+}
+
+/* Branding Styles for Accounts & Cards */
+.next_gen{
+#left_column {
+	width: $large-side;
+	height: $default-height;
+	overflow: hidden;
+	float:left;
+	position:relative;
+	color:  $whitefontcolor;
+	}
+}
+
+/* Accounts Specfic Styles */
+.next_gen {
+.accounts-ia {
+	width: $default-width;
+}
+.accounts-ia {
+	.menu-list {
+		border-top: 1px solid $borderblack;
+	}
+	.menu-list__header:first-child:after {
+		background: #606060;
+	}
+}
+}
+
+/* common for Accounts & Cards Skeleton */
+.next_gen {
+  .menu-list__header {
+    background: $menu-list-header;
+    color: $grayfontcolor;
+    border-bottom: 1px solid $borderblack;
+    strong {
+      line-height: $base-line_height + 6;
+      font-size: $basefontsize + 7;
+      float: left;
+      @include hello-b;
+      text-transform: $texttransform;
+      font-weight: $fontweight;
+    }
+  }
+  .total-bal p {
+    @include hello-b;
+    color: $whitefontcolor;
+    font-size: $basefontsize + 2;
+  }
+  .menu-list__item {
+    text-transform:  $texttransform;
+    border-bottom: 1px solid $borderblack;
+    dl {
+      color: #dddddd;
+      dt {
+        color: $whitefontcolor;
+         @include hello-b;
+      }
+    }
+    .bal_amount {
+      color: $grayfontcolor;
+      font-size: $basefontsize + 2;
+      @include hello-b;
+    }
+    dl {
+      &.active, &:hover {
+        background: $white_bg;
+        color: $bluefontcolor;
+		@include box-shadow();
+        cursor: pointer;
+      }
+    }
+    .active dt {
+      color: $bluefontcolor;
+    }
+  }
+  .active .bal_amount, .menu-list__item dl:hover dt, dd dl:hover .bal_amount {
+    color: $bluefontcolor;
+  }
+  .menu-list__item:after {
+    background: #606060;
+  }
+}
+
+/*  Branding Styles for center column */
+.next_gen {
+#center_column {
+	width: $large-center;
+	height: $default-height;
+	position: relative;
+	float:left;
+	z-index: 999;
+	overflow: hidden;
+	@include box-shadow($voff:0px, $blur:15px, $spread:0px ,$color:rgba(0,0,0,0.35));
+	}
+}
+/* Branding Styles for navigation IA */
+
+.next_gen {
+  .navigation-ia {
+    background: $white_bg;
+    border-bottom: 1px solid $bordergray;
+  }
+  .navigation-ia__logout {
+    text-transform: $texttransform;
+    color: $bluefontcolor;
+    @include hello-l;
+    visibility: hidden;
+  }
+}
+/* Branding Styles for action-bar IA */
+
+.next_gen {
+  .action_bar-ia {
+    background: $l-main;
+    border-bottom: 6px solid $action-bar-border;
+  }
+  .action_bar-ia__actions {
+    @include hello-r;
+    text-transform: $texttransform;
+    cursor: pointer;
+  }
+  .transfer_count {
+    background: $red;
+    color: $whitefontcolor;
+    font-size: $basefontsize -2;
+  }
+  .transfer_btn {
+    background: $red;
+  }
+}
+
+/* Branding styles for Movements IA */
+
+.next_gen {
+  .record-list__header {
+    background: $white_bg;
+    border-bottom: 1px solid #dddddd;
+	@include box-shadow($voff:0px,$color:rgba(0, 0, 0, 0.1));
+    h2 {
+      font-size: $basefontsize + 4;
+      line-height: $base-line_height + 7;
+      color: $basefontcolor;
+    }
+  }
+  .movements_balance {
+    font-size: $basefontsize + 4;
+    line-height:  $base-line_height + 7;
+    color: $bluefontcolor;
+    @include hello-b;
+  }
+  .movements_info {
+    text-transform: $texttransform;
+    color: #464646;
+  }
+  .label {
+    border-right: 1px solid $bordergray;
+  }
+  .desc {
+    color: #606060;
+  }
+  .record-list__group_header {
+    background: $l-main;
+    font-weight: bold;
+    @include hello-b;
+    text-transform: $texttransform;
+  }
+  .record-list__item li {
+    border-top: 1px solid #cccccc;
+    &:first-child {
+      border: none;
+    }
+  }
+  .top .amount {
+    color: $bluefontcolor;
+    font-size: $basefontsize + 2;
+    line-height: $base-line_height + 1;
+    text-transform: $texttransform;
+    @include hello-b;
+  }
+  .transaction_name {
+    font-size: $basefontsize;
+    text-transform: $texttransform;
+  }
+  p.value-date {
+    text-transform: none;
+    color: $menu-list-header;
+  }
+  .detail-page {
+    @include hello-r;
+    font-size: $basefontsize - 1;
+    background: $l-main;
+   @include border-radius(5px);
+  }
+}
+
+/* Branding styles for Action bar upcoming IA */
+
+.next_gen {
+  .upcomming_transfer_overlayer {
+    background: $main_bg;
+  }
+  .upcomming_transfer__header__inner h2 {
+    font-size: $basefontsize + 7;
+    color: $whitefontcolor;
+    @include hello-r;
+  }
+}
+
+@media all and (max-width: 768px) {@import "partials/768";}
+
+@media all and (max-width: 768px) and (max-width: 550px) {.action-bar_text {display: none;}}
+@media all and (max-width: 768px) and (max-width: 479px) {
+	.detail-page{
+		height: 166px;
+		background: url(images/transaction-detail-flip.jpg) no-repeat center top;
+		text-indent: -9999px;
+	}
+}
+@media (max-width: 1279px) and (max-width: 860px) and (min-width: 769px) {.action-bar_text {display: none;}}
+
+@media all and (min-width: 769px) and (max-width: 1279px) {@import "partials/769x1279";}
+
+@media all and (min-width: 769px) and (max-width: 1279px) and (max-width: 860px) {.text {display: none;}}
+
+@media all and (min-width: 1280px) {@import "partials/1280";}
+
+

@@ -1,0 +1,47 @@
+// Background colors ====================================================
+$main_bg: #333333;
+$white_bg: #ffffff;
+$blue_header:#00b0ca;
+$blue: #00b0ca;
+$d-blue: #0080a8;
+$red: #ff4b52;
+$l-main: #f3f3f3;
+
+
+// default width ====================================================
+$default-width:100%;
+$default-height:100%;
+
+// widths for medias & others ==================================
+$small-side: 85%;
+$small-center: $default-width;
+
+$medium-side: $default-width - 65%;
+$medium-center: $default-width - ($medium-side);
+
+$large-side: $default-width - 79%;
+$large-center: $default-width - ($large-side * 2);
+
+// animation speed ================================
+$animation-speed: 125ms;
+
+
+// font sizes, colors, weight, line-height ===================
+$basefontsize: 13px;
+$base-line_height: 18px;
+$basefontcolor: #333333;
+$bluefontcolor: #0080a8;
+$whitefontcolor: #ffffff;
+$grayfontcolor: #f3f3f3;
+$fontweight: 300;
+$texttransform:uppercase;
+
+// border colors =====================
+$borderblue: #ffffff;
+$borderblack: #000000;
+$bordergray: #f3f3f3;
+$action-bar-border:#00b0ca;
+
+// menu-list header colors =====================
+$menu-list-header: #262626;
+

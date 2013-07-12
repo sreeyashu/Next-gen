@@ -1,0 +1,27 @@
+/* Messages IA Static */
+#right_column {
+	position:relative;
+	width: 21%;
+	top: 0;
+	height: 100%;
+	float:left;
+}
+.messages-ia {
+	padding-top: 60px;
+}
+.messages-ia .menu-list__header {
+	padding: 60px 20px 20px;
+	position: relative;
+}
+.messages-ia .menu-list__header span {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	background: url(../images/sprite.png) no-repeat -230px 0;
+	position: relative;
+	top: 3px;
+	margin: 0 0 0 10px;
+}
+.messages-ia .menu-list__item {
+	text-transform: none;
+}

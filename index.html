@@ -3,407 +3,422 @@
    <head>
       <meta charset="utf-8">
       <meta name="description" content="">
-      <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="format-detection" content="telephone=no">
       <meta name="apple-mobile-web-app-capable" content="yes">
       <meta name="apple-mobile-web-app-status-bar-style" content="black">
-      <link rel="stylesheet" href="css/style.css">
-      <title>::.Next Gen - transactional.::</title>
+      <title>::Next Gen - transactional::</title>
+      <link rel="stylesheet" href="css/IA/menu-list.css">
+      <link rel="stylesheet" href="css/IA/record-list.css">
+      <link rel="stylesheet" href="css/IA/navigation-ia.css">
+      <link rel="stylesheet" href="css/IA/actionbar-ia.css">
+      <link rel="stylesheet" href="css/IA/right_column.css">
+      <link rel="stylesheet" href="css/brand.css">
       <script src="js/modernizr.custom.js"></script>
-      <script type="application/javascript" src="js/jquery-1.10.1.js"></script>
+      <script type="application/javascript" src="js/jquery-1.9.1.js"></script>
       <script type="text/javascript" src="js/iscroll.js"></script>
       <script type="text/javascript" src="js/custom.js"></script>
+     <!-- <script type="text/javascript" src="js/news.js"></script>-->
    </head>
-   <body class="next_gen">
-      <div class="wrapper">
-         <!-- Left Accounts & Cards -->
-         <div id="left_column" >
-            <div class="scroll-div" id="scroller" >
-               <!-- Accounts IA -->
-               <div class="accounts-ia">
-                  <dl class="menu-list">
-                     <dt class="menu-list__header">
-                        <div class="top clearfix">
-                           <strong>Cash</strong>
-                           <div class="info">
-                              <p>total balance</p>
-                              <div class="total-bal">
-                                 <p>99.999.999,99<span>EUR</span></p>
-                                 <p>99.999.999,99<span>USD</span></p>
-                              </div>
-                           </div>
-                        </div>
-                     </dt>
-                     <!-- List item for account -->
-                     <dd class="menu-list__item account">
-                        <dl class="active">
-                           <dt class="account__owner">Lorum ipsum dolor sit</dt>
-                           <dd class="account__type">Current Account</dd>
-                           <dd class="account__iban">BE68 0033 6588 8001</dd>
-                           <dd class="bal_amount"><span>1234.34</span><span>EUR</span></dd>
-                        </dl>
-                     </dd>
-                     <!-- List item for account -->
-                     <dd class="menu-list__item">
-                        <dl>
-                           <dt class="account-owner">Lorum ipsum dolor sit</dt>
-                           <dd>Current Account</dd>
-                           <dd>BE68 0033 6588 8001</dd>
-                           <dd class="bal_amount"><span>1234.34</span><span>EUR</span></dd>
-                        </dl>
-                     </dd>
-                  </dl>
-               </div>
-               <!-- Cards IA -->
-               <div class="cards-ia">
-                  <dl class="menu-list">
-                     <dt class="menu-list__header">
-                        <div class="top clearfix">
-                           <strong>Credit</strong>
-                           <div class="info">
-                              <p>total balance</p>
-                              <div class="total-bal">
-                                 <p>250,54<span>EUR</span></p>
-                              </div>
-                           </div>
-                        </div>
-                     </dt>
-                     <!-- List item for card -->
-                     <dd class="menu-list__item account">
-                        <dl>
-                           <dt class="account__owner">Lorum ipsum dolor sit</dt>
-                           <dd class="account__type">Current Account</dd>
-                           <dd class="account__iban">BE12 1234 1234 1234</dd>
-                           <dd class="bal_amount"><span>1234.34</span><span>EUR</span></dd>
-                        </dl>
-                     </dd>
-                     <!-- List item for card -->
-                     <dd class="menu-list__item">
-                        <dl>
-                           <dt class="account-owner">Lorum ipsum dolor sit</dt>
-                           <dd>Current Account</dd>
-                           <dd>BE12 1234 1234 1234</dd>
-                           <dd class="bal_amount"><span>1234.34</span><span>EUR</span></dd>
-                        </dl>
-                     </dd>
-                  </dl>
-               </div>
-            </div>
-         </div>
-         <!-- Center column Header, Upcoming & Movements -->
-         <div id="center_column">
-            <!-- Header Navigation IA -->
-            <div class="navigation-ia">
-               <ol class="navigation-ia__inner">
-                  <li class="navigation-ia__icon  branding_icons menu-oct show-left"></li>
-                  <li class="navigation-ia__brand_logo">Zena</li>
-                  <li class="navigation-ia__icon branding_icons messages show-right"></li>
-                  <li class="navigation-ia__logout">logout <span></span></li>
-               </ol>
-            </div>
-            <div class="scrolling_smallscreen" id="small-scroller">
-               <!-- Div for small screen scrolling -->
-               <div class="subscrolling">
-                  <!-- Div for small screen scrolling -->
-                  <div class="error_handling">Please while fetching the data*</div>
-                  <!-- Action bar IA -->
-                  <div class="action_bar-ia">
-                     <ol class="action_bar-ia__inner clearfix">
-                        <li class="action_bar-ia__actions tasks">
-                           <span class="action-icon">
-                           <span class="transfer_count">5</span>
-                           </span>
-                           <span class="text">upcoming transfers</span>
-                        </li>
-                        <li class="action_bar-ia__actions export">
-                           <span class="action-icon"></span>
-                           <span class="text">export</span>
-                        </li>
-                        <li class="transfer_btn branding_btn">transfer money</li>
-                     </ol>
-                  </div>
-                  <!-- Movements IA -->
-                  <div class="movements-ia" id="movements-ia">
-                     <div class="record-list">
-                        <div class="record-list__header">
-                           <h2>Lorum ipsum dolor sit</h2>
-                           <span class="movements_balance">1234.54<span>EUR</span></span>
-                           <div class="info">
-                              <span class="branding_icons info-icon"></span>
-                              <h3>Total Saldo</h3>
-                           </div>
-                           <ol class="account_info-details">
-                              <li>
-                                 <span class="label">IBAN</span>
-                                 <span class="desc">BE34 0910 0027 7790</span>
-                              </li>
-                              <li>
-                                 <span class="label">Currency</span>
-                                 <span class="desc">EUR</span>
-                              </li>
-                              <li>
-                                 <span class="label">Type</span>
-                                 <span class="desc">XXXXXXXXXXXXXXXXXXXXX</span>
-                              </li>
-                              <li>
-                                 <span class="label">Alias</span>
-                                 <span class="desc">Lorum ipsum dolor sit</span>
-                              </li>
-                              <li>
-                                 <span class="label">Relation</span>
-                                 <span class="desc">Limited Professional</span>
-                              </li>
-                              <li>
-                                 <span class="label">Contractnr</span>
-                                 <span class="desc">999-9999999-99</span>
-                              </li>
-                           </ol>
-                        </div>
-                        <div class="record-list__content" id="record-list__content">
-                           <div class="yash2">
-                              <h3 class="record-list__group_header">This week</h3>
-                              <ol class="record-list__item">
-                                 <li class="transaction_in">
-                                    <span class="top clearfix">
-                                    <span class="date">25/01/2013</span>
-                                    <span class="amount">- 125,35<span>eur</span></span>
-                                    </span>
-                                    <div class="info2">
-                                       <span class="branding_icons info-icon yash"></span>
-                                       <h2 class="transaction_name">Europese overschrijving van</h2>
-                                       <p>Lorum ipsum dolor sit amit quantum</p>
-                                       <p class="value-date">Value date <span>12/06/13</span></p>
-                                       <div class="detail-page">
-                                          <p>Avis de debit pour la période du 01/03/2011 au 31/03/2011
-                                             Frais d'équipement<br>
-                                             Frais package Montant<br>
-                                             Redevance Easy Pack (single)1,82<br>
-                                             Redevance Easy Pack (single)1,82<br>
-                                             Redevance Easy Pack (single)1,82<br><br>
-                                             A votre debit:1,82 EUR
-                                          </p>
-                                       </div>
+   <body>
+   	  <div class="wcm clearfix">
+          <div class="next_gen">
+              <div class="wrapper">
+                 <!-- Left Accounts & Cards -->
+                 <div id="left_column">
+                    <div class="left_column__inner">
+                       <!-- Accounts IA -->
+                       <div class="accounts-ia">
+                          <dl class="menu-list">
+                             <dt class="menu-list__header inner_padding">
+                                <div class="top clearfix">
+                                   <strong>Cash</strong>
+                                   <div class="menu-list__info amount_info">
+                                      <p>total balance</p>
+                                      <div class="menu-list__total-bal total-bal">
+                                         <p><span>99.999.999,99</span><span>EUR</span></p>
+                                      </div>
+                                   </div>
+                                </div>
+                             </dt>
+                             <!-- List item for account -->
+                             <dd class="menu-list__item">
+                                <dl class="active inner_padding">
+                                   <dt>Lorum ipsum dolor sit</dt>
+                                   <dd>Current Account</dd>
+                                   <dd>BE68 0033 6588 8001</dd>
+                                   <dd class="bal_amount"><span>1234.34</span><span>EUR</span></dd>
+                                </dl>
+                             </dd>
+                             <!-- List item for account -->
+                             <dd class="menu-list__item">
+                                <dl class="inner_padding">
+                                   <dt>Lorum ipsum dolor sit</dt>
+                                   <dd>Current Account</dd>
+                                   <dd>BE68 0033 6588 8001</dd>
+                                   <dd class="bal_amount"><span>1234.34</span><span>EUR</span></dd>
+                                </dl>
+                             </dd>
+                          </dl>
+                       </div>
+                       <!-- Cards IA -->
+                       <div class="cards-ia">
+                          <dl class="menu-list">
+                             <dt class="menu-list__header inner_padding">
+                                <div class="top clearfix">
+                                   <strong>Credit</strong>
+                                   <div class="amount_info">
+                                      <p>total balance</p>
+                                      <div class="total-bal">
+                                         <p>250,54<span>EUR</span></p>
+                                      </div>
+                                   </div>
+                                </div>
+                             </dt>
+                             <!-- List item for card -->
+                             <dd class="menu-list__item">
+                                <dl class="inner_padding">
+                                   <dt>Lorum ipsum dolor sit</dt>
+                                   <dd>Current Account</dd>
+                                   <dd>BE12 1234 1234 1234</dd>
+                                   <dd class="bal_amount"><span>1234.34</span><span>EUR</span></dd>
+                                </dl>
+                             </dd>
+                             <!-- List item for card -->
+                             <dd class="menu-list__item">
+                                <dl class="inner_padding">
+                                   <dt>Lorum ipsum dolor sit</dt>
+                                   <dd>Current Account</dd>
+                                   <dd>BE12 1234 1234 1234</dd>
+                                   <dd class="bal_amount"><span>1234.34</span><span>EUR</span></dd>
+                                </dl>
+                             </dd>
+                          </dl>
+                       </div>
+                    </div>
+                 </div>
+                 <!-- Center column Header, Upcoming & Movements -->
+                 <div id="center_column" class="white_background">
+                    <!-- Header Navigation IA -->
+                    <div class="navigation-ia">
+                       <ol class="navigation-ia__inner">
+                          <li class="navigation-ia__icon branding_btn menu-oct show-left"></li>
+                          <li class="navigation-ia__brand_logo">Zena</li>
+                          <li class="navigation-ia__icon branding_btn messages show-right"></li>
+                          <li class="navigation-ia__logout">logout <span></span></li>
+                       </ol>
+                    </div>
+                    <div class="scrolling_smallscreen" id="small-scroller"> <!-- Container for small screen scrolling -->
+                       <div class="subscrolling"> <!-- Container for small screen scrolling -->
+                          <!-- Action bar IA -->
+                          <div class="action_bar-ia">
+                             <ol class="action_bar-ia__inner clearfix">
+                                <li class="action_bar-ia__actions tasks">
+                                   <span class="action-icon">
+                                   <span class="transfer_count">9</span>
+                                   </span>
+                                   <span class="action-bar_text">upcoming transfers</span>
+                                </li>
+                                <li class="action_bar-ia__actions export">
+                                   <span class="action-icon"></span>
+                                   <span class="action-bar_text">export</span>
+                                </li>
+                                <li class="transfer_btn branding_btn">transfer money</li>
+                             </ol>
+                          </div>
+                          <!-- Movements IA -->
+                          <div class="movements-ia" id="movements-ia">
+                             <div class="record-list">
+                             <!-- Movements Header -->
+                                <div class="record-list__header">
+                                   <h2>Lorum ipsum dolor sit</h2>
+                                   <span class="movements_balance"><span>1234.54</span><span>EUR</span></span>
+                                   <div class="movements_info">
+                                      <span class="branding_icons info-icon"></span>
+                                      <h3>Total Saldo</h3>
+                                   </div>
+                                   <!-- Account Details -->
+                                   <ol class="account_info-details">
+                                      <li>
+                                         <span class="label">IBAN</span>
+                                         <span class="desc">BE34 0910 0027 7790</span>
+                                      </li>
+                                      <li>
+                                         <span class="label">Currency</span>
+                                         <span class="desc">EUR</span>
+                                      </li>
+                                      <li>
+                                         <span class="label">Type</span>
+                                         <span class="desc">XXXXXXXXXXXXXXXXXXXXX</span>
+                                      </li>
+                                      <li>
+                                         <span class="label">Alias</span>
+                                         <span class="desc">Lorum ipsum dolor sit</span>
+                                      </li>
+                                      <li>
+                                         <span class="label">Relation</span>
+                                         <span class="desc">Limited Professional</span>
+                                      </li>
+                                      <li>
+                                         <span class="label">Contractnr</span>
+                                         <span class="desc">999-9999999-99</span>
+                                      </li>
+                                   </ol>
+                                </div>
+                                <!-- Movements Content -->
+                                <div class="record-list__content" id="record-list__content">
+                                   <div class="record-list__scrolling">
+                                    <div class="record-list_group__item">
+                                      <h3 class="record-list__group_header">This week</h3>
+                                      <ol class="record-list__item">
+                                         <li class="transaction_in">
+                                            <span class="top clearfix">
+                                                <span class="date">25/01/2013</span>
+                                                <span class="amount"><span>- 125,35</span><span>eur</span></span>
+                                            </span>
+                                            <div class="transaction_info">
+                                               <span class="branding_icons info-icon transcation_icon"></span>
+                                               <h2 class="transaction_name">Europese overschrijving van</h2>
+                                               <p>Lorum ipsum dolor sit amit quantum</p>
+                                               <p class="value-date">Value date <span>12/06/13</span></p>
+                                               <div class="detail-page">
+                                                  <p>Avis de debit pour la période du 01/03/2011 au 31/03/2011
+                                                     Frais d'équipement
+                                                     Frais package Montant
+                                                     Redevance Easy Pack (single)1,82
+                                                     Redevance Easy Pack (single)1,82
+                                                     Redevance Easy Pack (single)1,82
+                                                     A votre debit:1,82 EUR
+                                                  </p>
+                                               </div>
+                                            </div>
+                                         </li>
+                                         <li class="transaction_out">
+                                            <span class="top clearfix">
+                                            <span class="date">25/01/2013</span>
+                                            <span class="amount"><span>- 125,35</span><span>eur</span></span>
+                                            </span>
+                                            <div class="transaction_info">
+                                               <span class="branding_icons info-icon transcation_icon"></span>
+                                               <h2 class="transaction_name">Europese overschrijving van</h2>
+                                               <p>Lorum ipsum dolor sit amit quantum</p>
+                                               <p class="value-date"><span>Value date</span><span>12/06/13</span></p>
+                                               <div class="detail-page">
+                                                  <p>Avis de debit pour la période du 01/03/2011 au 31/03/2011
+                                                     Frais d'équipement
+                                                     Frais package Montant
+                                                     Redevance Easy Pack (single)1,82
+                                                     Redevance Easy Pack (single)1,82
+                                                     Redevance Easy Pack (single)1,82
+                                                     A votre debit:1,82 EUR
+                                                  </p>
+                                               </div>
+                                            </div>
+                                         </li>
+                                         <li class="transaction_out">
+                                            <span class="top clearfix">
+                                            <span class="date">25/01/2013</span>
+                                            <span class="amount"><span>- 125,35</span><span>eur</span></span>
+                                            </span>
+                                            <div class="transaction_info">
+                                               <span class="branding_icons info-icon transcation_icon"></span>
+                                               <h2 class="transaction_name">Europese overschrijving van</h2>
+                                               <p>Lorum ipsum dolor sit amit quantum</p>
+                                               <p class="value-date"><span>Value date</span><span>12/06/13</span></p>
+                                               <div class="detail-page">
+                                                  <p>Avis de debit pour la période du 01/03/2011 au 31/03/2011
+                                                     Frais d'équipement
+                                                     Frais package Montant
+                                                     Redevance Easy Pack (single)1,82
+                                                     Redevance Easy Pack (single)1,82
+                                                     Redevance Easy Pack (single)1,82
+                                                     A votre debit:1,82 EUR
+                                                  </p>
+                                               </div>
+                                            </div>
+                                         </li>
+                                      </ol>
                                     </div>
-                                 </li>
-                                 <li class="transaction_out">
-                                    <span class="top clearfix">
-                                    <span class="date">25/01/2013</span>
-                                    <span class="amount">- 125,35<span>eur</span></span>
-                                    </span>
-                                    <div class="info2">
-                                       <span class="branding_icons info-icon yash"></span>
-                                       <h2 class="transaction_name">Europese overschrijving van</h2>
-                                       <p>Lorum ipsum dolor sit amit quantum</p>
-                                       <p class="value-date">Value date <span>12/06/13</span></p>
-                                       <div class="detail-page">
-                                          <p>Avis de debit pour la période du 01/03/2011 au 31/03/2011<br>
-                                             Frais d'équipement<br>
-                                             Frais package Montant<br>
-                                             Redevance Easy Pack (single)1,82<br>
-                                             Redevance Easy Pack (single)1,82<br>
-                                             Redevance Easy Pack (single)1,82<br><br>
-                                             A votre debit:1,82 EUR
-                                          </p>
-                                       </div>
-                                    </div>
-                                 </li>
-                                 <li class="transaction_out">
-                                    <span class="top clearfix">
-                                    <span class="date">25/01/2013</span>
-                                    <span class="amount">- 125,35<span>eur</span></span>
-                                    </span>
-                                    <div class="info2">
-                                       <span class="branding_icons info-icon yash"></span>
-                                       <h2 class="transaction_name">Europese overschrijving van</h2>
-                                       <p>Lorum ipsum dolor sit amit quantum</p>
-                                       <p class="value-date">Value date <span>12/06/13</span></p>
-                                       <div class="detail-page">
-                                          <p>Avis de debit pour la période du 01/03/2011 au 31/03/2011<br>
-                                             Frais d'équipement<br>
-                                             Frais package Montant<br>
-                                             Redevance Easy Pack (single)1,82<br>
-                                             Redevance Easy Pack (single)1,82<br>
-                                             Redevance Easy Pack (single)1,82<br><br>
-                                             A votre debit:1,82 EUR
-                                          </p>
-                                       </div>
-                                    </div>
-                                 </li>
-                              </ol>
-                              <h3 class="record-list__group_header">Prevoius Month</h3>
-                              <ol class="record-list__item">
-                                 <li class="transaction_out">
-                                    <span class="top clearfix">
-                                    <span class="date">25/01/2013</span>
-                                    <span class="amount">- 125,35<span>eur</span></span>
-                                    </span>
-                                    <div class="info2">
-                                       <span class="branding_icons info-icon yash"></span>
-                                       <h2 class="transaction_name">Europese overschrijving van</h2>
-                                       <p>Lorum ipsum dolor sit amit quantum</p>
-                                       <p class="value-date">Value date <span>12/06/13</span></p>
-                                       <div class="detail-page">
-                                          <p>Avis de debit pour la période du 01/03/2011 au 31/03/2011<br>
-                                             Frais d'équipement<br>
-                                             Frais package Montant<br>
-                                             Redevance Easy Pack (single)1,82<br>
-                                             Redevance Easy Pack (single)1,82<br>
-                                             Redevance Easy Pack (single)1,82<br><br>
-                                             A votre debit:1,82 EUR
-                                          </p>
-                                       </div>
-                                    </div>
-                                 </li>
-                                 <li class="transaction_out">
-                                    <span class="top clearfix">
-                                    <span class="date">25/01/2013</span>
-                                    <span class="amount">- 125,35<span>eur</span></span>
-                                    </span>
-                                    <div class="info2">
-                                       <span class="branding_icons info-icon yash"></span>
-                                       <h2 class="transaction_name">Europese overschrijving van</h2>
-                                       <p>Lorum ipsum dolor sit amit quantum</p>
-                                       <p class="value-date">Value date <span>12/06/13</span></p>
-                                       <div class="detail-page">
-                                          <p>Avis de debit pour la période du 01/03/2011 au 31/03/2011<br>
-                                             Frais d'équipement<br>
-                                             Frais package Montant<br>
-                                             Redevance Easy Pack (single)1,82<br>
-                                             Redevance Easy Pack (single)1,82<br>
-                                             Redevance Easy Pack (single)1,82<br><br>
-                                             A votre debit:1,82 EUR
-                                          </p>
-                                       </div>
-                                    </div>
-                                 </li>
-                                 <li class="transaction_out">
-                                    <span class="top clearfix">
-                                    <span class="date">25/01/2013</span>
-                                    <span class="amount">- 125,35<span>eur</span></span>
-                                    </span>
-                                    <div class="info2">
-                                       <span class="branding_icons info-icon yash"></span>
-                                       <h2 class="transaction_name">Europese overschrijving van</h2>
-                                       <p>Lorum ipsum dolor sit amit quantum</p>
-                                       <p class="value-date">Value date <span>12/06/13</span></p>
-                                       <div class="detail-page">
-                                          <p>Avis de debit pour la période du 01/03/2011 au 31/03/2011<br>
-                                             Frais d'équipement<br>
-                                             Frais package Montant<br>
-                                             Redevance Easy Pack (single)1,82<br>
-                                             Redevance Easy Pack (single)1,82<br>
-                                             Redevance Easy Pack (single)1,82<br><br>
-                                             A votre debit:1,82 EUR
-                                          </p>
-                                       </div>
-                                    </div>
-                                 </li>
-                              </ol>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <!-- Div for small screen scrolling -->
-            </div>
-            <!-- Div for small screen scrolling -->
-         </div>
-         <!-- Messages IA Static -->
-         <div id="right_column">
-            <div class="messages-ia">
-               <dl class="menu-list">
-                  <dt class="menu-list__header">
-                     <strong>Messages<span></span></strong>
-                  </dt>
-                  <!-- List item for account -->
-                  <dd class="menu-list__item account">
-                     <dl>
-                        <dt>LORUM IPSUM DOLORES SIT</dt>
-                        <dd>This is a message, lorum ipsum dolores amet sit quatum es rosas esperanza.</dd>
-                     </dl>
-                  </dd>
-                  <!-- List item for account -->
-                  <dd class="menu-list__item account">
-                     <dl>
-                        <dt>LORUM IPSUM DOLORES SIT</dt>
-                        <dd>This is a message, lorum ipsum dolores amet sit quatum es rosas esperanza.</dd>
-                     </dl>
-                  </dd>
-                  <dd class="menu-list__item account">
-                     <dl>
-                        <dt>LORUM IPSUM DOLORES SIT</dt>
-                        <dd>This is a message, lorum ipsum dolores amet sit quatum es rosas esperanza.</dd>
-                     </dl>
-                  </dd>
-                  <dd class="menu-list__item account">
-                     <dl>
-                        <dt>LORUM IPSUM DOLORES SIT</dt>
-                        <dd>This is a message, lorum ipsum dolores amet sit quatum es rosas esperanza.</dd>
-                     </dl>
-                  </dd>
-                  <dd class="menu-list__item account">
-                     <dl>
-                        <dt>LORUM IPSUM DOLORES SIT</dt>
-                        <dd>This is a message, lorum ipsum dolores amet sit quatum es rosas esperanza.</dd>
-                     </dl>
-                  </dd>
-                  <dd class="menu-list__item account">
-                     <dl>
-                        <dt>LORUM IPSUM DOLORES SIT</dt>
-                        <dd>This is a message, lorum ipsum dolores amet sit quatum es rosas esperanza.</dd>
-                     </dl>
-                  </dd>
-                  <dd class="menu-list__item account">
-                     <dl>
-                        <dt>LORUM IPSUM DOLORES SIT</dt>
-                        <dd>This is a message, lorum ipsum dolores amet sit quatum es rosas esperanza.</dd>
-                     </dl>
-                  </dd>
-               </dl>
-            </div>
-         </div>
+                                    <div class="record-list_group">
+                                      <h3 class="record-list__group_header">Prevoius Month</h3>
+                                      <ol class="record-list__item">
+                                         <li class="transaction_out">
+                                            <span class="top clearfix">
+                                            <span class="date">25/01/2013</span>
+                                            <span class="amount"><span>- 125,35</span><span>eur</span></span>
+                                            </span>
+                                            <div class="transaction_info">
+                                               <span class="branding_icons info-icon transcation_icon"></span>
+                                               <h2 class="transaction_name">Europese overschrijving van</h2>
+                                               <p>Lorum ipsum dolor sit amit quantum</p>
+                                               <p class="value-date"><span>Value date</span><span>12/06/13</span></p>
+                                               <div class="detail-page">
+                                                  <p>Avis de debit pour la période du 01/03/2011 au 31/03/2011
+                                                     Frais d'équipement
+                                                     Frais package Montant
+                                                     Redevance Easy Pack (single)1,82
+                                                     Redevance Easy Pack (single)1,82
+                                                     Redevance Easy Pack (single)1,82
+                                                     A votre debit:1,82 EUR
+                                                  </p>
+                                               </div>
+                                            </div>
+                                         </li>
+                                         <li class="transaction_out">
+                                            <span class="top clearfix">
+                                            <span class="date">25/01/2013</span>
+                                            <span class="amount"><span>- 125,35</span><span>eur</span></span>
+                                            </span>
+                                            <div class="transaction_info">
+                                               <span class="branding_icons info-icon transcation_icon"></span>
+                                               <h2 class="transaction_name">Europese overschrijving van</h2>
+                                               <p>Lorum ipsum dolor sit amit quantum</p>
+                                               <p class="value-date"><span>Value date</span><span>12/06/13</span></p>
+                                               <div class="detail-page">
+                                                  <p>Avis de debit pour la période du 01/03/2011 au 31/03/2011
+                                                     Frais d'équipement
+                                                     Frais package Montant
+                                                     Redevance Easy Pack (single)1,82
+                                                     Redevance Easy Pack (single)1,82
+                                                     Redevance Easy Pack (single)1,82
+                                                     A votre debit:1,82 EUR
+                                                  </p>
+                                               </div>
+                                            </div>
+                                         </li>
+                                         <li class="transaction_out">
+                                            <span class="top clearfix">
+                                            <span class="date">25/01/2013</span>
+                                            <span class="amount">- 125,35<span>eur</span></span>
+                                            </span>
+                                            <div class="transaction_info">
+                                               <span class="branding_icons info-icon transcation_icon"></span>
+                                               <h2 class="transaction_name">Europese overschrijving van</h2>
+                                               <p>Lorum ipsum dolor sit amit quantum</p>
+                                               <p class="value-date"><span>Value date</span><span>12/06/13</span></p>
+                                               <div class="detail-page">
+                                                  <p>Avis de debit pour la période du 01/03/2011 au 31/03/2011
+                                                     Frais d'équipement
+                                                     Frais package Montant
+                                                     Redevance Easy Pack (single)1,82
+                                                     Redevance Easy Pack (single)1,82
+                                                     Redevance Easy Pack (single)1,82
+                                                     A votre debit:1,82 EUR
+                                                  </p>
+                                               </div>
+                                            </div>
+                                         </li>
+                                      </ol>
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                       <!-- Div for small screen scrolling -->
+                    </div>
+                    <div class="center-trigger"></div>
+                    <!-- Div for small screen scrolling -->
+                 </div>
+                 <!-- Messages IA Static -->
+                 <div id="right_column">
+                    <div class="messages-ia">
+                       <dl class="menu-list">
+                          <dt class="menu-list__header inner_padding">
+                             <strong>Messages<span></span></strong>
+                          </dt>
+                          <!-- List item for account -->
+                          <dd class="menu-list__item">
+                             <dl class="inner_padding">
+                                <dt>LORUM IPSUM DOLORES SIT</dt>
+                                <dd>This is a message, lorum ipsum dolores amet sit quatum es rosas esperanza.</dd>
+                             </dl>
+                          </dd>
+                          <!-- List item for account -->
+                          <dd class="menu-list__item">
+                             <dl class="inner_padding">
+                                <dt>LORUM IPSUM DOLORES SIT</dt>
+                                <dd>This is a message, lorum ipsum dolores amet sit quatum es rosas esperanza.</dd>
+                             </dl>
+                          </dd>
+                          <dd class="menu-list__item">
+                             <dl class="inner_padding">
+                                <dt>LORUM IPSUM DOLORES SIT</dt>
+                                <dd>This is a message, lorum ipsum dolores amet sit quatum es rosas esperanza.</dd>
+                             </dl>
+                          </dd>
+                          <dd class="menu-list__item">
+                             <dl class="inner_padding">
+                                <dt>LORUM IPSUM DOLORES SIT</dt>
+                                <dd>This is a message, lorum ipsum dolores amet sit quatum es rosas esperanza.</dd>
+                             </dl>
+                          </dd>
+                          <dd class="menu-list__item">
+                             <dl class="inner_padding">
+                                <dt>LORUM IPSUM DOLORES SIT</dt>
+                                <dd>This is a message, lorum ipsum dolores amet sit quatum es rosas esperanza.</dd>
+                             </dl>
+                          </dd>
+                          <dd class="menu-list__item">
+                             <dl class="inner_padding">
+                                <dt>LORUM IPSUM DOLORES SIT</dt>
+                                <dd>This is a message, lorum ipsum dolores amet sit quatum es rosas esperanza.</dd>
+                             </dl>
+                          </dd>
+                          <dd class="menu-list__item">
+                             <dl class="inner_padding">
+                                <dt>LORUM IPSUM DOLORES SIT</dt>
+                                <dd>This is a message, lorum ipsum dolores amet sit quatum es rosas esperanza.</dd>
+                             </dl>
+                          </dd>
+                       </dl>
+                    </div>
+                 </div>
+              </div>
+              <!-- Upcomming Transfer Overlay in hidden content-->
+              <div class="upcomming_transfer_overlayer">
+                 <div class="upcomming_transfer__inner white_background">
+                    <div class="upcomming_transfer__header blue_header">
+                       <div class="upcomming_transfer__header__inner">
+                          <h2>UPCOMING TRANSFERS</h2>
+                          <h3 class="branding_btn close_btn">x</h3>
+                       </div>
+                    </div>
+                    <div class="record-list__content upcomming_transfer__content" id="upcomming_transfer">
+                       <div class="upcomming_transfer__content__inner">
+                          <ol class="record-list__item">
+                            <!-- Transaction row -->
+                             <li class="transaction_out">
+                                <span class="top clearfix">
+                                <span class="date">25/01/2013</span>
+                                <span class="amount">- 125,35<span>eur</span></span>
+                                </span>
+                                <div class="transaction_info">
+                                   <h2 class="transaction_name">Europese overschrijving van</h2>
+                                   <p>Lorum ipsum dolor sit amit quantum</p>
+                                   <p class="value-date">Value date <span>12/06/13</span></p>
+                                </div>
+                             </li>
+                             <!-- Transaction row -->
+                             <li class="transaction_out">
+                                <span class="top clearfix">
+                                <span class="date">25/01/2013</span>
+                                <span class="amount">- 125,35<span>eur</span></span>
+                                </span>
+                                <div class="transaction_info">
+                                   <h2 class="transaction_name">Europese overschrijving van</h2>
+                                   <p>Lorum ipsum dolor sit amit quantum</p>
+                                   <p class="value-date">Value date <span>12/06/13</span></p>
+                                </div>
+                             </li>
+                          </ol>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <!-- Upcomming Transfer -->
+          </div>
       </div>
-      <!-- Upcomming Transfer Overlay in hidden content-->
-      <div class="upcomming_transfer_overlayer">
-         <div class="upcomming_transfer__inner">
-            <div class="upcomming_transfer__header">
-               <div class="upcomming_transfer__header__inner">
-                  <h2>UPCOMMING TRANSFERS</h2>
-                  <h3 class="branding_btn close_btn">x</h3>
-               </div>
-            </div>
-            <div class="record-list__content upcomming_transfer__content" id="upcomming_transfer">
-               <div class="upcomming_transfer__content__inner">
-                  <ol class="record-list__item">
-                  	<!-- Transaction row -->
-                     <li class="transaction_out">
-                        <span class="top clearfix">
-                        <span class="date">25/01/2013</span>
-                        <span class="amount">- 125,35<span>eur</span></span>
-                        </span>
-                        <div class="info2">
-                           <h2 class="transaction_name">Europese overschrijving van</h2>
-                           <p>Lorum ipsum dolor sit amit quantum</p>
-                           <p class="value-date">Value date <span>12/06/13</span></p>
-                        </div>
-                     </li>
-                     <!-- Transaction row -->
-                     <li class="transaction_out">
-                        <span class="top clearfix">
-                        <span class="date">25/01/2013</span>
-                        <span class="amount">- 125,35<span>eur</span></span>
-                        </span>
-                        <div class="info2">
-                           <h2 class="transaction_name">Europese overschrijving van</h2>
-                           <p>Lorum ipsum dolor sit amit quantum</p>
-                           <p class="value-date">Value date <span>12/06/13</span></p>
-                        </div>
-                     </li>
-                  </ol>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- Upcomming Transfer -->
    </body>
 </html>

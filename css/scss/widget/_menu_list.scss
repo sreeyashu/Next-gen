@@ -1,0 +1,47 @@
+
+
+.accounts-ia {
+	@include inner_padding($top:68px, $right-left:0, $bottom:0);
+}
+
+.menu-list {
+  width: $default-width;
+}
+
+.menu-list__header {
+  position: relative;
+  strong {
+    position: absolute;
+    left: 20px;
+    bottom: 23px;
+    margin: 0;
+    line-height: $base-line_height + 6;
+    padding: 0;
+  }
+  .total-bal p span {
+    padding-left: 4px;
+  }
+}
+
+.menu-list__item {
+  .bal_amount span {
+    padding-left: 4px;
+  }
+  &:after {
+    content: "";
+    display: block;
+    width: $default-width;
+    height: 1px;
+  }
+}
+.accounts-ia {
+	.menu-list__header:first-child:after {
+	  content: "";
+	  display: block;
+	  width: $default-width;
+	  height: 1px;
+	  position: absolute;
+	  left: 0;
+	  top: 0;
+	}
+}

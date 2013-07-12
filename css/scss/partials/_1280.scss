@@ -1,0 +1,9 @@
+.navigation-ia__brand_logo {
+  left: 20px;
+}
+
+.navigation-ia__icon {
+  &.messages, &.menu-oct {
+    display: none;
+  }
+}
