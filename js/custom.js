@@ -76,127 +76,125 @@ $(document).ready(function() {
 
 	//iScrolling
 	var leftScroll, defaultScroll, rightScroll, upcommingScroll;
-	(function($) {
-		leftScroll = new iScroll('left_column', {
-			draggableScrollbars: true,
-		});
+	leftScroll = new iScroll('left_column', {
+            draggableScrollbars: true
+        });
+        rightScroll = new iScroll('right_column', {
+            draggableScrollbars: true
+        });
 
-		rightScroll = new iScroll('right_column', {
-			draggableScrollbars: true
-		});
-		upcommingScroll = new iScroll('upcomming_transfer', {
-			draggableScrollbars: true
-		});
-		//'use strict';
-		var setiScrollForMovements = function(elem) {
-			if (defaultScroll) {
-				defaultScroll.destroy();
-			}
-			defaultScroll = new iScroll(elem, {
-				draggableScrollbars: true
-			});
-		}
+	var WCMScroller = function() {
+			var isChange = false;
+			return {
+				init: function() {
+					this.heights.previousHeight = (this.elements.$window.height() <= this.heights.small) ? this.heights.small : this.heights.large;
+					this.breakPoints.previousWidth = (this.elements.$window.width()  <= this.breakPoints.medium) ? this.breakPoints.medium : this.breakPoints.large;
 
-		var scroller = {},
-			breakPoint = {},
-			$window = $(window),
-			w = $window.width(),
-			h = $window.height();
-		scroller.center = {};
-		scroller.center.small = {};
-		scroller.center.medium = {};
-		scroller.center.large = {};
-		scroller.$navigation = $('.navigation-ia');
-		scroller.$actionbar = $('.action_bar-ia');
-		scroller.$accountbar = $('.record-list__header');
-		//initialization
-		breakPoint = (function(w, h) {
-				var heights = {
-					small: 320,
-					large: 321
+					var that = this;
+					this.setElementForScroll(this.heights.previousHeight,this.breakPoints.previousWidth);
+					this.elements.$window.on('resize', function() {
+						that.setBreakPoint(that.elements.$window.width(), that.elements.$window.height());
+					});
 				},
-					breakPoints = {
-						medium: 767,
-						large: 1024
-					},
-					previousWidth = (w <= breakPoints.medium) ? breakPoints.medium : breakPoints.large,
-					previousHeight = (h <= heights.small) ? heights.small : heights.large,
-					isChange = false;
-				scroller.center.$wrap = $('#center_column');
-
-				scroller.center.small.id = 'small-scroller';
-				scroller.center.small.$el = $('#' + scroller.center.small.id);
-
-				scroller.center.medium.id = 'movements-ia';
-				scroller.center.medium.$el = $('#' + scroller.center.medium.id);
-
-				scroller.center.large.id = 'record-list__content';
-				scroller.center.large.$el = $('#record-list__content');
-
-				//initilizating the first application
-				var setElement = function(height, breakpoint) {
-						var element;
-						if (height === heights.small) {
+				heights: {
+					small: 320,
+					large: 321,
+					previousHeight: null
+				},
+				breakPoints: {
+					medium: 767,
+					large: 1024,
+					previousWidth: null
+				},
+				scrollElement: null,
+				elements: {
+					$window: $(window),
+					small: 'small-scroller',
+					$small: $('#small-scroller'),
+					medium: 'movements-ia',
+					$medium: $('#movements-ia'),
+					large: 'record-list__content',
+					$large: $('#record-list__content'),
+					$navigation: $('.navigation-ia'),
+					$actionbar: $('.action_bar-ia'),
+					$accountbar: $('.record-list__header'),
+					scroller: {
+						small:'.subscrolling',
+						$small: $('.subscrolling'),
+						medium: '.record-list', 
+						$medium: $('.record-list')
+					}
+				},
+				setBreakPoint: function(w, h) {
+					var width, height;
+					width = (w <= this.breakPoints.medium) ? this.breakPoints.medium : this.breakPoints.large;
+					height = (h <= this.heights.small) ? this.heights.small : this.heights.large;
+					if (width !== this.breakPoints.previousWidth || height !== this.heights.previousHeight) {
+						isChange = true;
+						this.breakPoints.previousWidth = width;
+						this.heights.previousHeight = height;
+						//console.log("breakPoint Width:" + width + "height:" + height);
+					}
+					
+					if (isChange) {
+						this.setElementForScroll(height, width);
+						isChange = false;
+					}
+					else {
+					    this.setHeights(this.elements.$window.height(), this.scrollElement);
+					}
+				},
+				setElementForScroll: function(height, breakpoint) {
+					
+						if (height === this.heights.small) {
 							$('.subscrolling').css("height", "auto");
-							element = 'small-scroller';
+							this.scrollElement = this.elements.small;
 							//setiScrollForMovements('small-scroller');
-						} else if (breakpoint === breakPoints.medium) {
+						} else if (breakpoint === this.breakPoints.medium) {
 							$('.subscrolling').css("height", "100%");
 							$('.record-list').css("height", "auto");
-							element = 'movements-ia';
+							this.scrollElement = this.elements.medium;
 							//setiScrollForMovements('movements-ia');
 						} else {
 							$('.subscrolling').css("height", "100%");
 							$('.record-list').css("height", "100%");
-							element = 'record-list__content';
+							this.scrollElement = this.elements.large;
 							//setiScrollForMovements('record-list__content');
 						}
-						setiScrollForMovements(element);
-					};
-				//Set ViewPort heights
-				var setHeights = function(h) {
-						//define center
+						this.setHeights(this.elements.$window.height(), this.scrollElement);
+						this.setiScrollForMovements(this.scrollElement);
 
-						// Height Calculations 
-						scroller.center.$wrap.height(h);
-						//scroller.center.small.$el.height(h - (scroller.$navigation.outerHeight(true)));
-						//scroller.center.medium.$el.height(h - (scroller.$navigation.outerHeight(true) + scroller.$actionbar.outerHeight(true)));
-						//scroller.center.large.$el.height(h - (scroller.$navigation.outerHeight(true) + scroller.$actionbar.outerHeight(true) + scroller.$accountbar.outerHeight(true)));
-
+				},
+				setiScrollForMovements: function(elem) {
+					if (defaultScroll) {
+						defaultScroll.destroy();
 					}
-				//Set iScroll when the application starts
-				setElement(previousHeight, previousWidth);
-				//Set Height
-				//setHeights(h);
-				return {
-						setBreakPoint: function(w, h) {
-							var width, height;
-							width = (w <= breakPoints.medium) ? breakPoints.medium : breakPoints.large;
-							height = (h <= heights.small) ? heights.small : heights.large;
-							if (width !== previousWidth || height !== previousHeight) {
-								isChange = true;
-								previousWidth = width;
-								previousHeight = height;
-							}
-							
-							if (isChange) {
-								setElement(height, width);
-							}
-							//setHeights(h);
-						}
+					console.log(defaultScroll);
+					defaultScroll = new iScroll(elem, {
+						draggableScrollbars: true
+					});
+				},
+				setHeights: function(viewportHeight, elem) {
+					if (elem === this.elements.small) {
+						this.elements.$small.height(viewportHeight - (this.elements.$navigation.outerHeight(true)));
+						this.elements.$medium.height('auto');
+						this.elements.$large.height('auto');
+					}
+					else if (elem === this.elements.medium) {
+						this.elements.$medium.height(viewportHeight - (this.elements.$navigation.outerHeight(true) + this.elements.$actionbar.outerHeight(true)));
+						this.elements.$small.height('auto');
+						this.elements.$large.height('auto');
+					}
+					else {
+						this.elements.$large.height(viewportHeight - (this.elements.$navigation.outerHeight(true) + this.elements.$actionbar.outerHeight(true) + this.elements.$accountbar.outerHeight(true)));
+						this.elements.$small.height('auto');
+						this.elements.$medium.height('auto');
+					}
+				}
+			}
+			
+		}
 
-					};
-			})(w, h);
-		$window.on('resize', function() {
-				breakPoint.setBreakPoint($window.width(), $window.height());
-				/*setTimeout(function() {
-					defaultScroll.refresh();
-				}, 500);*/
-				setTimeout(function() {
-					leftScroll.refresh();
-					rightScroll.refresh();
-				}, 500);
-			});
-	})(jQuery);
-
+	var wcmScroller = new WCMScroller();
+	wcmScroller.init();
 });

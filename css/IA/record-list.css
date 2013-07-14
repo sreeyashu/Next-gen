@@ -22,13 +22,13 @@
 }
 .record-list {
 	width: 100%;
-	padding-bottom:24px;
 }
 .record-list__header {
 	position: relative;
 	z-index: 10;
 	cursor: pointer;
 	padding: 14px 20px 20px;
+	
 }
 .record-list__header h2 {
 	float: left;
