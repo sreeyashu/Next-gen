@@ -1,5 +1,4 @@
-﻿@import "partials/reset";
-@import "partials/mixins";
+﻿@import "partials/mixins";
 @import "partials/fonts";
 @import "config";
 
@@ -69,14 +68,42 @@ h2, h3 {
 	cursor: pointer;
 	color: $whitefontcolor;
 	@include hello-r;
-	font-size: $basefontsize + 3;
+	font-size: $basefontsize + 2;
 	line-height: $base-line_height + 1;
 	text-decoration: none;
 	display: inline-block;
 	text-transform: $texttransform;
 	@include border-radius(2px);
 }
-
+.loading{
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 200;
+	width: $default-width;
+	height: $default-height;
+	background: #ffffff url(images/loading.gif) no-repeat center center;
+	opacity: 1;
+}
+.movements_loading{
+	width: $default-width;
+	margin:auto;
+	background: #ffffff url(images/movements_loader.gif) no-repeat 41% center;
+	border:1px solid #cccccc;
+	padding:14px;
+	text-align:center;
+	font-size:15px;
+	position:absolute;
+	bottom:0;
+}
+.info_messages{
+	background:$l-main;
+	width:$default-width;
+	text-align:center;
+	font-style:italic;
+}
+.info_messages p{ padding:6px;}
 /* Branding Styles for Accounts & Cards */
 .next_gen{
 #left_column {
@@ -86,6 +113,7 @@ h2, h3 {
 	float:left;
 	position:relative;
 	color:  $whitefontcolor;
+	z-index:999;
 	}
 }
 
@@ -288,7 +316,7 @@ h2, h3 {
 
 @media all and (max-width: 768px) and (max-width: 550px) {.action-bar_text {display: none;}}
 @media all and (max-width: 768px) and (max-width: 479px) {
-	.detail-page{
+	.next-gen .detail-page{
 		height: 166px;
 		background: url(images/transaction-detail-flip.jpg) no-repeat center top;
 		text-indent: -9999px;

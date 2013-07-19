@@ -4,93 +4,102 @@
       <meta charset="utf-8">
       <meta name="description" content="">
       <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="format-detection" content="telephone=no">
       <meta name="apple-mobile-web-app-capable" content="yes">
       <meta name="apple-mobile-web-app-status-bar-style" content="black">
       <title>::Next Gen - transactional::</title>
-      <link rel="stylesheet" href="css/IA/menu-list.css">
-      <link rel="stylesheet" href="css/IA/record-list.css">
-      <link rel="stylesheet" href="css/IA/navigation-ia.css">
-      <link rel="stylesheet" href="css/IA/actionbar-ia.css">
-      <link rel="stylesheet" href="css/IA/right_column.css">
+      <link rel="stylesheet" href="css/reset.css">
+      <link rel="stylesheet" href="css/patern-lib.css">
       <link rel="stylesheet" href="css/brand.css">
       <script src="js/modernizr.custom.js"></script>
       <script type="application/javascript" src="js/jquery-1.9.1.js"></script>
       <script type="text/javascript" src="js/iscroll.js"></script>
       <script type="text/javascript" src="js/custom.js"></script>
+      <link rel="stylesheet" href="css/IA/menu-list.css">
+      <link rel="stylesheet" href="css/IA/record-list.css">
+      <link rel="stylesheet" href="css/IA/navigation-bar.css">
+      <link rel="stylesheet" href="css/IA/actionbar-ia.css">
+      <link rel="stylesheet" href="css/IA/right_column.css">
    </head>
    <body>
    	  <div class="wcm clearfix">
           <div class="next_gen">
               <div class="wrapper">
                  <!-- Left Accounts & Cards -->
-                 <div id="left_column">
-                    <div class="left_column__inner">
+                 <div id="accounts_column">
+                    <div class="accounts_column__inner">
                        <!-- Accounts IA -->
-                       <div class="accounts-ia">
+                       <div class="cash_accounts">
                           <dl class="menu-list">
-                             <dt class="menu-list__header inner_padding">
+                             <dt class="menu-list__header border-effect positioning inner-padding">
                                 <div class="top clearfix">
                                    <strong>Cash</strong>
                                    <div class="menu-list__info amount_info">
                                       <p>total balance</p>
                                       <div class="menu-list__total-bal total-bal">
-                                         <p><span>99.999.999,99</span><span>EUR</span></p>
+                                         <p><span>99.999.999,99</span><span class="currency-spacing">EUR</span></p>
                                       </div>
                                    </div>
                                 </div>
                              </dt>
                              <!-- List item for account -->
-                             <dd class="menu-list__item">
-                                <dl class="active inner_padding">
-                                   <dt>Lorum ipsum dolor sit</dt>
+                             <dd class="menu-list__item border-effect">
+                                <dl class="menu-list__row inner-padding active">
+                                   <dt>Dolor it</dt>
                                    <dd>Current Account</dd>
-                                   <dd>BE68 0033 6588 8001</dd>
-                                   <dd class="bal_amount"><span>1234.34</span><span>EUR</span></dd>
+                                   <dd>BE68-001200300-0047</dd>
+                                   <dd class="bal-amount"><span>99.999.999,99</span><span class="currency-spacing">EUR</span></dd>
                                 </dl>
                              </dd>
                              <!-- List item for account -->
-                             <dd class="menu-list__item">
-                                <dl class="inner_padding">
+                             <dd class="menu-list__item border-effect">
+                                <dl class="menu-list__row inner-padding">
+                                   <dt>Lorum ipsum dolor sit</dt>
+                                   <dd>Saving Account</dd>
+                                   <dd>BE68 0033 6588 8001</dd>
+                                   <dd class="bal-amount"><span>1234.34</span><span class="currency-spacing">EUR</span></dd>
+                                </dl>
+                             </dd>
+                              <dd class="menu-list__item border-effect">
+                                <dl class="menu-list__row inner-padding">
                                    <dt>Lorum ipsum dolor sit</dt>
                                    <dd>Current Account</dd>
                                    <dd>BE68 0033 6588 8001</dd>
-                                   <dd class="bal_amount"><span>1234.34</span><span>EUR</span></dd>
+                                   <dd class="bal-amount"><span>1234.34</span><span class="currency-spacing">EUR</span></dd>
                                 </dl>
                              </dd>
                           </dl>
                        </div>
                        <!-- Cards IA -->
-                       <div class="cards-ia">
+                       <div class="card_accounts">
                           <dl class="menu-list">
-                             <dt class="menu-list__header inner_padding">
+                             <dt class="menu-list__header border-effect positioning inner-padding">
                                 <div class="top clearfix">
                                    <strong>Credit</strong>
                                    <div class="amount_info">
                                       <p>total balance</p>
                                       <div class="total-bal">
-                                         <p>250,54<span>EUR</span></p>
+                                         <p><span>1234.34</span><span class="currency-spacing">EUR</span></p>
                                       </div>
                                    </div>
                                 </div>
                              </dt>
                              <!-- List item for card -->
-                             <dd class="menu-list__item">
-                                <dl class="inner_padding">
+                             <dd class="menu-list__item border-effect">
+                                <dl class="menu-list__row inner-padding">
                                    <dt>Lorum ipsum dolor sit</dt>
                                    <dd>Current Account</dd>
                                    <dd>BE12 1234 1234 1234</dd>
-                                   <dd class="bal_amount"><span>1234.34</span><span>EUR</span></dd>
+                                   <dd class="bal-amount"><span>1234.34</span><span class="currency-spacing">EUR</span></dd>
                                 </dl>
                              </dd>
                              <!-- List item for card -->
-                             <dd class="menu-list__item">
-                                <dl class="inner_padding">
+                             <dd class="menu-list__item border-effect">
+                                <dl class="menu-list__row inner-padding">
                                    <dt>Lorum ipsum dolor sit</dt>
                                    <dd>Current Account</dd>
                                    <dd>BE12 1234 1234 1234</dd>
-                                   <dd class="bal_amount"><span>1234.34</span><span>EUR</span></dd>
+                                   <dd class="bal-amount"><span>1234.34</span><span class="currency-spacing">EUR</span></dd>
                                 </dl>
                              </dd>
                           </dl>
@@ -100,42 +109,42 @@
                  <!-- Center column Header, Upcoming & Movements -->
                  <div id="center_column" class="white_background">
                     <!-- Header Navigation IA -->
-                    <div class="navigation-ia">
-                       <ol class="navigation-ia__inner">
-                          <li class="navigation-ia__icon branding_btn menu-oct show-left"></li>
-                          <li class="navigation-ia__brand_logo">Zena</li>
-                          <li class="navigation-ia__icon branding_btn messages show-right"></li>
-                          <li class="navigation-ia__logout">logout <span></span></li>
+                    <div class="navigation-bar">
+                       <ol class="navigation-bar__inner">
+                          <li class="navigation-bar__icon brand-action-icon menu_icon show-left"></li>
+                          <li class="navigation-bar__brand_logo">Zena</li>
+                          <li class="navigation-bar__icon brand-action-icon messages_icon show-right"></li>
+                          <li class="navigation-bar__logout">logout <span></span></li>
                        </ol>
                     </div>
                     <div class="scrolling_smallscreen" id="small-scroller"> <!-- Container for small screen scrolling -->
                        <div class="subscrolling"> <!-- Container for small screen scrolling -->
                           <!-- Action bar IA -->
-                          <div class="action_bar-ia">
-                             <ol class="action_bar-ia__inner clearfix">
-                                <li class="action_bar-ia__actions tasks">
-                                   <span class="action-icon">
+                          <div class="action_bar">
+                             <ol class="action_bar__inner clearfix">
+                                <li class="action_bar__actions tasks">
+                                   <span class="action_bar_icon brand-action-icon upcoming-icon">
                                    <span class="transfer_count">9</span>
                                    </span>
                                    <span class="action-bar_text">upcoming transfers</span>
                                 </li>
-                                <li class="action_bar-ia__actions export">
-                                   <span class="action-icon"></span>
+                                <li class="action_bar__actions export">
+                                   <span class="action_bar_icon brand-action-icon export_con"></span>
                                    <span class="action-bar_text">export</span>
                                 </li>
-                                <li class="transfer_btn branding_btn">transfer money</li>
+                                <li class="transfer-btn branding-btn">transfer money</li>
                              </ol>
                           </div>
                           <!-- Movements IA -->
-                          <div class="movements-ia" id="movements-ia">
+                          <div class="account_movements" id="account_movements">
                              <div class="record-list">
                              <!-- Movements Header -->
-                                <div class="record-list__header">
+                                <div class="record-list__header account-info">
                                    <h2>Lorum ipsum dolor sit</h2>
-                                   <span class="movements_balance"><span>1234.54</span><span>EUR</span></span>
-                                   <div class="movements_info">
-                                      <span class="branding_icons info-icon"></span>
-                                      <h3>Total Saldo</h3>
+                                   <span class="account-info__balance"><span>1234.54</span><span class="currency-spacing">EUR</span></span>
+                                   <div class="account-info__text">
+                                      <span class="brand-action-icon account-info__text--icon"></span>
+                                      <h3>Total balance</h3>
                                    </div>
                                    <!-- Account Details -->
                                    <ol class="account_info-details">
@@ -160,26 +169,52 @@
                                          <span class="desc">Limited Professional</span>
                                       </li>
                                       <li>
-                                         <span class="label">Contractnr</span>
+                                         <span class="label">Contract</span>
                                          <span class="desc">999-9999999-99</span>
                                       </li>
                                    </ol>
                                 </div>
                                 <!-- Movements Content -->
                                 <div class="record-list__content" id="record-list__content">
-                                   <div class="record-list__scrolling">
+                                   <div class="record-list__inner">
                                     <div class="record-list_group__item">
                                       <h3 class="record-list__group_header">This week</h3>
-                                      <ol class="record-list__item">
-                                         <li class="transaction_in">
+                                      <ul class="transaction-details">
+                                         <li class="transaction-details__in">
                                             <span class="top clearfix">
-                                                <span class="date">25/01/2013</span>
-                                                <span class="amount"><span>- 125,35</span><span>eur</span></span>
+                                                <span class="execution-date">25/01/2013</span>
+                                                <span class="execution-amount"><span>- 125,35</span><span class="currency-spacing">eur</span></span>
                                             </span>
                                             <div class="transaction_info">
-                                               <span class="branding_icons info-icon transcation_icon"></span>
+                                               <span class="brand-action-icon account-info__text--icon transcation_icon"></span>
                                                <h2 class="transaction_name">Europese overschrijving van</h2>
-                                               <p>Lorum ipsum dolor sit amit quantum</p>
+                                               <p class="transaction-content">Lorum ipsum dolor sit amit quantum <br/>BE68-001200300-0047<br/>BIC GEBABEE via mobile banking zonder mededeling.</p>
+                                               <p class="value-date">Value date<span class="value_date-spacing">12/06/13</span></p>
+                                               <div class="detail-page">
+                                                  <p>Avis de debit pour la période du 01/03/2011 au 31/03/2011
+                                                     Frais d'équipement
+                                                     Frais package Montant
+                                                     Redevance Easy Pack (single)1,82
+                                                     Redevance Easy Pack (single)1,82
+                                                     Redevance Easy Pack (single)1,82
+                                                     A votre debit:1,82 EUR
+                                                  </p>
+                                               </div>
+                                            </div>
+                                         </li>
+                                      </ul>
+                                    </div>
+                                    <div class="record-list_group__item">
+                                      <ul class="transaction-details">
+                                         <li class="transaction-details__in">
+                                            <span class="top clearfix">
+                                                <span class="execution-date">25/01/2013</span>
+                                                <span class="execution-amount"><span>- 125,35</span><span class="currency-spacing">eur</span></span>
+                                            </span>
+                                            <div class="transaction_info">
+                                               <span class="brand-action-icon account-info__text--icon transcation_icon"></span>
+                                               <h2 class="transaction_name">Europese overschrijving van</h2>
+                                               <p class="transaction-content">Lorum ipsum dolor sit amit quantum <br/>BE68-001200300-0047<br/>BIC GEBABEE via mobile banking zonder mededeling.</p>
                                                <p class="value-date">Value date <span>12/06/13</span></p>
                                                <div class="detail-page">
                                                   <p>Avis de debit pour la période du 01/03/2011 au 31/03/2011
@@ -193,65 +228,20 @@
                                                </div>
                                             </div>
                                          </li>
-                                         <li class="transaction_out">
-                                            <span class="top clearfix">
-                                            <span class="date">25/01/2013</span>
-                                            <span class="amount"><span>- 125,35</span><span>eur</span></span>
-                                            </span>
-                                            <div class="transaction_info">
-                                               <span class="branding_icons info-icon transcation_icon"></span>
-                                               <h2 class="transaction_name">Europese overschrijving van</h2>
-                                               <p>Lorum ipsum dolor sit amit quantum</p>
-                                               <p class="value-date"><span>Value date</span><span>12/06/13</span></p>
-                                               <div class="detail-page">
-                                                  <p>Avis de debit pour la période du 01/03/2011 au 31/03/2011
-                                                     Frais d'équipement
-                                                     Frais package Montant
-                                                     Redevance Easy Pack (single)1,82
-                                                     Redevance Easy Pack (single)1,82
-                                                     Redevance Easy Pack (single)1,82
-                                                     A votre debit:1,82 EUR
-                                                  </p>
-                                               </div>
-                                            </div>
-                                         </li>
-                                         <li class="transaction_out">
-                                            <span class="top clearfix">
-                                            <span class="date">25/01/2013</span>
-                                            <span class="amount"><span>- 125,35</span><span>eur</span></span>
-                                            </span>
-                                            <div class="transaction_info">
-                                               <span class="branding_icons info-icon transcation_icon"></span>
-                                               <h2 class="transaction_name">Europese overschrijving van</h2>
-                                               <p>Lorum ipsum dolor sit amit quantum</p>
-                                               <p class="value-date"><span>Value date</span><span>12/06/13</span></p>
-                                               <div class="detail-page">
-                                                  <p>Avis de debit pour la période du 01/03/2011 au 31/03/2011
-                                                     Frais d'équipement
-                                                     Frais package Montant
-                                                     Redevance Easy Pack (single)1,82
-                                                     Redevance Easy Pack (single)1,82
-                                                     Redevance Easy Pack (single)1,82
-                                                     A votre debit:1,82 EUR
-                                                  </p>
-                                               </div>
-                                            </div>
-                                         </li>
-                                      </ol>
+                                      </ul>
                                     </div>
-                                    <div class="record-list_group">
-                                      <h3 class="record-list__group_header">Prevoius Month</h3>
-                                      <ol class="record-list__item">
-                                         <li class="transaction_out">
+                                    <div class="record-list_group__item">
+                                      <ul class="transaction-details">
+                                         <li class="transaction-details__in">
                                             <span class="top clearfix">
-                                            <span class="date">25/01/2013</span>
-                                            <span class="amount"><span>- 125,35</span><span>eur</span></span>
+                                                <span class="execution-date">25/01/2013</span>
+                                                <span class="execution-amount"><span>- 125,35</span><span class="currency-spacing">eur</span></span>
                                             </span>
                                             <div class="transaction_info">
-                                               <span class="branding_icons info-icon transcation_icon"></span>
+                                               <span class="brand-action-icon account-info__text--icon transcation_icon"></span>
                                                <h2 class="transaction_name">Europese overschrijving van</h2>
-                                               <p>Lorum ipsum dolor sit amit quantum</p>
-                                               <p class="value-date"><span>Value date</span><span>12/06/13</span></p>
+                                               <p class="transaction-content">Lorum ipsum dolor sit amit quantum <br/>BE68-001200300-0047<br/>BIC GEBABEE via mobile banking zonder mededeling.</p>
+                                               <p class="value-date">Value date <span>12/06/13</span></p>
                                                <div class="detail-page">
                                                   <p>Avis de debit pour la période du 01/03/2011 au 31/03/2011
                                                      Frais d'équipement
@@ -264,16 +254,20 @@
                                                </div>
                                             </div>
                                          </li>
-                                         <li class="transaction_out">
+                                      </ul>
+                                    </div>
+                                    <div class="record-list_group__item">
+                                      <ul class="transaction-details">
+                                         <li class="transaction-details__in">
                                             <span class="top clearfix">
-                                            <span class="date">25/01/2013</span>
-                                            <span class="amount"><span>- 125,35</span><span>eur</span></span>
+                                                <span class="execution-date">25/01/2013</span>
+                                                <span class="execution-amount"><span>- 125,35</span><span class="currency-spacing">eur</span></span>
                                             </span>
                                             <div class="transaction_info">
-                                               <span class="branding_icons info-icon transcation_icon"></span>
+                                               <span class="brand-action-icon account-info__text--icon transcation_icon"></span>
                                                <h2 class="transaction_name">Europese overschrijving van</h2>
-                                               <p>Lorum ipsum dolor sit amit quantum</p>
-                                               <p class="value-date"><span>Value date</span><span>12/06/13</span></p>
+                                               <p class="transaction-content">Lorum ipsum dolor sit amit quantum <br/>BE68-001200300-0047<br/>BIC GEBABEE via mobile banking zonder mededeling.</p>
+                                               <p class="value-date">Value date <span>12/06/13</span></p>
                                                <div class="detail-page">
                                                   <p>Avis de debit pour la période du 01/03/2011 au 31/03/2011
                                                      Frais d'équipement
@@ -286,16 +280,21 @@
                                                </div>
                                             </div>
                                          </li>
-                                         <li class="transaction_out">
+                                      </ul>
+                                    </div>
+                                    <div class="record-list_group__item">
+                                      <h3 class="record-list__group_header">This week</h3>
+                                      <ul class="transaction-details">
+                                         <li class="transaction-details__in">
                                             <span class="top clearfix">
-                                            <span class="date">25/01/2013</span>
-                                            <span class="amount">- 125,35<span>eur</span></span>
+                                                <span class="execution-date">25/01/2013</span>
+                                                <span class="execution-amount"><span>- 125,35</span><span class="currency-spacing">eur</span></span>
                                             </span>
                                             <div class="transaction_info">
-                                               <span class="branding_icons info-icon transcation_icon"></span>
+                                               <span class="brand-action-icon account-info__text--icon transcation_icon"></span>
                                                <h2 class="transaction_name">Europese overschrijving van</h2>
-                                               <p>Lorum ipsum dolor sit amit quantum</p>
-                                               <p class="value-date"><span>Value date</span><span>12/06/13</span></p>
+                                               <p class="transaction-content">Lorum ipsum dolor sit amit quantum <br/>BE68-001200300-0047<br/>BIC GEBABEE via mobile banking zonder mededeling.</p>
+                                               <p class="value-date">Value date <span>12/06/13</span></p>
                                                <div class="detail-page">
                                                   <p>Avis de debit pour la période du 01/03/2011 au 31/03/2011
                                                      Frais d'équipement
@@ -308,9 +307,169 @@
                                                </div>
                                             </div>
                                          </li>
-                                      </ol>
-                                      </div>
+                                      </ul>
+                                    </div>
+                                    <div class="record-list_group__item">
+                                      <ul class="transaction-details">
+                                         <li class="transaction-details__in">
+                                            <span class="top clearfix">
+                                                <span class="execution-date">25/01/2013</span>
+                                                <span class="execution-amount"><span>- 125,35</span><span class="currency-spacing">eur</span></span>
+                                            </span>
+                                            <div class="transaction_info">
+                                               <span class="brand-action-icon account-info__text--icon transcation_icon"></span>
+                                               <h2 class="transaction_name">Europese overschrijving van</h2>
+                                               <p class="transaction-content">Lorum ipsum dolor sit amit quantum <br/>BE68-001200300-0047<br/>BIC GEBABEE via mobile banking zonder mededeling.</p>
+                                               <p class="value-date">Value date <span>12/06/13</span></p>
+                                               <div class="detail-page">
+                                                  <p>Avis de debit pour la période du 01/03/2011 au 31/03/2011
+                                                     Frais d'équipement
+                                                     Frais package Montant
+                                                     Redevance Easy Pack (single)1,82
+                                                     Redevance Easy Pack (single)1,82
+                                                     Redevance Easy Pack (single)1,82
+                                                     A votre debit:1,82 EUR
+                                                  </p>
+                                               </div>
+                                            </div>
+                                         </li>
+                                      </ul>
+                                    </div>
+                                    <div class="record-list_group__item">
+                                      <ul class="transaction-details">
+                                         <li class="transaction-details__in">
+                                            <span class="top clearfix">
+                                                <span class="execution-date">25/01/2013</span>
+                                                <span class="execution-amount"><span>- 125,35</span><span class="currency-spacing">eur</span></span>
+                                            </span>
+                                            <div class="transaction_info">
+                                               <span class="brand-action-icon account-info__text--icon transcation_icon"></span>
+                                               <h2 class="transaction_name">Europese overschrijving van</h2>
+                                               <p class="transaction-content">Lorum ipsum dolor sit amit quantum <br/>BE68-001200300-0047<br/>BIC GEBABEE via mobile banking zonder mededeling.</p>
+                                               <p class="value-date">Value date <span>12/06/13</span></p>
+                                               <div class="detail-page">
+                                                  <p>Avis de debit pour la période du 01/03/2011 au 31/03/2011
+                                                     Frais d'équipement
+                                                     Frais package Montant
+                                                     Redevance Easy Pack (single)1,82
+                                                     Redevance Easy Pack (single)1,82
+                                                     Redevance Easy Pack (single)1,82
+                                                     A votre debit:1,82 EUR
+                                                  </p>
+                                               </div>
+                                            </div>
+                                         </li>
+                                      </ul>
+                                    </div>
+                                    <div class="record-list_group__item">
+                                      <ul class="transaction-details">
+                                         <li class="transaction-details__in">
+                                            <span class="top clearfix">
+                                                <span class="execution-date">25/01/2013</span>
+                                                <span class="execution-amount"><span>- 125,35</span><span class="currency-spacing">eur</span></span>
+                                            </span>
+                                            <div class="transaction_info">
+                                               <span class="brand-action-icon account-info__text--icon transcation_icon"></span>
+                                               <h2 class="transaction_name">Europese overschrijving van</h2>
+                                               <p class="transaction-content">Lorum ipsum dolor sit amit quantum <br/>BE68-001200300-0047<br/>BIC GEBABEE via mobile banking zonder mededeling.</p>
+                                               <p class="value-date">Value date <span>12/06/13</span></p>
+                                               <div class="detail-page">
+                                                  <p>Avis de debit pour la période du 01/03/2011 au 31/03/2011
+                                                     Frais d'équipement
+                                                     Frais package Montant
+                                                     Redevance Easy Pack (single)1,82
+                                                     Redevance Easy Pack (single)1,82
+                                                     Redevance Easy Pack (single)1,82
+                                                     A votre debit:1,82 EUR
+                                                  </p>
+                                               </div>
+                                            </div>
+                                         </li>
+                                      </ul>
+                                    </div>
+                                    <div class="record-list_group__item">
+                                      <h3 class="record-list__group_header">This week</h3>
+                                      <ul class="transaction-details">
+                                         <li class="transaction-details__in">
+                                            <span class="top clearfix">
+                                                <span class="execution-date">25/01/2013</span>
+                                                <span class="execution-amount"><span>- 125,35</span><span class="currency-spacing">eur</span></span>
+                                            </span>
+                                            <div class="transaction_info">
+                                               <span class="brand-action-icon account-info__text--icon transcation_icon"></span>
+                                               <h2 class="transaction_name">Europese overschrijving van</h2>
+                                               <p class="transaction-content">Lorum ipsum dolor sit amit quantum <br/>BE68-001200300-0047<br/>BIC GEBABEE via mobile banking zonder mededeling.</p>
+                                               <p class="value-date">Value date <span>12/06/13</span></p>
+                                               <div class="detail-page">
+                                                  <p>Avis de debit pour la période du 01/03/2011 au 31/03/2011
+                                                     Frais d'équipement
+                                                     Frais package Montant
+                                                     Redevance Easy Pack (single)1,82
+                                                     Redevance Easy Pack (single)1,82
+                                                     Redevance Easy Pack (single)1,82
+                                                     A votre debit:1,82 EUR
+                                                  </p>
+                                               </div>
+                                            </div>
+                                         </li>
+                                      </ul>
+                                    </div>
+                                    <div class="record-list_group__item">
+                                      <ul class="transaction-details">
+                                         <li class="transaction-details__in">
+                                            <span class="top clearfix">
+                                                <span class="execution-date">25/01/2013</span>
+                                                <span class="execution-amount"><span>- 125,35</span><span class="currency-spacing">eur</span></span>
+                                            </span>
+                                            <div class="transaction_info">
+                                               <span class="brand-action-icon account-info__text--icon transcation_icon"></span>
+                                               <h2 class="transaction_name">Europese overschrijving van</h2>
+                                               <p class="transaction-content">Lorum ipsum dolor sit amit quantum <br/>BE68-001200300-0047<br/>BIC GEBABEE via mobile banking zonder mededeling.</p>
+                                               <p class="value-date">Value date <span>12/06/13</span></p>
+                                               <div class="detail-page">
+                                                  <p>Avis de debit pour la période du 01/03/2011 au 31/03/2011
+                                                     Frais d'équipement
+                                                     Frais package Montant
+                                                     Redevance Easy Pack (single)1,82
+                                                     Redevance Easy Pack (single)1,82
+                                                     Redevance Easy Pack (single)1,82
+                                                     A votre debit:1,82 EUR
+                                                  </p>
+                                               </div>
+                                            </div>
+                                         </li>
+                                      </ul>
+                                    </div>
+                                    <div class="record-list_group__item">
+                                      <ul class="transaction-details">
+                                         <li class="transaction-details__in">
+                                            <span class="top clearfix">
+                                                <span class="execution-date">25/01/2013</span>
+                                                <span class="execution-amount"><span>- 125,35</span><span class="currency-spacing">eur</span></span>
+                                            </span>
+                                            <div class="transaction_info">
+                                               <span class="brand-action-icon account-info__text--icon transcation_icon"></span>
+                                               <h2 class="transaction_name">Europese overschrijving van</h2>
+                                               <p class="transaction-content">Lorum ipsum dolor sit amit quantum <br/>BE68-001200300-0047<br/>BIC GEBABEE via mobile banking zonder mededeling.</p>
+                                               <p class="value-date">Value date <span>12/06/13</span></p>
+                                               <div class="detail-page">
+                                                  <p>Avis de debit pour la période du 01/03/2011 au 31/03/2011
+                                                     Frais d'équipement
+                                                     Frais package Montant
+                                                     Redevance Easy Pack (single)1,82
+                                                     Redevance Easy Pack (single)1,82
+                                                     Redevance Easy Pack (single)1,82
+                                                     A votre debit:1,82 EUR
+                                                  </p>
+                                               </div>
+                                            </div>
+                                         </li>
+                                      </ul>
+                                    </div>
+                                    <div class="movements_loading"><p>loading...</p></div>
+                                    <div class="info_messages"><p>No more movement history available</p></div>
                                    </div>
+                                   
                                 </div>
                              </div>
                           </div>
@@ -321,54 +480,54 @@
                     <!-- Div for small screen scrolling -->
                  </div>
                  <!-- Messages IA Static -->
-                 <div id="right_column">
-                    <div class="messages-ia">
+                 <div id="messages_column">
+                    <div class="messages_column__inner">
                        <dl class="menu-list">
-                          <dt class="menu-list__header inner_padding">
-                             <strong>Messages<span></span></strong>
+                          <dt class="menu-list__header border-effect positioning inner-padding">
+                             <strong>Messages<span class="messages-icon brand-action-icon"></span></strong>
                           </dt>
                           <!-- List item for account -->
-                          <dd class="menu-list__item">
-                             <dl class="inner_padding">
+                          <dd class="menu-list__item border-effect">
+                             <dl class="inner-padding">
                                 <dt>LORUM IPSUM DOLORES SIT</dt>
-                                <dd>This is a message, lorum ipsum dolores amet sit quatum es rosas esperanza.</dd>
+                                <dd class="message_text">This is a message, lorum ipsum dolores amet sit quatum es rosas esperanza.</dd>
                              </dl>
                           </dd>
                           <!-- List item for account -->
-                          <dd class="menu-list__item">
-                             <dl class="inner_padding">
+                          <dd class="menu-list__item border-effect">
+                             <dl class="inner-padding">
                                 <dt>LORUM IPSUM DOLORES SIT</dt>
-                                <dd>This is a message, lorum ipsum dolores amet sit quatum es rosas esperanza.</dd>
+                                <dd class="message_text">This is a message, lorum ipsum dolores amet sit quatum es rosas esperanza.</dd>
                              </dl>
                           </dd>
-                          <dd class="menu-list__item">
-                             <dl class="inner_padding">
+                          <dd class="menu-list__item border-effect">
+                             <dl class="inner-padding">
                                 <dt>LORUM IPSUM DOLORES SIT</dt>
-                                <dd>This is a message, lorum ipsum dolores amet sit quatum es rosas esperanza.</dd>
+                                <dd class="message_text">This is a message, lorum ipsum dolores amet sit quatum es rosas esperanza.</dd>
                              </dl>
                           </dd>
-                          <dd class="menu-list__item">
-                             <dl class="inner_padding">
+                          <dd class="menu-list__item border-effect">
+                             <dl class="inner-padding">
                                 <dt>LORUM IPSUM DOLORES SIT</dt>
-                                <dd>This is a message, lorum ipsum dolores amet sit quatum es rosas esperanza.</dd>
+                                <dd class="message_text">This is a message, lorum ipsum dolores amet sit quatum es rosas esperanza.</dd>
                              </dl>
                           </dd>
-                          <dd class="menu-list__item">
-                             <dl class="inner_padding">
+                          <dd class="menu-list__item border-effect">
+                             <dl class="inner-padding">
                                 <dt>LORUM IPSUM DOLORES SIT</dt>
-                                <dd>This is a message, lorum ipsum dolores amet sit quatum es rosas esperanza.</dd>
+                                <dd class="message_text">This is a message, lorum ipsum dolores amet sit quatum es rosas esperanza.</dd>
                              </dl>
                           </dd>
-                          <dd class="menu-list__item">
-                             <dl class="inner_padding">
+                          <dd class="menu-list__item border-effect">
+                             <dl class="inner-padding">
                                 <dt>LORUM IPSUM DOLORES SIT</dt>
-                                <dd>This is a message, lorum ipsum dolores amet sit quatum es rosas esperanza.</dd>
+                                <dd class="message_text">This is a message, lorum ipsum dolores amet sit quatum es rosas esperanza.</dd>
                              </dl>
                           </dd>
-                          <dd class="menu-list__item">
-                             <dl class="inner_padding">
+                          <dd class="menu-list__item border-effect">
+                             <dl class="inner-padding">
                                 <dt>LORUM IPSUM DOLORES SIT</dt>
-                                <dd>This is a message, lorum ipsum dolores amet sit quatum es rosas esperanza.</dd>
+                                <dd class="message_text">This is a message, lorum ipsum dolores amet sit quatum es rosas esperanza.</dd>
                              </dl>
                           </dd>
                        </dl>
@@ -378,49 +537,46 @@
               <!-- Upcomming Transfer Overlay in hidden content-->
               <div class="upcomming_transfer_overlayer">
                  <div class="upcomming_transfer__inner white_background">
-                    <div class="upcomming_transfer__header blue_header">
+                    <div class="upcomming_transfer__header">
                        <div class="upcomming_transfer__header__inner">
                           <h2>UPCOMING TRANSFERS</h2>
-                          <h3 class="branding_btn close_btn">x</h3>
+                          <h3 class="brand-action-icon close_btn">x</h3>
                        </div>
                     </div>
                     <div class="record-list__content upcomming_transfer__content" id="upcomming_transfer">
                        <div class="upcomming_transfer__content__inner">
-                          <ol class="record-list__item">
+                          <ul class="transaction-details">
                             <!-- Transaction row -->
-                             <li class="transaction_out">
+                             <li class="transaction-details__out">
                                 <span class="top clearfix">
-                                <span class="date">25/01/2013</span>
-                                <span class="amount">- 125,35<span>eur</span></span>
+                                <span class="execution-date">25/01/2013</span>
+                                <span class="execution-amount">- 125,35<span class="currency-spacing">eur</span></span>
                                 </span>
                                 <div class="transaction_info">
                                    <h2 class="transaction_name">Europese overschrijving van</h2>
-                                   <p>Lorum ipsum dolor sit amit quantum</p>
-                                   <p class="value-date">Value date <span>12/06/13</span></p>
+                                   <p class="transaction-content">Lorum ipsum dolor sit amit quantum</p>
+                                   <p class="value-date">Value date<span class="value_date-spacing">12/06/13</span></p>
                                 </div>
                              </li>
                              <!-- Transaction row -->
-                             <li class="transaction_out">
+                            <li class="transaction-details__out">
                                 <span class="top clearfix">
-                                <span class="date">25/01/2013</span>
-                                <span class="amount">- 125,35<span>eur</span></span>
+                                <span class="execution-date">25/01/2013</span>
+                                <span class="execution-amount">- 125,35<span class="currency-spacing">eur</span></span>
                                 </span>
                                 <div class="transaction_info">
                                    <h2 class="transaction_name">Europese overschrijving van</h2>
-                                   <p>Lorum ipsum dolor sit amit quantum</p>
-                                   <p class="value-date">Value date <span>12/06/13</span></p>
+                                   <p class="transaction-content">Lorum ipsum dolor sit amit quantum</p>
+                                   <p class="value-date">Value date<span class="value_date-spacing">12/06/13</span></p>
                                 </div>
                              </li>
-                          </ol>
+                          </ul>
                        </div>
                     </div>
                  </div>
               </div>
               <!-- Upcomming Transfer -->
-          </div>
-      </div>
-   </body>
-</html>Upcomming Transfer -->
+              <div class="loading action_show"></div>
           </div>
       </div>
    </body>

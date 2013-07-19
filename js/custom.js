@@ -10,17 +10,17 @@ $(document).ready(function() {
 	offcanvas.$close = $('.center-trigger');
 
 	// bind events
-	offcanvas.left.$trigger.fastClick(function(e) {
+	offcanvas.left.$trigger.click(function(e) {
 		e.preventDefault();
 		offcanvas.left.toggler();
 	});
 
-	offcanvas.right.$trigger.fastClick(function(e) {
+	offcanvas.right.$trigger.click(function(e) {
 		e.preventDefault();
 		offcanvas.right.toggler();
 	});
 
-	offcanvas.$close.fastClick(function(e) {
+	offcanvas.$close.click(function(e) {
 		e.preventDefault();
 		$('.wcm').removeClass('left_open').removeClass('right_open');
 		//messages.$messageContainer.removeClass('open');
@@ -76,15 +76,16 @@ $(document).ready(function() {
 
 	//iScrolling
 	var leftScroll, defaultScroll, rightScroll, upcommingScroll;
-	leftScroll = new iScroll('left_column', {
-            draggableScrollbars: true
-        });
-        rightScroll = new iScroll('right_column', {
-            draggableScrollbars: true
-        });
+	
 
 	var WCMScroller = function() {
 			var isChange = false;
+			leftScroll = new iScroll('accounts_column', {
+            draggableScrollbars: true
+			});
+			rightScroll = new iScroll('messages_column', {
+				draggableScrollbars: true
+			});
 			return {
 				init: function() {
 					this.heights.previousHeight = (this.elements.$window.height() <= this.heights.small) ? this.heights.small : this.heights.large;
@@ -94,7 +95,11 @@ $(document).ready(function() {
 					this.setElementForScroll(this.heights.previousHeight,this.breakPoints.previousWidth);
 					this.elements.$window.on('resize', function() {
 						that.setBreakPoint(that.elements.$window.width(), that.elements.$window.height());
+						setTimeout(function() {
+							defaultScroll.refresh();
+						}, 500);
 					});
+					
 				},
 				heights: {
 					small: 320,
@@ -111,12 +116,12 @@ $(document).ready(function() {
 					$window: $(window),
 					small: 'small-scroller',
 					$small: $('#small-scroller'),
-					medium: 'movements-ia',
-					$medium: $('#movements-ia'),
+					medium: 'account_movements',
+					$medium: $('#account_movements'),
 					large: 'record-list__content',
 					$large: $('#record-list__content'),
-					$navigation: $('.navigation-ia'),
-					$actionbar: $('.action_bar-ia'),
+					$navigation: $('.navigation-bar'),
+					$actionbar: $('.action_bar'),
 					$accountbar: $('.record-list__header'),
 					scroller: {
 						small:'.subscrolling',
@@ -154,7 +159,7 @@ $(document).ready(function() {
 							$('.subscrolling').css("height", "100%");
 							$('.record-list').css("height", "auto");
 							this.scrollElement = this.elements.medium;
-							//setiScrollForMovements('movements-ia');
+							//setiScrollForMovements('account_movements');
 						} else {
 							$('.subscrolling').css("height", "100%");
 							$('.record-list').css("height", "100%");

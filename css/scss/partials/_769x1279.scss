@@ -7,6 +7,7 @@
 	@include transition(margin-left, 325ms);
     position: absolute;
     right: 0;
+	z-index:111;
   }
   #right_column {
     width: $medium-side;

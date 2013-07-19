@@ -1,0 +1,341 @@
+/* menu-list accounts & cards */
+.cash_accounts {
+	padding: 68px 0 0 0;
+}
+.menu-list {
+	width: 100%;
+}
+.menu-list__header {
+	position: relative;
+}
+strong {
+	position: absolute;
+	left: 20px;
+	bottom: 20px;
+	margin: 0;
+	padding: 0;
+}
+.bal-amount {
+	display: inline-block;
+	width: 100%;
+	text-align: right;
+	line-height: 19px;
+	margin: 15px 0 0 0;
+}
+.currency-spacing, .value_date-spacing {
+	padding-left: 4px;
+}
+.border-effect:after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 1px;
+}
+.positioning:after {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.top {
+	display: block;
+	width: 100%;
+}
+.amount_info {
+	text-transform: uppercase;
+	float: right;
+	text-align: right;
+	color: #c9c9c9;
+}
+.inner-padding {
+	padding: 22px 20px 20px;
+}
+/* Styles header IA */
+.navigation-bar {
+	width: 100%;
+	height: 60px;
+	position: relative;
+	z-index: 10;
+}
+.navigation-bar__inner {
+	padding: 20px 20px 15px;
+	position: relative;
+}
+.navigation-bar__brand_logo {
+	position: absolute;
+	left: 60px;
+	top: 10px;
+	-webkit-backface-visibility: hidden;
+	display: block;
+}
+.messages_icon {
+	margin: 0 0 0 20px;
+	padding: 0;
+}
+.navigation-bar__logout {
+	position: relative;
+	padding: 7px 35px 5px 0;
+	text-decoration: none;
+	float: right;
+}
+.navigation-bar__logout span {
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+/* actionbar*/
+.action_bar {
+	width: 100%;
+	height: 80px;
+	position: relative;
+	z-index: 9;
+	-webkit-backface-visibility: hidden;
+}
+.action_bar__inner {
+	padding: 25px 20px;
+}
+.action_bar__actions {
+	display: inline-block;
+	padding: 6px 0 0 40px;
+	position: relative;
+	text-decoration: none;
+	float: left;
+	margin: 0 0 0 30px;
+}
+.action_bar_icon {
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	left: 0;
+	top: -4px;
+	display: block;
+}
+.tasks {
+	margin: 0;
+}
+.transfer_count {
+	display: inline-block;
+	padding: 1px 4px;
+	width: auto;
+	height: auto;
+	line-height: 12px;
+	position: absolute;
+	right: -3px;
+	top: 3px;
+	left: auto;
+}
+.transfer-btn {
+	float: right;
+	cursor: not-allowed;
+	padding: 5px 15px;
+}
+/* record-list */
+.scrolling_smallscreen {/* */
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+.subscrolling {
+	width: 100%;
+	height: 100%;
+}
+.account_movements {/* */
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+.record-list__content {/* */
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+}
+.record-list {
+	width: 100%;
+}
+.record-list__header {
+	position: relative;
+	z-index: 10;
+	cursor: pointer;
+	padding: 14px 20px 20px;
+}
+.record-list__header h2 {
+	margin: 0;
+	width: 100%;
+}
+.account-info__text {
+	float: right;
+	text-align: right;
+	line-height: 19px;
+	margin: -18px 0 0 0;
+	color: #262626;
+}
+.account-info__text--icon {
+	padding: 0 0 0 11px;
+	float: right;
+}
+.account-info h3 {
+	width: 100%;
+	float: right;
+	margin-top: 4px;
+}
+.account_info-details {
+	display: none;
+	width: 100%;
+	border-top: 1px solid #f3f3f3;
+	margin: 10px 0 0 0;
+	padding: 10px 0 0 0;
+	overflow: hidden;
+	max-height: 200px;
+}
+.label {
+	width: 18%;
+	float: left;
+	padding: 3px 0;
+}
+.desc {
+	width: 70%;
+	float: left;
+	margin: 0 0 0 20px;
+	padding: 3px 0;
+	height: 18px;
+}
+.record-list_group__item {
+	width: 100%;
+}
+.record-list__group_header {
+	padding: 2px 20px;
+	margin: 0;
+	clear: both;
+}
+.transaction-details {
+	padding: 0 20px;
+}
+.transaction-details li {
+	width: 100%;
+	display: table;
+	padding: 30px 0 20px;
+}
+.transaction-details .top {
+	margin: 0 0 5px 0;
+}
+.detail-page {
+	display: none;
+}
+.execution-date {
+	line-height: 19px;
+	float: left;
+}
+.execution-amount {
+	float: right;
+}
+.transaction_info {
+	display: block;
+	width: 100%;
+	float: left;
+	position: relative;
+}
+.transaction-content {
+	width: 92%;
+}
+.value-date {
+	margin: 10px 0 0 0;
+}
+.detail-page {
+	display: none;
+	width: 100%;
+	float: left;
+	margin: 15px 0 0;
+	overflow: hidden;
+	padding: 15px 0;
+}
+.detail-page p {
+	display: block;
+	width: 60%;
+	margin: 0 auto;
+}
+.center-trigger {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	cursor: pointer;
+}
+/* Styles for upcoming Overlay */
+.upcomming_transfer_overlayer {
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	position: fixed;
+	opacity: 0;
+	top: 1600px;
+	left: 0;
+}
+.upcomming_transfer__inner {
+	width: 768px;
+	margin: auto;
+	height: 100%;
+}
+.upcomming_transfer__header {
+	width: 100%;
+	position: relative;
+	margin: 0;
+}
+.upcomming_transfer__header__inner {
+	padding: 20px 50px;
+}
+.close_btn {
+	display: block;
+	padding: 0;
+	position: absolute;
+	right: 40px;
+	top: 10px;
+	cursor: pointer;
+}
+.upcomming_transfer__content {
+	height: 93%;
+}
+.upcomming_transfer__content .record-list__item {
+	padding: 0 50px;
+}
+/* Messages IA Static */
+
+.messages_column__inner {
+	padding-top: 60px;
+}
+.messages_column__inner .menu-list__header {
+	padding: 60px 20px 20px;
+	position: relative;
+}
+.messages-icon {
+	position: relative;
+	top: 3px;
+	margin: 0 0 0 10px;
+}
+/* Global Styles for container*/
+.loading {
+	display:none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 200;
+	display:none;
+}
+.movements_loading {
+	padding: 12px;
+	position:absolute;
+	bottom:0;
+	display:none;
+}
+.info_messages{
+	display:none;
+}
+.info_messages p {
+	padding: 6px;
+}
+/* Functional */
+.action-show{
+	display:block;
+}
