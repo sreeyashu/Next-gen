@@ -6,6 +6,7 @@ $blue: #00b0ca;
 $d-blue: #0080a8;
 $red: #ff4b52;
 $l-main: #f3f3f3;
+$infomessages: #f2f2f2;
 
 
 // default width ====================================================
@@ -25,16 +26,20 @@ $large-center: $default-width - ($large-side * 2);
 // animation speed ================================
 $animation-speed: 125ms;
 
+//Floating of the columns =========================
+
 
 // font sizes, colors, weight, line-height ===================
 $basefontsize: 13px;
-$base-line_height: 18px;
+$baselineheight: 18px;
 $basefontcolor: #333333;
 $bluefontcolor: #0080a8;
 $whitefontcolor: #ffffff;
 $grayfontcolor: #f3f3f3;
+$grayamountfontcolor:#c9c9c9;
 $fontweight: 300;
 $texttransform:uppercase;
+$textindent: -9999px;
 
 // border colors =====================
 $borderblue: #ffffff;
@@ -44,4 +49,18 @@ $action-bar-border:#00b0ca;
 
 // menu-list header colors =====================
 $menu-list-header: #262626;
+
+// Icons, logos images & positions ==============
+$spriteimage: url(../css/images/sprite.png) no-repeat;
+$progressloading: #f3f3f3 url(images/movements_loader.gif) no-repeat 41% center;
+$menuicon: 3px 5px;
+$messagesicon: -149px 1px;
+$upcomingicon: -180px -80px;
+$exporticon:  -40px -80px;
+$accountinfoicon: -109px -90px;
+$transaction-in:url(../css/images/icon-in.png) no-repeat 50% 6px;
+$transaction-out:url(../css/images/icon-out.png) no-repeat 50% 6px;
+$closebtn: -270px -40px;
+
+
 

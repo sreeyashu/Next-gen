@@ -4,6 +4,9 @@ var viewport = offcanvas = {
 };
 
 $(document).ready(function() {
+	
+	 
+	  
 	//Off canvas
 	offcanvas.left.$trigger = $('.show-left');
 	offcanvas.right.$trigger = $('.show-right');
@@ -44,6 +47,7 @@ $(document).ready(function() {
 			defaultScroll.refresh();
 		}, 500);
 	});
+	
 	// Movements toggler
 	$('.transcation_icon').click(function() {
 		$(this).closest('li').find('.detail-page').slideToggle();
@@ -54,10 +58,10 @@ $(document).ready(function() {
 	// Upcoming Transfer
 	if (Modernizr.csstransitions) {
 		$('.tasks').on('click', function() {
-			$(".upcomming_transfer_overlayer").css("top", "0px").css("opacity", "1").css("z-index", "9999");
+			$(".upcomming_transfer_overlayer").addClass("overlay-transition").removeClass("overlay-close");
 		});
 		$('.close_btn').on('click', function() {
-			$(".upcomming_transfer_overlayer").css("top", "1600px").css("opacity", "0").css("z-index", "-1");
+			$(".upcomming_transfer_overlayer").removeClass("overlay-transition").addClass("overlay-close");
 		});
 	} else {
 		$('.tasks').on('click', function() {
@@ -202,4 +206,5 @@ $(document).ready(function() {
 
 	var wcmScroller = new WCMScroller();
 	wcmScroller.init();
+	$('.flexslider').flexslider();
 });

@@ -9,17 +9,14 @@
       <meta name="apple-mobile-web-app-status-bar-style" content="black">
       <title>::Next Gen - transactional::</title>
       <link rel="stylesheet" href="css/reset.css">
-      <link rel="stylesheet" href="css/patern-lib.css">
+      <link rel="stylesheet" href="css/pattern-lib.css">
       <link rel="stylesheet" href="css/brand.css">
+      <link rel="stylesheet" href="flexslider.css" type="text/css" media="screen" />
       <script src="js/modernizr.custom.js"></script>
       <script type="application/javascript" src="js/jquery-1.9.1.js"></script>
       <script type="text/javascript" src="js/iscroll.js"></script>
       <script type="text/javascript" src="js/custom.js"></script>
-      <link rel="stylesheet" href="css/IA/menu-list.css">
-      <link rel="stylesheet" href="css/IA/record-list.css">
-      <link rel="stylesheet" href="css/IA/navigation-bar.css">
-      <link rel="stylesheet" href="css/IA/actionbar-ia.css">
-      <link rel="stylesheet" href="css/IA/right_column.css">
+      <script defer src="jquery.flexslider.js"></script>
    </head>
    <body>
    	  <div class="wcm clearfix">
@@ -129,7 +126,7 @@
                                    <span class="action-bar_text">upcoming transfers</span>
                                 </li>
                                 <li class="action_bar__actions export">
-                                   <span class="action_bar_icon brand-action-icon export_con"></span>
+                                   <span class="action_bar_icon brand-action-icon export_icon"></span>
                                    <span class="action-bar_text">export</span>
                                 </li>
                                 <li class="transfer-btn branding-btn">transfer money</li>
@@ -141,7 +138,7 @@
                              <!-- Movements Header -->
                                 <div class="record-list__header account-info">
                                    <h2>Lorum ipsum dolor sit</h2>
-                                   <span class="account-info__balance"><span>1234.54</span><span class="currency-spacing">EUR</span></span>
+                                   <span class="account-info__balance"><span>123.345.999.999,54</span><span class="currency-spacing">EUR</span></span>
                                    <div class="account-info__text">
                                       <span class="brand-action-icon account-info__text--icon"></span>
                                       <h3>Total balance</h3>
@@ -180,7 +177,7 @@
                                     <div class="record-list_group__item">
                                       <h3 class="record-list__group_header">This week</h3>
                                       <ul class="transaction-details">
-                                         <li class="transaction-details__in">
+                                         <li class="transaction-details__in transaction-details__content">
                                             <span class="top clearfix">
                                                 <span class="execution-date">25/01/2013</span>
                                                 <span class="execution-amount"><span>- 125,35</span><span class="currency-spacing">eur</span></span>
@@ -191,7 +188,10 @@
                                                <p class="transaction-content">Lorum ipsum dolor sit amit quantum <br/>BE68-001200300-0047<br/>BIC GEBABEE via mobile banking zonder mededeling.</p>
                                                <p class="value-date">Value date<span class="value_date-spacing">12/06/13</span></p>
                                                <div class="detail-page">
-                                                  <p>Avis de debit pour la période du 01/03/2011 au 31/03/2011
+                                               	<div class="flexslider">
+                                                  <ul class="slides">
+                                                    <li>
+                                                        <p>Avis de debit pour la période du 01/03/2011 au 31/03/2011
                                                      Frais d'équipement
                                                      Frais package Montant
                                                      Redevance Easy Pack (single)1,82
@@ -199,6 +199,33 @@
                                                      Redevance Easy Pack (single)1,82
                                                      A votre debit:1,82 EUR
                                                   </p>
+                                                        </li>
+                                                        <li>
+                                                       <p>bbb de debit pour la période du 01/03/2011 au 31/03/2011
+                                                     Frais d'équipement
+                                                     Frais package Montant
+                                                     Redevance Easy Pack (single)1,82
+                                                     Redevance Easy Pack (single)1,82
+                                                     Redevance Easy Pack (single)1,82
+                                                     A votre debit:1,82 EUR
+                                                  </p>
+                                                        </li>
+                                                        <li>
+                                                        <p>kiran</p>
+                                                        </li>
+                                                        <li>
+                                                       <p>gali</p>
+                                                        </li>
+                                                  </ul>
+                                                </div>
+                                                <!-- <p>Avis de debit pour la période du 01/03/2011 au 31/03/2011
+                                                     Frais d'équipement
+                                                     Frais package Montant
+                                                     Redevance Easy Pack (single)1,82
+                                                     Redevance Easy Pack (single)1,82
+                                                     Redevance Easy Pack (single)1,82
+                                                     A votre debit:1,82 EUR
+                                                  </p>-->
                                                </div>
                                             </div>
                                          </li>
@@ -206,7 +233,7 @@
                                     </div>
                                     <div class="record-list_group__item">
                                       <ul class="transaction-details">
-                                         <li class="transaction-details__in">
+                                         <li class="transaction-details__in transaction-details__content">
                                             <span class="top clearfix">
                                                 <span class="execution-date">25/01/2013</span>
                                                 <span class="execution-amount"><span>- 125,35</span><span class="currency-spacing">eur</span></span>
@@ -232,7 +259,7 @@
                                     </div>
                                     <div class="record-list_group__item">
                                       <ul class="transaction-details">
-                                         <li class="transaction-details__in">
+                                         <li class="transaction-details__in transaction-details__content">
                                             <span class="top clearfix">
                                                 <span class="execution-date">25/01/2013</span>
                                                 <span class="execution-amount"><span>- 125,35</span><span class="currency-spacing">eur</span></span>
@@ -258,112 +285,7 @@
                                     </div>
                                     <div class="record-list_group__item">
                                       <ul class="transaction-details">
-                                         <li class="transaction-details__in">
-                                            <span class="top clearfix">
-                                                <span class="execution-date">25/01/2013</span>
-                                                <span class="execution-amount"><span>- 125,35</span><span class="currency-spacing">eur</span></span>
-                                            </span>
-                                            <div class="transaction_info">
-                                               <span class="brand-action-icon account-info__text--icon transcation_icon"></span>
-                                               <h2 class="transaction_name">Europese overschrijving van</h2>
-                                               <p class="transaction-content">Lorum ipsum dolor sit amit quantum <br/>BE68-001200300-0047<br/>BIC GEBABEE via mobile banking zonder mededeling.</p>
-                                               <p class="value-date">Value date <span>12/06/13</span></p>
-                                               <div class="detail-page">
-                                                  <p>Avis de debit pour la période du 01/03/2011 au 31/03/2011
-                                                     Frais d'équipement
-                                                     Frais package Montant
-                                                     Redevance Easy Pack (single)1,82
-                                                     Redevance Easy Pack (single)1,82
-                                                     Redevance Easy Pack (single)1,82
-                                                     A votre debit:1,82 EUR
-                                                  </p>
-                                               </div>
-                                            </div>
-                                         </li>
-                                      </ul>
-                                    </div>
-                                    <div class="record-list_group__item">
-                                      <h3 class="record-list__group_header">This week</h3>
-                                      <ul class="transaction-details">
-                                         <li class="transaction-details__in">
-                                            <span class="top clearfix">
-                                                <span class="execution-date">25/01/2013</span>
-                                                <span class="execution-amount"><span>- 125,35</span><span class="currency-spacing">eur</span></span>
-                                            </span>
-                                            <div class="transaction_info">
-                                               <span class="brand-action-icon account-info__text--icon transcation_icon"></span>
-                                               <h2 class="transaction_name">Europese overschrijving van</h2>
-                                               <p class="transaction-content">Lorum ipsum dolor sit amit quantum <br/>BE68-001200300-0047<br/>BIC GEBABEE via mobile banking zonder mededeling.</p>
-                                               <p class="value-date">Value date <span>12/06/13</span></p>
-                                               <div class="detail-page">
-                                                  <p>Avis de debit pour la période du 01/03/2011 au 31/03/2011
-                                                     Frais d'équipement
-                                                     Frais package Montant
-                                                     Redevance Easy Pack (single)1,82
-                                                     Redevance Easy Pack (single)1,82
-                                                     Redevance Easy Pack (single)1,82
-                                                     A votre debit:1,82 EUR
-                                                  </p>
-                                               </div>
-                                            </div>
-                                         </li>
-                                      </ul>
-                                    </div>
-                                    <div class="record-list_group__item">
-                                      <ul class="transaction-details">
-                                         <li class="transaction-details__in">
-                                            <span class="top clearfix">
-                                                <span class="execution-date">25/01/2013</span>
-                                                <span class="execution-amount"><span>- 125,35</span><span class="currency-spacing">eur</span></span>
-                                            </span>
-                                            <div class="transaction_info">
-                                               <span class="brand-action-icon account-info__text--icon transcation_icon"></span>
-                                               <h2 class="transaction_name">Europese overschrijving van</h2>
-                                               <p class="transaction-content">Lorum ipsum dolor sit amit quantum <br/>BE68-001200300-0047<br/>BIC GEBABEE via mobile banking zonder mededeling.</p>
-                                               <p class="value-date">Value date <span>12/06/13</span></p>
-                                               <div class="detail-page">
-                                                  <p>Avis de debit pour la période du 01/03/2011 au 31/03/2011
-                                                     Frais d'équipement
-                                                     Frais package Montant
-                                                     Redevance Easy Pack (single)1,82
-                                                     Redevance Easy Pack (single)1,82
-                                                     Redevance Easy Pack (single)1,82
-                                                     A votre debit:1,82 EUR
-                                                  </p>
-                                               </div>
-                                            </div>
-                                         </li>
-                                      </ul>
-                                    </div>
-                                    <div class="record-list_group__item">
-                                      <ul class="transaction-details">
-                                         <li class="transaction-details__in">
-                                            <span class="top clearfix">
-                                                <span class="execution-date">25/01/2013</span>
-                                                <span class="execution-amount"><span>- 125,35</span><span class="currency-spacing">eur</span></span>
-                                            </span>
-                                            <div class="transaction_info">
-                                               <span class="brand-action-icon account-info__text--icon transcation_icon"></span>
-                                               <h2 class="transaction_name">Europese overschrijving van</h2>
-                                               <p class="transaction-content">Lorum ipsum dolor sit amit quantum <br/>BE68-001200300-0047<br/>BIC GEBABEE via mobile banking zonder mededeling.</p>
-                                               <p class="value-date">Value date <span>12/06/13</span></p>
-                                               <div class="detail-page">
-                                                  <p>Avis de debit pour la période du 01/03/2011 au 31/03/2011
-                                                     Frais d'équipement
-                                                     Frais package Montant
-                                                     Redevance Easy Pack (single)1,82
-                                                     Redevance Easy Pack (single)1,82
-                                                     Redevance Easy Pack (single)1,82
-                                                     A votre debit:1,82 EUR
-                                                  </p>
-                                               </div>
-                                            </div>
-                                         </li>
-                                      </ul>
-                                    </div>
-                                    <div class="record-list_group__item">
-                                      <ul class="transaction-details">
-                                         <li class="transaction-details__in">
+                                         <li class="transaction-details__in transaction-details__content">
                                             <span class="top clearfix">
                                                 <span class="execution-date">25/01/2013</span>
                                                 <span class="execution-amount"><span>- 125,35</span><span class="currency-spacing">eur</span></span>
@@ -390,7 +312,7 @@
                                     <div class="record-list_group__item">
                                       <h3 class="record-list__group_header">This week</h3>
                                       <ul class="transaction-details">
-                                         <li class="transaction-details__in">
+                                         <li class="transaction-details__in transaction-details__content">
                                             <span class="top clearfix">
                                                 <span class="execution-date">25/01/2013</span>
                                                 <span class="execution-amount"><span>- 125,35</span><span class="currency-spacing">eur</span></span>
@@ -416,7 +338,7 @@
                                     </div>
                                     <div class="record-list_group__item">
                                       <ul class="transaction-details">
-                                         <li class="transaction-details__in">
+                                         <li class="transaction-details__in transaction-details__content">
                                             <span class="top clearfix">
                                                 <span class="execution-date">25/01/2013</span>
                                                 <span class="execution-amount"><span>- 125,35</span><span class="currency-spacing">eur</span></span>
@@ -442,7 +364,112 @@
                                     </div>
                                     <div class="record-list_group__item">
                                       <ul class="transaction-details">
-                                         <li class="transaction-details__in">
+                                         <li class="transaction-details__in transaction-details__content">
+                                            <span class="top clearfix">
+                                                <span class="execution-date">25/01/2013</span>
+                                                <span class="execution-amount"><span>- 125,35</span><span class="currency-spacing">eur</span></span>
+                                            </span>
+                                            <div class="transaction_info">
+                                               <span class="brand-action-icon account-info__text--icon transcation_icon"></span>
+                                               <h2 class="transaction_name">Europese overschrijving van</h2>
+                                               <p class="transaction-content">Lorum ipsum dolor sit amit quantum <br/>BE68-001200300-0047<br/>BIC GEBABEE via mobile banking zonder mededeling.</p>
+                                               <p class="value-date">Value date <span>12/06/13</span></p>
+                                               <div class="detail-page">
+                                                  <p>Avis de debit pour la période du 01/03/2011 au 31/03/2011
+                                                     Frais d'équipement
+                                                     Frais package Montant
+                                                     Redevance Easy Pack (single)1,82
+                                                     Redevance Easy Pack (single)1,82
+                                                     Redevance Easy Pack (single)1,82
+                                                     A votre debit:1,82 EUR
+                                                  </p>
+                                               </div>
+                                            </div>
+                                         </li>
+                                      </ul>
+                                    </div>
+                                    <div class="record-list_group__item">
+                                      <ul class="transaction-details">
+                                         <li class="transaction-details__in transaction-details__content">
+                                            <span class="top clearfix">
+                                                <span class="execution-date">25/01/2013</span>
+                                                <span class="execution-amount"><span>- 125,35</span><span class="currency-spacing">eur</span></span>
+                                            </span>
+                                            <div class="transaction_info">
+                                               <span class="brand-action-icon account-info__text--icon transcation_icon"></span>
+                                               <h2 class="transaction_name">Europese overschrijving van</h2>
+                                               <p class="transaction-content">Lorum ipsum dolor sit amit quantum <br/>BE68-001200300-0047<br/>BIC GEBABEE via mobile banking zonder mededeling.</p>
+                                               <p class="value-date">Value date <span>12/06/13</span></p>
+                                               <div class="detail-page">
+                                                  <p>Avis de debit pour la période du 01/03/2011 au 31/03/2011
+                                                     Frais d'équipement
+                                                     Frais package Montant
+                                                     Redevance Easy Pack (single)1,82
+                                                     Redevance Easy Pack (single)1,82
+                                                     Redevance Easy Pack (single)1,82
+                                                     A votre debit:1,82 EUR
+                                                  </p>
+                                               </div>
+                                            </div>
+                                         </li>
+                                      </ul>
+                                    </div>
+                                    <div class="record-list_group__item">
+                                      <h3 class="record-list__group_header">This week</h3>
+                                      <ul class="transaction-details">
+                                         <li class="transaction-details__in transaction-details__content">
+                                            <span class="top clearfix">
+                                                <span class="execution-date">25/01/2013</span>
+                                                <span class="execution-amount"><span>- 125,35</span><span class="currency-spacing">eur</span></span>
+                                            </span>
+                                            <div class="transaction_info">
+                                               <span class="brand-action-icon account-info__text--icon transcation_icon"></span>
+                                               <h2 class="transaction_name">Europese overschrijving van</h2>
+                                               <p class="transaction-content">Lorum ipsum dolor sit amit quantum <br/>BE68-001200300-0047<br/>BIC GEBABEE via mobile banking zonder mededeling.</p>
+                                               <p class="value-date">Value date <span>12/06/13</span></p>
+                                               <div class="detail-page">
+                                                  <p>Avis de debit pour la période du 01/03/2011 au 31/03/2011
+                                                     Frais d'équipement
+                                                     Frais package Montant
+                                                     Redevance Easy Pack (single)1,82
+                                                     Redevance Easy Pack (single)1,82
+                                                     Redevance Easy Pack (single)1,82
+                                                     A votre debit:1,82 EUR
+                                                  </p>
+                                               </div>
+                                            </div>
+                                         </li>
+                                      </ul>
+                                    </div>
+                                    <div class="record-list_group__item">
+                                      <ul class="transaction-details">
+                                         <li class="transaction-details__in transaction-details__content">
+                                            <span class="top clearfix">
+                                                <span class="execution-date">25/01/2013</span>
+                                                <span class="execution-amount"><span>- 125,35</span><span class="currency-spacing">eur</span></span>
+                                            </span>
+                                            <div class="transaction_info">
+                                               <span class="brand-action-icon account-info__text--icon transcation_icon"></span>
+                                               <h2 class="transaction_name">Europese overschrijving van</h2>
+                                               <p class="transaction-content">Lorum ipsum dolor sit amit quantum <br/>BE68-001200300-0047<br/>BIC GEBABEE via mobile banking zonder mededeling.</p>
+                                               <p class="value-date">Value date <span>12/06/13</span></p>
+                                               <div class="detail-page">
+                                                  <p>Avis de debit pour la période du 01/03/2011 au 31/03/2011
+                                                     Frais d'équipement
+                                                     Frais package Montant
+                                                     Redevance Easy Pack (single)1,82
+                                                     Redevance Easy Pack (single)1,82
+                                                     Redevance Easy Pack (single)1,82
+                                                     A votre debit:1,82 EUR
+                                                  </p>
+                                               </div>
+                                            </div>
+                                         </li>
+                                      </ul>
+                                    </div>
+                                    <div class="record-list_group__item">
+                                      <ul class="transaction-details">
+                                         <li class="transaction-details__in transaction-details__content">
                                             <span class="top clearfix">
                                                 <span class="execution-date">25/01/2013</span>
                                                 <span class="execution-amount"><span>- 125,35</span><span class="currency-spacing">eur</span></span>
@@ -476,7 +503,7 @@
                        </div>
                        <!-- Div for small screen scrolling -->
                     </div>
-                    <div class="center-trigger"></div>
+                    <div class="center-trigger" onClick="javascript:alert(22)"></div>
                     <!-- Div for small screen scrolling -->
                  </div>
                  <!-- Messages IA Static -->
@@ -577,6 +604,16 @@
               </div>
               <!-- Upcomming Transfer -->
               <div class="loading action_show"></div>
+              <div class="error_message" style="display:none;background: rgba(0,0,0,0.5); width:100%; height:100%; z-index:200; position:absolute; ">
+              	<div class="error_message__inner" style="width:500px; min-height:200px; background:#ffffff; margin:auto; text-align:center; position:absolute; left:30%; top:30%; border-radius:5px;">
+                <div class="upcomming_transfer__header__inner" style="background:#ff4b52; text-align:left; border-radius: 5px 5px 0 0;padding: 20px 20px;">
+                          <h2>ERROR</h2>
+                          <h3 class="brand-action-icon close_btn" style="right: 20px;">x</h3>
+                       </div>
+                       <div class="error_img" style=" background:url(css/images/error.png) no-repeat 5% 40%; width:100px; height:100px; margin-left:25px; float:left; margin-top:20px;"></div>
+                       <p style="padding:8%;">Lorum ipsum dolor sit amit quantum Lorum ipsum dolor sit amit quantum</p>
+                </div>
+              </div>
           </div>
       </div>
    </body>

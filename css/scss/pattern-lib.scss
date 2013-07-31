@@ -1,6 +1,407 @@
 ﻿@import "partials/mixins";
 @import "config";
-//@import "widget/action_bar";
-//@import "widget/menu_list";
-//@import "widget/navigation_bar";
-@import "widget/record_list";
+
+/* menu-list accounts & cards */
+
+.cash_accounts {
+  padding: 68px 0 0 0;
+}
+
+.menu-list {
+  width: $default-width;
+}
+
+.menu-list__header {
+  position: relative;
+}
+
+strong {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.bal-amount {
+  display: inline-block;
+  width: $default-width;
+  text-align: right;
+  line-height: 19px;
+  margin: 15px 0 0 0;
+}
+
+.currency-spacing, .value_date-spacing {
+  padding-left: 4px;
+}
+
+.border-effect:after {
+  content: "";
+  display: block;
+  width: $default-width;
+  height: 1px;
+}
+
+.positioning:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.top {
+  display: block;
+  width: $default-width;
+}
+
+.amount_info {
+  text-transform: uppercase;
+  float: right;
+  text-align: right;
+  color: $grayamountfontcolor;
+}
+
+.inner-padding {
+  padding: 22px 20px 20px;
+}
+
+/* Styles header IA */
+
+.navigation-bar {
+  width: $default-width;
+  height: 60px;
+  position: relative;
+  z-index: 10;
+}
+
+.navigation-bar__inner {
+  padding: 20px 20px 15px;
+  position: relative;
+}
+
+.navigation-bar__brand_logo {
+  position: absolute;
+  left: 60px;
+  top: 10px;
+  -webkit-backface-visibility: hidden;
+  display: block;
+}
+
+.messages_icon {
+  margin: 0 0 0 20px;
+  padding: 11px 0 0 11px;
+}
+
+.navigation-bar__logout {
+  position: relative;
+  padding: 7px 35px 5px 0;
+  text-decoration: none;
+  float: right;
+  span {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+/* actionbar*/
+
+.action_bar {
+  width:  $default-width;
+  height: 80px;
+  position: relative;
+  z-index: 9;
+  -webkit-backface-visibility: hidden;
+}
+
+.action_bar__inner {
+  padding: 25px 20px;
+}
+
+.action_bar__actions {
+  display: inline-block;
+  padding: 6px 0 0 40px;
+  position: relative;
+  text-decoration: none;
+  float: left;
+  margin: 0 0 0 30px;
+}
+
+.action_bar_icon {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 0;
+  top: -4px;
+  display: block;
+}
+
+.tasks {
+  margin: 0;
+}
+
+.transfer_count {
+  display: inline-block;
+  padding: 1px 4px;
+  width: auto;
+  height: auto;
+  line-height: 12px;
+  position: absolute;
+  right: -3px;
+  top: 3px;
+  left: auto;
+  min-width:8px;
+}
+
+.transfer-btn {
+  float: right;
+  cursor: not-allowed;
+  padding: 5px 15px;
+}
+
+/* record-list */
+
+.scrolling_smallscreen {
+  /* */
+  width:  $default-width;
+  overflow: hidden;
+  position: relative;
+}
+
+.subscrolling {
+  width:  $default-width;
+  height:  $default-height;
+}
+
+.account_movements {
+  /* */
+  width:  $default-width;
+  overflow: hidden;
+  position: relative;
+}
+
+.record-list__content {
+  /* */
+  position: relative;
+  overflow: hidden;
+  width:  $default-width;
+}
+
+.record-list {
+  width:  $default-width;
+}
+
+.record-list__header {
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+  padding: 14px 20px 20px;
+  h2 {
+    margin: 0;
+    width:  $default-width;
+  }
+}
+
+.account-info__text {
+  float: right;
+  text-align: right;
+  line-height: 19px;
+  margin: -29px 0 0 0;
+  color: $menu-list-header;
+}
+
+.account-info__text--icon {
+  padding: 12px 0 0 12px;
+  float: right;
+}
+
+.account-info h3 {
+  width: $default-width;
+  float: right;
+  margin-top: 4px;
+}
+
+.account_info-details {
+  display: none;
+  width: $default-width;
+  border-top: 1px solid #f3f3f3;
+  margin: 10px 0 0 0;
+  padding: 10px 0 0 0;
+  overflow: hidden;
+  max-height: 200px;
+}
+
+.label {
+  width: 18%;
+  float: left;
+  padding: 3px 0;
+}
+
+.desc {
+  width: 70%;
+  float: left;
+  margin: 0 0 0 20px;
+  padding: 3px 0;
+  height: 18px;
+}
+
+.record-list_group__item {
+  width: $default-width;
+}
+
+.record-list__group_header {
+  padding: 2px 20px;
+  margin: 0;
+  clear: both;
+}
+.transaction-details {
+  padding: 0 20px;
+  .top {
+    margin: 0 0 5px 0;
+  }
+}
+.transaction-details__content{
+    width: $default-width;
+    display: table;
+    padding: 30px 0 20px;
+}
+.execution-date {
+  line-height: 19px;
+  float: left;
+}
+
+.execution-amount {
+  float: right;
+}
+
+.transaction_info {
+  display: block;
+  width: $default-width;
+  float: left;
+  position: relative;
+}
+.transaction_info.account-info__text--icon {
+ padding: 12px;
+}
+.transaction-content {
+  width: 92%;
+}
+
+.value-date {
+  margin: 10px 0 0 0;
+}
+
+.detail-page {
+  display: none;
+  width: $default-width;
+  float: left;
+  margin: 15px 0 0;
+  overflow: hidden;
+  padding: 15px 0;
+  p {
+    display: block;
+    width:$default-width - 40%;
+    margin: 0 auto;
+  }
+}
+
+.center-trigger {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  width: $default-width;
+  height: $default-height;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Styles for upcoming Overlay */
+
+.upcomming_transfer_overlayer {
+  width: $default-width;
+  height: $default-height;
+  z-index: -1;
+  position: fixed;
+  top: 1600px;
+  left: 0;
+}
+
+.upcomming_transfer__inner {
+  width: 768px;
+  margin: auto;
+  height: $default-height;
+}
+
+.upcomming_transfer__header {
+  width: $default-width;
+  position: relative;
+  margin: 0;
+}
+
+.upcomming_transfer__header__inner {
+  padding: 20px 50px;
+}
+
+.close_btn {
+  display: block;
+  padding: 0;
+  position: absolute;
+  right: 40px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.upcomming_transfer__content {
+  height: 93%;
+  .record-list__item {
+    padding: 0 50px;
+  }
+}
+
+/* Messages IA Static */
+
+.messages_column__inner {
+  padding-top: 60px;
+  .menu-list__header {
+    padding: 60px 20px 20px;
+    position: relative;
+  }
+}
+
+.messages-icon {
+  position: relative;
+  top: 3px;
+  margin: 0 0 0 10px;
+}
+
+/* Global Styles for container*/
+
+.loading {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 200;
+  display: none;
+}
+
+.movements_loading {
+  padding: 12px;
+  position: absolute;
+  bottom: 0;
+  display: none;
+}
+
+.info_messages {
+  display: none;
+  p {
+    padding: 6px;
+  }
+}
+
+/* Functional */
+
+.action-show {
+  display: block;
+}

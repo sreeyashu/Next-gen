@@ -1,333 +1,452 @@
 ﻿@import "partials/mixins";
 @import "partials/fonts";
 @import "config";
-
+#showHidePagebus {
+	display: none;
+}
+ @-ms-viewport {
+ width:device-width;
+}
+/* Layout Stylings */
 html, body, .wcm {
-	width: $default-width;
-	height: $default-height;
+ width: $default-width;
+ height: $default-height;
 	overflow: hidden;
 }
-*{-webkit-tap-highlight-color:rgba(0,0,0,0);}
+* {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 .next_gen {
-	width: $default-width;
-	height: $default-height;
-	background: $main_bg;
-	font-size: $basefontsize;
-	line-height: $base-line_height;
-	-webkit-user-select: text !important;
+ width: $default-width;
+ height: $default-height;
+ background: $main_bg;
+ font-size: $basefontsize;
+ line-height: $baselineheight;
+	-webkit-user-select: none !important;
 	-webkit-text-size-adjust: none;
-	@include hello-r;
-.wrapper {
-	width: $default-width;
-	height: $default-height;
-	overflow:hidden;
-	position:absolute;
-	top:0;
-	left:0;
+ @include hello-r;
+ .wrapper {
+ width: $default-width;
+ height: $default-height;
+ overflow: hidden;
+ position: absolute;
+ top: 0;
+ left: 0;
 }
-
 h2, h3 {
-	@include hello-b;
-	text-transform: $texttransform;
-	padding:0;
-	font-weight:$fontweight;
+ @include hello-b;
+ text-transform: $texttransform;
+ font-weight: $fontweight;
+}
+#accounts_column {
+ width: $large-side;
+ height: $default-height;
+	position: relative;
+	float: left;
+ color: $whitefontcolor;
+}
+#center_column {
+ width: $large-center;
+ height:  $default-height;
+	position: relative;
+	float: left;
+ @include box-shadow($voff:0px, $blur:15px, $spread:0px, $color:rgba(0,0,0,0.35));
+}
+#messages_column {
+ width: $large-side;
+ height:  $default-height;
+	position: relative;
+	float: left;
 }
 }
+/* left column, right column styles */
 
+/* cash acounts Specfic Styles */
 
-/* Common Global Styles */
-.white_background{
-	background:$white_bg;
+.next_gen {
+ .cash_accounts {
+ .menu-list {
+ border-top: 1px solid black;
 }
-.blue_header{
-	background: $blue_header;
+ .menu-list__header:first-child:after {
+ background: #606060;
 }
-.inner_padding{
-	@include inner_padding();
 }
-.amount_info {
-	text-transform: $texttransform;
-	float: right;
-	text-align: right;
-	color: #c9c9c9;
 }
+/**/
 
-.top {
-	display: block;
-	width: $default-width;
-	margin: 0 0 5px 0;
+.next_gen {
+ .menu-list__header {
+ background: $menu-list-header;
+ color: $grayfontcolor;
+ border-bottom: 1px solid $borderblack;
 }
-.bal_amount {
-	display: inline-block;
-	width: $default-width;
-	text-align: right;
-	line-height: $base-line_height + 1;
-	margin: 15px 0 0 0;
+strong {
+ line-height: $baselineheight + 6;
+ font-size: $basefontsize + 7;
+	float: left;
+ @include hello-b;
+ text-transform: $texttransform;
+ font-weight: $fontweight;
 }
-.branding_btn {
+.total-bal span {
+ @include hello-b;
+ color: $whitefontcolor;
+ font-size: $basefontsize + 2;
+ line-height: $baselineheight + 2;
+}
+.menu-list__item {
+ text-transform: $texttransform;
+ border-bottom: 1px solid $borderblack;
+ dl {
+ color: #dddddd;
+}
+dt {
+	color: white;
+ @include hello-b;
+}
+}
+.bal-amount {
+ color: $grayfontcolor;
+ font-size: $basefontsize + 2;
+ @include hello-b;
+}
+.active {
+ background: $white_bg;
+ color: $bluefontcolor;
 	cursor: pointer;
-	color: $whitefontcolor;
-	@include hello-r;
-	font-size: $basefontsize + 2;
-	line-height: $base-line_height + 1;
+}
+.menu-list__item:after {
+	background: #606060;
+}
+.active {
+ dt, dd, .bal-amount {
+ color: $bluefontcolor;
+}
+}
+}
+.no-touch {
+ .next_gen {
+ .menu-list__row:hover {
+ background: $white_bg;
+ color: $bluefontcolor;
+ cursor: pointer;
+}
+ dd dl:hover {
+ dt, .bal-amount {
+ color: $bluefontcolor;
+}
+}
+}
+}
+/* Common Btns, Actions, bg, loadings, info messages Icons*/
+
+.next_gen {
+ .brand-action-icon {
+ background: $spriteimage;
+}
+.branding-btn {
+	cursor: pointer;
+ color: $whitefontcolor;
+ @include hello-r;
+ font-size: $basefontsize + 2;
+ line-height: $baselineheight + 1;
 	text-decoration: none;
 	display: inline-block;
-	text-transform: $texttransform;
-	@include border-radius(2px);
+ text-transform: $texttransform;
+ @include border-radius(2px);
 }
-.loading{
-	display: none;
-	position: absolute;
-	left: 0;
-	top: 0;
+.white_background {
+ background: $white_bg;
+}
+.loading {
 	z-index: 200;
-	width: $default-width;
-	height: $default-height;
-	background: #ffffff url(images/loading.gif) no-repeat center center;
+ width: $default-width;
+ height: $default-height;
+	background: white url(images/loading.gif) no-repeat center center;
 	opacity: 1;
 }
-.movements_loading{
-	width: $default-width;
-	margin:auto;
-	background: #ffffff url(images/movements_loader.gif) no-repeat 41% center;
-	border:1px solid #cccccc;
-	padding:14px;
-	text-align:center;
-	font-size:15px;
-	position:absolute;
-	bottom:0;
+.movements_loading {
+ width: $default-width;
+	margin: auto;
+ background: $progressloading;
+	text-align: center;
+ font-size:  $basefontsize + 2;
 }
-.info_messages{
-	background:$l-main;
-	width:$default-width;
-	text-align:center;
-	font-style:italic;
-}
-.info_messages p{ padding:6px;}
-/* Branding Styles for Accounts & Cards */
-.next_gen{
-#left_column {
-	width: $large-side;
-	height: $default-height;
-	overflow: hidden;
-	float:left;
-	position:relative;
-	color:  $whitefontcolor;
-	z-index:999;
-	}
-}
-
-/* Accounts Specfic Styles */
-.next_gen {
-.accounts-ia {
-	width: $default-width;
-}
-.accounts-ia {
-	.menu-list {
-		border-top: 1px solid $borderblack;
-	}
-	.menu-list__header:first-child:after {
-		background: #606060;
-	}
+.info_messages {
+ background: $infomessages;
+ width: $default-width;
+	text-align: center;
+	font-style: italic;
+ p {
+ padding: 6px;
 }
 }
-
-/* common for Accounts & Cards Skeleton */
-.next_gen {
-  .menu-list__header {
-    background: $menu-list-header;
-    color: $grayfontcolor;
-    border-bottom: 1px solid $borderblack;
-    strong {
-      line-height: $base-line_height + 6;
-      font-size: $basefontsize + 7;
-      float: left;
-      @include hello-b;
-      text-transform: $texttransform;
-      font-weight: $fontweight;
-    }
-  }
-  .total-bal p {
-    @include hello-b;
-    color: $whitefontcolor;
-    font-size: $basefontsize + 2;
-  }
-  .menu-list__item {
-    text-transform:  $texttransform;
-    border-bottom: 1px solid $borderblack;
-    dl {
-      color: #dddddd;
-      dt {
-        color: $whitefontcolor;
-         @include hello-b;
-      }
-    }
-    .bal_amount {
-      color: $grayfontcolor;
-      font-size: $basefontsize + 2;
-      @include hello-b;
-    }
-    dl {
-      &.active, &:hover {
-        background: $white_bg;
-        color: $bluefontcolor;
-		@include box-shadow();
-        cursor: pointer;
-      }
-    }
-    .active dt {
-      color: $bluefontcolor;
-    }
-  }
-  .active .bal_amount, .menu-list__item dl:hover dt, dd dl:hover .bal_amount {
-    color: $bluefontcolor;
-  }
-  .menu-list__item:after {
-    background: #606060;
-  }
+.no-border li:nth-child(1) {
+	border-top: none;
 }
-
-/*  Branding Styles for center column */
-.next_gen {
-#center_column {
-	width: $large-center;
-	height: $default-height;
-	position: relative;
-	float:left;
-	z-index: 999;
-	overflow: hidden;
-	@include box-shadow($voff:0px, $blur:15px, $spread:0px ,$color:rgba(0,0,0,0.35));
-	}
 }
 /* Branding Styles for navigation IA */
 
 .next_gen {
-  .navigation-ia {
-    background: $white_bg;
-    border-bottom: 1px solid $bordergray;
-  }
-  .navigation-ia__logout {
-    text-transform: $texttransform;
-    color: $bluefontcolor;
-    @include hello-l;
-    visibility: hidden;
-  }
+ .navigation-bar {
+ background:$white_bg;
+ border-bottom: 1px solid $bordergray;
+}
+.navigation-bar__icon {
+	display: block;
+	width: 26px;
+	height: 25px;
+}
+.menu_icon {
+	float: left;
+ background-position: $menuicon;
+}
+.messages_icon {
+	float: right;
+ background-position: $messagesicon;
+}
+.navigation-bar__logout {
+ color: $bluefontcolor;
+ @include hello-l;
+ text-transform: $texttransform;
+	visibility: hidden;
+}
+.navigation-bar__brand_logo {
+	width: 54px;
+	height: 60px;
+ background: $spriteimage -39px 0;
+ text-indent: $textindent;
+}
+.navigation-bar__logout span {
+	width: 26px;
+	height: 25px;
+ background: $spriteimage -109px 1px;
+ text-indent: $textindent;
+}
 }
 /* Branding Styles for action-bar IA */
 
 .next_gen {
-  .action_bar-ia {
-    background: $l-main;
-    border-bottom: 6px solid $action-bar-border;
-  }
-  .action_bar-ia__actions {
-    @include hello-r;
-    text-transform: $texttransform;
-    cursor: pointer;
-  }
-  .transfer_count {
-    background: $red;
-    color: $whitefontcolor;
-    font-size: $basefontsize -2;
-  }
-  .transfer_btn {
-    background: $red;
-  }
+ .action_bar {
+ background: $l-main;
+ border-bottom:6px solid $action-bar-border;
 }
-
+.action_bar__actions {
+ @include hello-r;
+ text-transform: $texttransform;
+	cursor: pointer;
+ color: $basefontcolor;
+}
+.upcoming-icon {
+ background-position: $upcomingicon;
+}
+.transfer_count {
+ background: $red;
+ color: $whitefontcolor;
+ font-size: $basefontsize - 2;
+ @include border-radius(2px);
+	line-height: 12px;
+}
+.export_icon {
+ background-position: $exporticon;
+}
+.transfer-btn {
+ background: $red;
+}
+}
 /* Branding styles for Movements IA */
 
 .next_gen {
-  .record-list__header {
-    background: $white_bg;
-    border-bottom: 1px solid #dddddd;
-	@include box-shadow($voff:0px,$color:rgba(0, 0, 0, 0.1));
-    h2 {
-      font-size: $basefontsize + 4;
-      line-height: $base-line_height + 7;
-      color: $basefontcolor;
-    }
-  }
-  .movements_balance {
-    font-size: $basefontsize + 4;
-    line-height:  $base-line_height + 7;
-    color: $bluefontcolor;
-    @include hello-b;
-  }
-  .movements_info {
-    text-transform: $texttransform;
-    color: #464646;
-  }
-  .label {
-    border-right: 1px solid $bordergray;
-  }
-  .desc {
-    color: #606060;
-  }
-  .record-list__group_header {
-    background: $l-main;
-    font-weight: bold;
-    @include hello-b;
-    text-transform: $texttransform;
-  }
-  .record-list__item li {
-    border-top: 1px solid #cccccc;
-    &:first-child {
-      border: none;
-    }
-  }
-  .top .amount {
-    color: $bluefontcolor;
-    font-size: $basefontsize + 2;
-    line-height: $base-line_height + 1;
-    text-transform: $texttransform;
-    @include hello-b;
-  }
-  .transaction_name {
-    font-size: $basefontsize;
-    text-transform: $texttransform;
-  }
-  p.value-date {
-    text-transform: none;
-    color: $menu-list-header;
-  }
-  .detail-page {
-    @include hello-r;
-    font-size: $basefontsize - 1;
-    background: $l-main;
-   @include border-radius(5px);
-  }
+ .record-list__header {
+ background: $white_bg;
+ border-bottom: 1px solid #dddddd;
+ @include box-shadow($voff:0px, $color:rgba(0, 0, 0, 0.1));
+ h2 {
+ font-size: $basefontsize + 4;
+ line-height: $baselineheight + 7;
+ color: $basefontcolor;
 }
-
-/* Branding styles for Action bar upcoming IA */
+}
+.account-info__text {
+ text-transform: $texttransform;
+	color: #464646;
+}
+.account-info__text--icon {
+	width: 17px;
+	height: 17px;
+ background-position: $accountinfoicon;
+}
+.account-info h3 {
+ @include hello-r;
+}
+.account-info__balance {
+ font-size: $basefontsize + 4;
+ line-height: $baselineheight + 7;
+ color: $bluefontcolor;
+ @include hello-b;
+}
+.label {
+ border-right: 1px solid $bordergray;
+ font-size: $basefontsize - 1;
+}
+.desc {
+	color: #606060;
+}
+.record-list__group_header {
+ background: $l-main;
+	font-weight: bold;
+ @include hello-b;
+ text-transform: $texttransform;
+}
+.transaction-details__content {
+	border-top: 1px solid #cccccc;
+}
+.execution-amount {
+ color: $bluefontcolor;
+ font-size: $basefontsize + 2;
+ line-height: $baselineheight + 1;
+ text-transform: $texttransform;
+ @include hello-b;
+}
+.transcation_icon {
+	position: absolute;
+	right: 0;
+	top: 24px;
+	cursor: pointer;
+}
+.transaction-details__in .top {
+ background: $transaction-in;
+}
+.transaction-details__out .top {
+ background:$transaction-out;
+}
+.transaction_name {
+	width: 92%;
+ font-size: $basefontsize;
+ text-transform: $texttransform;
+}
+.transaction_info {
+ color: $menu-list-header;
+ line-height: $baselineheight;
+}
+.value-date {
+	text-transform: none;
+ color: $menu-list-header;
+ @include hello-l;
+}
+.detail-page {
+ @include hello-r;
+ font-size: $basefontsize - 1;
+ background: $l-main;
+ @include border-radius(5px);
+}
+}
+/* Branding for messages */
 
 .next_gen {
-  .upcomming_transfer_overlayer {
-    background: $main_bg;
-  }
-  .upcomming_transfer__header__inner h2 {
-    font-size: $basefontsize + 7;
-    color: $whitefontcolor;
-    @include hello-r;
-  }
+ .message_text {
+ text-transform: none;
+}
+.messages-icon {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	background-position: -230px 0;
+}
+#messages_column .menu-list__item:hover {
+ color: $whitefontcolor;
+ background: $menu-list-header;
+ dt {
+ color: $whitefontcolor;
+ background: $menu-list-header;
+}
+}
+}
+/* Branding styles for Action bar upcoming IA */
+
+.next_gen .upcomming_transfer_overlayer {
+ background: $main_bg;
+}
+.next_gen .upcomming_transfer__header {
+ background: $action-bar-border;
+}
+.next_gen .upcomming_transfer__header__inner h2 {
+ font-size: $basefontsize + 7;
+ color: $whitefontcolor;
+ @include hello-r;
+}
+.next_gen .close_btn {
+	width: 38px;
+	height: 38px;
+ text-indent: $textindent;
+ background-position: $closebtn;
 }
 
-@media all and (max-width: 768px) {@import "partials/768";}
+ 
 
-@media all and (max-width: 768px) and (max-width: 550px) {.action-bar_text {display: none;}}
-@media all and (max-width: 768px) and (max-width: 479px) {
-	.next-gen .detail-page{
-		height: 166px;
-		background: url(images/transaction-detail-flip.jpg) no-repeat center top;
-		text-indent: -9999px;
+/* MEDIA BREAK POINTS */
+
+@media all and (max-width:319px) {
+.next_gen .wrapper {
+	width: 319px;
+	margin: auto;
+}
+}
+ @media all and (max-width: 480px) {
+.next_gen {
+ .label {
+ width: 22%;
+}
+.upcomming_transfer__header__inner h2 {
+ font-size: $basefontsize + 5;
+}
+}
+}
+ @media all and (max-width: 768px) {
+@import "partials/768";
+}
+ @media all and (max-width: 768px) and (max-width: 550px) {
+.next_gen {
+ .action-bar_text {
+ display: none;
+}
+}
+}
+ @media all and (max-width: 768px) and (max-width: 479px)and (orientation:portrait) {
+.next_gen {
+	.detail-page {
+		 height: 166px;
+		 background: url(images/transaction-detail-flip.jpg) no-repeat center top;
+		 text-indent: $textindent;
+		 p {
+		display:none;
+		}
 	}
 }
-@media (max-width: 1279px) and (max-width: 860px) and (min-width: 769px) {.action-bar_text {display: none;}}
-
-@media all and (min-width: 769px) and (max-width: 1279px) {@import "partials/769x1279";}
-
-@media all and (min-width: 769px) and (max-width: 1279px) and (max-width: 860px) {.text {display: none;}}
-
-@media all and (min-width: 1280px) {@import "partials/1280";}
-
-
+}
+ @media (max-width: 1279px) and (max-width: 860px) and (min-width: 769px) {
+.next_gen .action-bar_text {
+	display: none;
+}
+}
+ @media all and (min-width: 769px) and (max-width: 1279px) {
+@import "partials/769x1279";
+}
+ @media all and (min-width: 769px) and (max-width: 1279px) and (max-width: 860px) {
+.next_gen .action-bar_text {
+	display: none;
+}
+}
+ @media all and (min-width: 1280px) {
+@import "partials/1280";
+}
+ @media all and (min-width: 1600px) {
+.next_gen {
+	width: 1600px;
+	margin: auto;
+ .wrapper {
+position:relative;
+}
+}
+}

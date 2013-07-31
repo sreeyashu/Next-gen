@@ -1,27 +1,30 @@
 /** Font imports ttf,eot,woff,svg **/
 @font-face {
 	font-family: 'HelloType-l';
-	src: url("../css/fonts/HelloType-l.eot"),
-		 url("../css/fonts/HelloType-l.eot?#iefix") format("eot"), 
-		 url("../css/fonts/HelloType-l.woff") format("woff"), 
-		 url("../css/fonts/HelloType-l.ttf") format("truetype"), 
-		 url("../css/fonts/HelloType-l.svg#HelloType-l") format("svg");
+	src: url("../css/fonts/HelloType-l.eot");
+	src: url("../css/fonts/HelloType-l.eot?#iefix") format("eot"), url("../css/fonts/HelloType-l.woff") format("woff"), url("../css/fonts/HelloType-l.ttf") format("truetype"), url("../css/fonts/HelloType-l.svg#HelloType-l") format("svg");
+	font-style: normal;
+	font-weight: normal;
 }
 @font-face {
 	font-family: 'HelloType-b';
-	src: url("../css/fonts/HelloType-b.eot"), 
-		 url("../css/fonts/HelloType-b.eot?#iefix") format("eot"), 
-		 url("../css/fonts/HelloType-b.woff") format("woff"), 
-		 url("../css/fonts/HelloType-b.ttf") format("truetype"), 
-		 url("../css/fonts/HelloType-b.svg#HelloType-b") format("svg");
+	src: url("../css/fonts/HelloType-b.eot");
+	src: url("../css/fonts/HelloType-b.eot?#iefix") format("eot"), url("../css/fonts/HelloType-b.woff") format("woff"), url("../css/fonts/HelloType-b.ttf") format("truetype"), url("../css/fonts/HelloType-b.svg#HelloType-b") format("svg");
+	font-style: normal;
+	font-weight: normal;
 }
 @font-face {
 	font-family: 'HelloType-r';
-	src: url("../css/fonts/HelloType-r.eot"), 
-		 url("../css/fonts/HelloType-r.eot?#iefix") format("eot"), 
-		 url("../css/fonts/HelloType-r.woff") format("woff"), 
-		 url("../css/fonts/HelloType-r.ttf") format("truetype"), 
-		 url("../css/fonts/HelloType-r.svg#HelloType-r") format("svg");
+	src: url("../css/fonts/HelloType-r.eot");
+	src: url("../css/fonts/HelloType-r.eot?#iefix") format("eot"), url("../css/fonts/HelloType-r.woff") format("woff"), url("../css/fonts/HelloType-r.ttf") format("truetype"), url("../css/fonts/HelloType-r.svg#HelloType-r") format("svg");
+	font-style: normal;
+	font-weight: normal;
+}
+#showHidePagebus {
+	display: none;
+}
+ @-ms-viewport {
+ width: device-width;
 }
 /* Layout Stylings */
 html, body, .wcm {
@@ -38,7 +41,7 @@ html, body, .wcm {
 	background: #333333;
 	font-size: 13px;
 	line-height: 18px;
-	-webkit-user-select: text !important;
+	-webkit-user-select: none !important;
 	-webkit-text-size-adjust: none;
 	font-family: 'HelloType-r', sans-serif;
 }
@@ -60,7 +63,7 @@ html, body, .wcm {
 	height: 100%;
 	position: relative;
 	float: left;
-	color: #ffffff;
+	color: white;
 }
 .next_gen #center_column {
 	width: 58%;
@@ -121,7 +124,7 @@ html, body, .wcm {
 	font-size: 15px;
 	font-family: 'HelloType-b', sans-serif;
 }
-.next_gen .active, .next_gen .menu-list__row:hover {
+.next_gen .active {
 	background: white;
 	color: #0080a8;
 	cursor: pointer;
@@ -129,10 +132,15 @@ html, body, .wcm {
 .next_gen .menu-list__item:after {
 	background: #606060;
 }
-.next_gen .active dt, .next_gen .active dd {
+.next_gen .active dt, .next_gen .active dd, .next_gen .active .bal-amount {
 	color: #0080a8;
 }
-.next_gen .active .bal-amount, .next_gen dd dl:hover dt, .next_gen dd dl:hover .bal-amount {
+.no-touch .next_gen .menu-list__row:hover {
+	background: white;
+	color: #0080a8;
+	cursor: pointer;
+}
+.no-touch .next_gen dd dl:hover dt, .no-touch .next_gen dd dl:hover .bal-amount {
 	color: #0080a8;
 }
 /* Common Btns, Actions, bg, loadings, info messages Icons*/
@@ -158,11 +166,11 @@ html, body, .wcm {
 	background: white;
 }
 .next_gen .loading {
-	z-index: 200;
+	z-index: 200;/**/
 	width: 100%;
 	height: 100%;
-	background: #ffffff url(images/loading.gif) no-repeat center center;
-	opacity: 1; 
+	background: white url(images/loading.gif) no-repeat center center;
+	opacity: 1;
 }
 .next_gen .movements_loading {
 	width: 100%;
@@ -180,9 +188,12 @@ html, body, .wcm {
 .next_gen .info_messages p {
 	padding: 6px;
 }
+.next_gen .no-border li:nth-child(1) {
+	border-top: none;
+}
 /* Branding Styles for navigation IA */
 .next_gen .navigation-bar {
-	background: #ffffff;
+	background: white;
 	border-bottom: 1px solid #f3f3f3;
 }
 .next_gen .navigation-bar__icon {
@@ -225,7 +236,7 @@ html, body, .wcm {
 	font-family: 'HelloType-r', sans-serif;
 	text-transform: uppercase;
 	cursor: pointer;
-	color: #333;
+	color: #333333;
 }
 .next_gen .upcoming-icon {
 	background-position: -180px -80px;
@@ -239,8 +250,9 @@ html, body, .wcm {
 	-ms-border-radius: 2px;
 	-o-border-radius: 2px;
 	border-radius: 2px;
+	line-height: 12px;
 }
-.next_gen .export_con {
+.next_gen .export_icon {
 	background-position: -40px -80px;
 }
 .next_gen .transfer-btn {
@@ -268,7 +280,7 @@ html, body, .wcm {
 	height: 17px;
 	background-position: -109px -90px;
 }
-.account-info h3 {
+.next_gen .account-info h3 {
 	font-family: 'HelloType-r', sans-serif;
 }
 .next_gen .account-info__balance {
@@ -290,7 +302,7 @@ html, body, .wcm {
 	font-family: 'HelloType-b', sans-serif;
 	text-transform: uppercase;
 }
-.next_gen .transaction-details li {
+.next_gen .transaction-details__content {
 	border-top: 1px solid #cccccc;
 }
 .next_gen .execution-amount {
@@ -346,18 +358,18 @@ html, body, .wcm {
 	height: 24px;
 	background-position: -230px 0;
 }
-.next_gen #messages_column .menu-list__item:hover, .next_gen #messages_column .menu-list__item:hover dt {
-	color: #ffffff;
+.next_gen #messages_column .menu-list__item:hover {
+	color: white;
+	background: #262626;
+}
+.next_gen #messages_column .menu-list__item:hover dt {
+	color: white;
 	background: #262626;
 }
 /* Branding styles for Action bar upcoming IA */
 .next_gen .upcomming_transfer_overlayer {
 	background: #333333;
-	-webkit-transition: top 250ms, opacity 400ms;
-	-moz-transition: top 250ms, opacity 400ms;
-	-o-transition: top 250ms, opacity 400ms;
-	transition: top, 250ms, opacity, 400ms;
-}
+/*@include transition(top 250ms, opacity 400ms);*/ }
 .next_gen .upcomming_transfer__header {
 	background: #00b0ca;
 }
@@ -371,6 +383,14 @@ html, body, .wcm {
 	height: 38px;
 	text-indent: -9999px;
 	background-position: -270px -40px;
+}
+
+/* MEDIA BREAK POINTS */
+@media all and (max-width: 319px) {
+.next_gen .wrapper {
+	width: 319px;
+	margin: auto;
+}
 }
 @media all and (max-width: 480px) {
 .next_gen .label {
@@ -397,7 +417,7 @@ html, body, .wcm {
 	-moz-transition: margin-left, 325ms;
 	-o-transition: margin-left, 325ms;
 	transition: margin-left, 325ms;
-	z-index: 111;
+	z-index: 111;/**/
 }
 .next_gen #messages_column {
 	width: 85%;
@@ -409,22 +429,21 @@ html, body, .wcm {
 	top: 0;
 	right: 0;
 }
+.next_gen .upcomming_transfer__inner {
+	width: 100%;
+}
 .next_gen .navigation-bar__logout {
 	text-indent: -9999px;
 }
-.next_gen .transfer-btn {
-	padding: 10px 16px;
+.next_gen .upcomming_transfer__content .record-list__item {
+	padding: 0 20px;
 }
-.next_gen .export {
-	margin-left: 15px;
+.next_gen .upcomming_transfer__header__inner {
+	padding: 20px 20px;
 }
-.next_gen .action_bar__inner {
-	padding: 20px;
+.next_gen .close_btn {
+	right: 20px;
 }
-.next_gen .action_bar__actions {
-	margin-top: 7px;
-}
-/* Off canvas */
 .left_open #center_column {
 	margin-left: 85%;
 }
@@ -437,21 +456,20 @@ html, body, .wcm {
 .right_open #accounts_column {
 	left: -85%;
 }
+.next_gen .transfer_btn {
+	padding: 10px 16px;
+}
+.next_gen .export {
+	margin-left: 15px;
+}
+.next_gen .action_bar__inner {
+	padding: 20px;
+}
+.next_gen .action_bar__actions {
+	margin-top: 7px;
+}
 .left_open .center-trigger, .right_open .center-trigger {
-	z-index: 9;
-}
-/* Upcoming Transfer */
-.upcomming_transfer__inner {
-	width: 100%;
-}
-.upcomming_transfer__content .record-list__item {
-	padding: 0 20px;
-}
-.upcomming_transfer__header__inner {
-	padding: 20px 20px;
-}
-.close_btn {
-	right: 20px;
+	z-index: 9;/**/
 }
 }
 @media all and (max-width: 768px) and (max-width: 550px) {
@@ -459,19 +477,22 @@ html, body, .wcm {
 	display: none;
 }
 }
-@media all and (max-width: 768px) and (max-width: 479px) {
+@media all and (max-width: 768px) and (max-width: 479px) and (orientation: portrait) {
 .next_gen .detail-page {
 	height: 166px;
 	background: url(images/transaction-detail-flip.jpg) no-repeat center top;
 	text-indent: -9999px;
 }
+.next_gen .detail-page p {
+	display: none;
 }
-@media (max-width: 1279px) and (max-width: 860px) and (min-width: 769px) {
+}
+@media (max-width: 1199px) and (max-width: 860px) and (min-width: 769px) {
 .next_gen .action-bar_text {
 	display: none;
 }
 }
-@media all and (min-width: 769px) and (max-width: 1279px) {
+@media all and (min-width: 769px) and (max-width: 1199px) {
 .next_gen #accounts_column {
 	width: 35%;
 }
@@ -483,8 +504,8 @@ html, body, .wcm {
 	transition: margin-left, 325ms;
 	position: absolute;
 	right: 0;
-	z-index: 111;
-	border: 1px solid #ffffff;
+	z-index: 111;/**/
+	border: 1px solid white;
 }
 .next_gen #messages_column {
 	width: 35%;
@@ -498,7 +519,6 @@ html, body, .wcm {
 .next_gen .navigation-bar__brand_logo {
 	left: 20px;
 }
-/* Off canvas */
 .right_open .menu_icon {
 	display: block !important;
 }
@@ -509,16 +529,25 @@ html, body, .wcm {
 	right: 35%;
 }
 }
-@media all and (min-width: 769px) and (max-width: 1279px) and (max-width: 860px) {
+@media all and (min-width: 769px) and (max-width: 1199px) and (max-width: 860px) {
 .next_gen .action-bar_text {
 	display: none;
 }
 }
-@media all and (min-width: 1280px) {
+@media all and (min-width: 1200px) {
 .next_gen .navigation-bar__brand_logo {
 	left: 20px;
 }
-.next_gen .menu_icon, .next_gen .messages_icon {
+.next_gen .navigation-bar__icon {
 	display: none;
+}
+}
+@media all and (min-width: 1600px) {
+.next_gen {
+	width: 1600px;
+	margin: auto;
+}
+.next_gen .wrapper {
+	position: relative;
 }
 }

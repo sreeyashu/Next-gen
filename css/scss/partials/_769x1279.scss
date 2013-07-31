@@ -1,5 +1,5 @@
 .next_gen {
-  #left_column {
+  #accounts_column {
     width: $medium-side;
   }
   #center_column {
@@ -8,28 +8,28 @@
     position: absolute;
     right: 0;
 	z-index:111;
+	border:1px solid $borderblue;
   }
-  #right_column {
+  #messages_column {
     width: $medium-side;
     position: absolute;
     top: 0;
     right: 0;
   }
-}
+  .menu_icon {
+  	display: none;
+	}
 
-.navigation-ia__icon.menu-oct {
-  display: none;
-}
-
-.navigation-ia__brand_logo {
-  left: 20px;
+	.navigation-bar__brand_logo {
+  	left: 20px;
+	}
 }
 
 .right_open {
-  .menu-oct {
+  .menu_icon {
     display: block !important;
   }
-  .navigation-ia__brand_logo {
+  .navigation-bar__brand_logo {
     left: 60px;
   }
   #center_column {
